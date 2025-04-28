@@ -61,11 +61,12 @@ class DeepSeekClient:
         response = self.client.chat.completions.create(
             model=self.model_name,
             messages=messages,
-            response_format={'type': 'json_object'}
+            # response_format={'type': 'json_object'}
         )
         data = response.choices[0].message.content
         data = data.strip("```").strip("json").strip()
-        return json.loads(data)
+        # return json.loads(data)
+        return data
     except Exception as e:
         print(f"Error during request: {e}")
         return None

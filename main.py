@@ -16,18 +16,14 @@ def process_qa(qa, cli, results_queue):
     while True:
         try:
             output = cli.perform_code_review(input_)
-            if "deficiency_existence" in output:
-                results_queue.put({
-                    "Question": input_,
-                    "deficiency_existence": output["deficiency_existence"],
-                    "code_review_suggestion": output["code_review_suggestion"],
-                    "suggested_code": output["suggested_code"]
-                })
-                break
+            # 直接将整个output作为字符串保存
+            results_queue.put({
+                "Question": input_,
+                "RawOutput": str(output)  # 确保转换为字符串
+            })
+            break
         except Exception as e:
-            print("Error occurred during processing. Retrying...")
-            print(e)
-            print("Error occurred during processing. Retrying...")
+            print(f"Error occurred during processing: {e}. Retrying...")
             continue
 
 def save_results(results_queue, model_name, dataset_name, save_interval=20):
@@ -38,7 +34,6 @@ def save_results(results_queue, model_name, dataset_name, save_interval=20):
             item = results_queue.get(timeout=30)  # Timeout for safety
             results.append(item)
             counter += 1
-            
             if counter % save_interval == 0:
                 temp_output_file = f"Results/{model_name}_{dataset_name}.xlsx"
                 df = pd.DataFrame(results)
@@ -52,7 +47,7 @@ def save_results(results_queue, model_name, dataset_name, save_interval=20):
                 df.to_excel(temp_output_file, index=False)
             break
 
-def process_concurrently(QAs, cli, args, save_interval=20, max_workers=1):
+def process_concurrently(QAs, cli, args, save_interval=5, max_workers=1):
     results_queue = queue.Queue()
     # Start the saver thread
     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as saver_executor:
@@ -98,9 +93,8 @@ def process(data_path:str = None):
 
 
 if __name__ == "__main__":
-
   parser = argparse.ArgumentParser(description="The entrence function for S-ACR process.")
-  parser.add_argument("-m", "--model_name", type=str,choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="qwen_2.5",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
+  parser.add_argument("-m", "--model_name", type=str,choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="ds_reasoner",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
   parser.add_argument("-d", "--dataset_name", type=str, default="carllm", help="The dataset given to be used")
   args = parser.parse_args()
   ##########################

@@ -1,0 +1,8 @@
+nohup: ignoring input
+==================================================
+Program Starting with Parameters:
+Model Name: llama_3.1
+Dataset Name: carllm
+==================================================
+
+Processing QAs:   0%|          | 0/200 [00:00<?, ?it/s]Processing QAs:   0%|          | 1/200 [00:12<40:33, 12.23s/it]Processing QAs:   1%|          | 2/200 [00:24<39:53, 12.09s/it]

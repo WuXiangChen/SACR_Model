@@ -1,7 +1,12 @@
 nohup: ignoring input
-Traceback (most recent call last):
-  File "/root/workspace/SACR_Model/main.py", line 4, in <module>
-    from Model.remote_server import DeepSeekClient
-  File "/root/workspace/SACR_Model/Model/remote_server.py", line 3, in <module>
-    from openai import OpenAI
-ModuleNotFoundError: No module named 'openai'
+==================================================
+Program Starting with Parameters:
+Model Name: qwen_2.5
+Dataset Name: carllm
+==================================================
+
+Processing QAs:   0%|          | 0/200 [00:00<?, ?it/s]Processing QAs:   0%|          | 1/200 [00:11<39:35, 11.94s/it]Processing QAs:   1%|          | 2/200 [00:21<34:01, 10.31s/it]Error during request: Expecting ',' delimiter: line 4 column 92 (char 504)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:   2%|▏         | 3/200 [01:45<2:24:45, 44.09s/it]Processing QAs:   2%|▏         | 4/200 [02:10<1:59:45, 36.66s/it]Processing QAs:   2%|▎         | 5/200 [03:21<2:38:45, 48.85s/it]Processing QAs:   3%|▎         | 6/200 [03:36<2:00:59, 37.42s/it]Processing QAs:   4%|▎         | 7/200 [04:05<1:51:22, 34.63s/it]Processing QAs:   4%|▍         | 8/200 [04:16<1:26:34, 27.06s/it]Processing QAs:   4%|▍         | 9/200 [04:45<1:28:05, 27.67s/it]
