@@ -1,0 +1,7 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/root/workspace/SACR_Model/main.py", line 4, in <module>
+    from Model.remote_server import DeepSeekClient
+  File "/root/workspace/SACR_Model/Model/remote_server.py", line 3, in <module>
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'

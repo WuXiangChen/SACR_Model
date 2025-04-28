@@ -52,6 +52,7 @@ class DeepSeekClient:
           "code_review_suggestion": "The code could use more meaningful variable names. Consider using Python's built-in sum() function for simplicity.",
           "suggested_code": "def calculate_sum(nums):\n    try:\n        return sum(nums)\n    except TypeError:\n        print(\"Error: Input must be iterable of numbers\")\n        return 0"
       }
+
       """
     messages = [{"role": "system", "content": system_prompt},
             {"role": "user", "content": code_diff}]
@@ -63,6 +64,7 @@ class DeepSeekClient:
             response_format={'type': 'json_object'}
         )
         data = response.choices[0].message.content
+        data = data.strip("```").strip("json").strip()
         return json.loads(data)
     except Exception as e:
         print(f"Error during request: {e}")
