@@ -5,8 +5,14 @@ Model Name: qwen_2.5
 Dataset Name: carllm
 ==================================================
 
-Processing QAs:   0%|          | 0/200 [00:00<?, ?it/s]Processing QAs:   0%|          | 1/200 [00:11<39:35, 11.94s/it]Processing QAs:   1%|          | 2/200 [00:21<34:01, 10.31s/it]Error during request: Expecting ',' delimiter: line 4 column 92 (char 504)
-Error occurred during processing. Retrying...
-argument of type 'NoneType' is not iterable
-Error occurred during processing. Retrying...
-Processing QAs:   2%|▏         | 3/200 [01:45<2:24:45, 44.09s/it]Processing QAs:   2%|▏         | 4/200 [02:10<1:59:45, 36.66s/it]Processing QAs:   2%|▎         | 5/200 [03:21<2:38:45, 48.85s/it]Processing QAs:   3%|▎         | 6/200 [03:36<2:00:59, 37.42s/it]Processing QAs:   4%|▎         | 7/200 [04:05<1:51:22, 34.63s/it]Processing QAs:   4%|▍         | 8/200 [04:16<1:26:34, 27.06s/it]Processing QAs:   4%|▍         | 9/200 [04:45<1:28:05, 27.67s/it]
+Processing QAs:   0%|          | 0/20 [00:00<?, ?it/s]Processing QAs:   5%|▌         | 1/20 [00:12<03:58, 12.56s/it]Processing QAs:  10%|█         | 2/20 [00:23<03:30, 11.72s/it]Processing QAs:  15%|█▌        | 3/20 [00:31<02:50, 10.02s/it]Processing QAs:  20%|██        | 4/20 [00:39<02:24,  9.03s/it]
+Added 5 results to results/qwen_2.5_carllm.json (now 25 total)
+Processing QAs:  25%|██▌       | 5/20 [00:50<02:25,  9.67s/it]Processing QAs:  30%|███       | 6/20 [00:58<02:10,  9.30s/it]Processing QAs:  35%|███▌      | 7/20 [01:06<01:53,  8.74s/it]Processing QAs:  40%|████      | 8/20 [01:26<02:28, 12.35s/it]Processing QAs:  45%|████▌     | 9/20 [01:33<01:58, 10.74s/it]
+Added 5 results to results/qwen_2.5_carllm.json (now 30 total)
+Processing QAs:  50%|█████     | 10/20 [01:55<02:23, 14.34s/it]Processing QAs:  55%|█████▌    | 11/20 [02:15<02:23, 15.95s/it]Processing QAs:  60%|██████    | 12/20 [02:19<01:38, 12.35s/it]Processing QAs:  65%|██████▌   | 13/20 [02:59<02:24, 20.70s/it]Processing QAs:  70%|███████   | 14/20 [03:08<01:43, 17.26s/it]
+Added 5 results to results/qwen_2.5_carllm.json (now 35 total)
+Processing QAs:  75%|███████▌  | 15/20 [03:30<01:32, 18.48s/it]Processing QAs:  80%|████████  | 16/20 [03:54<01:21, 20.29s/it]Processing QAs:  85%|████████▌ | 17/20 [04:04<00:51, 17.22s/it]Processing QAs:  90%|█████████ | 18/20 [04:08<00:26, 13.14s/it]Processing QAs:  95%|█████████▌| 19/20 [04:19<00:12, 12.57s/it]
+Added 5 results to results/qwen_2.5_carllm.json (now 40 total)
+Processing QAs: 100%|██████████| 20/20 [04:28<00:00, 11.46s/it]Processing QAs: 100%|██████████| 20/20 [04:28<00:00, 13.42s/it]
+Model Name: qwen_2.5
+Dataset Name: carllm

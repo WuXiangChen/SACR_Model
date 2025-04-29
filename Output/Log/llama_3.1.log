@@ -5,4 +5,14 @@ Model Name: llama_3.1
 Dataset Name: carllm
 ==================================================
 
-Processing QAs:   0%|          | 0/200 [00:00<?, ?it/s]Processing QAs:   0%|          | 1/200 [00:12<40:33, 12.23s/it]Processing QAs:   1%|          | 2/200 [00:24<39:53, 12.09s/it]
+Processing QAs:   0%|          | 0/20 [00:00<?, ?it/s]Processing QAs:   5%|▌         | 1/20 [00:16<05:05, 16.07s/it]Processing QAs:  10%|█         | 2/20 [00:31<04:42, 15.72s/it]Processing QAs:  15%|█▌        | 3/20 [00:44<04:05, 14.46s/it]Processing QAs:  20%|██        | 4/20 [00:51<03:06, 11.63s/it]
+Added 5 results to results/llama_3.1_carllm.json (now 5 total)
+Processing QAs:  25%|██▌       | 5/20 [01:01<02:42, 10.84s/it]Processing QAs:  30%|███       | 6/20 [01:10<02:22, 10.21s/it]Processing QAs:  35%|███▌      | 7/20 [01:18<02:04,  9.61s/it]Processing QAs:  40%|████      | 8/20 [01:40<02:41, 13.49s/it]Processing QAs:  45%|████▌     | 9/20 [01:56<02:36, 14.22s/it]
+Added 5 results to results/llama_3.1_carllm.json (now 10 total)
+Processing QAs:  50%|█████     | 10/20 [02:11<02:24, 14.46s/it]Processing QAs:  55%|█████▌    | 11/20 [02:35<02:38, 17.58s/it]Processing QAs:  60%|██████    | 12/20 [02:46<02:04, 15.59s/it]Processing QAs:  65%|██████▌   | 13/20 [03:02<01:50, 15.74s/it]Processing QAs:  70%|███████   | 14/20 [03:15<01:28, 14.71s/it]
+Added 5 results to results/llama_3.1_carllm.json (now 15 total)
+Processing QAs:  75%|███████▌  | 15/20 [03:22<01:02, 12.41s/it]Processing QAs:  80%|████████  | 16/20 [03:40<00:55, 13.99s/it]Processing QAs:  85%|████████▌ | 17/20 [03:54<00:42, 14.04s/it]Processing QAs:  90%|█████████ | 18/20 [04:04<00:25, 12.93s/it]Processing QAs:  95%|█████████▌| 19/20 [04:16<00:12, 12.75s/it]
+Added 5 results to results/llama_3.1_carllm.json (now 20 total)
+Processing QAs: 100%|██████████| 20/20 [04:30<00:00, 13.03s/it]Processing QAs: 100%|██████████| 20/20 [04:30<00:00, 13.53s/it]
+Model Name: llama_3.1
+Dataset Name: carllm

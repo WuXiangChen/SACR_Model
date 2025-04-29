@@ -177,4 +177,50 @@ Error occurred during processing. Retrying...
 Error occurred during processing. Retrying...
 argument of type 'NoneType' is not iterable
 Error occurred during processing. Retrying...
-Processing QAs:  63%|██████▎   | 126/200 [4:02:35<2:52:02, 139.49s/it]
+Processing QAs:  63%|██████▎   | 126/200 [4:02:35<2:52:02, 139.49s/it]Processing QAs:  64%|██████▎   | 127/200 [4:03:12<2:12:24, 108.84s/it]Processing QAs:  64%|██████▍   | 128/200 [4:04:37<2:01:53, 101.58s/it]Processing QAs:  64%|██████▍   | 129/200 [4:06:03<1:54:38, 96.88s/it] Processing QAs:  65%|██████▌   | 130/200 [4:07:05<1:41:07, 86.68s/it]Processing QAs:  66%|██████▌   | 131/200 [4:08:47<1:44:49, 91.16s/it]Processing QAs:  66%|██████▌   | 132/200 [4:09:20<1:23:35, 73.76s/it]Processing QAs:  66%|██████▋   | 133/200 [4:10:31<1:21:24, 72.91s/it]Processing QAs:  67%|██████▋   | 134/200 [4:10:59<1:05:28, 59.53s/it]Processing QAs:  68%|██████▊   | 135/200 [4:11:38<57:42, 53.28s/it]  Processing QAs:  68%|██████▊   | 136/200 [4:12:32<56:59, 53.43s/it]Processing QAs:  68%|██████▊   | 137/200 [4:13:26<56:25, 53.74s/it]Processing QAs:  69%|██████▉   | 138/200 [4:13:53<47:03, 45.54s/it]Error during request: Expecting ',' delimiter: line 4 column 591 (char 1312)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:  70%|██████▉   | 139/200 [4:16:53<1:27:27, 86.02s/it]Processing QAs:  70%|███████   | 140/200 [4:18:45<1:33:44, 93.73s/it]Processing QAs:  70%|███████   | 141/200 [4:20:03<1:27:30, 88.99s/it]Error during request: Invalid control character at: line 4 column 39 (char 302)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:  71%|███████   | 142/200 [4:21:29<1:25:19, 88.27s/it]Processing QAs:  72%|███████▏  | 143/200 [4:22:06<1:09:00, 72.64s/it]Processing QAs:  72%|███████▏  | 144/200 [4:22:51<1:00:02, 64.32s/it]Processing QAs:  72%|███████▎  | 145/200 [4:25:48<1:30:11, 98.39s/it]Processing QAs:  73%|███████▎  | 146/200 [4:26:18<1:09:53, 77.66s/it]Processing QAs:  74%|███████▎  | 147/200 [4:26:56<58:05, 65.77s/it]  Error during request: Invalid control character at: line 4 column 77 (char 379)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:  74%|███████▍  | 148/200 [4:28:04<57:41, 66.56s/it]Processing QAs:  74%|███████▍  | 149/200 [4:28:57<53:06, 62.48s/it]Processing QAs:  75%|███████▌  | 150/200 [4:29:34<45:36, 54.73s/it]Processing QAs:  76%|███████▌  | 151/200 [4:31:04<53:23, 65.38s/it]Error during request: Invalid control character at: line 4 column 76 (char 449)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:  76%|███████▌  | 152/200 [4:35:50<1:45:21, 131.71s/it]Processing QAs:  76%|███████▋  | 153/200 [4:39:00<1:56:42, 148.99s/it]Error during request: Invalid control character at: line 4 column 29 (char 357)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Error during request: Invalid control character at: line 4 column 29 (char 490)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:  77%|███████▋  | 154/200 [4:41:05<1:48:38, 141.71s/it]Processing QAs:  78%|███████▊  | 155/200 [4:41:44<1:23:18, 111.08s/it]Processing QAs:  78%|███████▊  | 156/200 [4:42:59<1:13:33, 100.31s/it]Processing QAs:  78%|███████▊  | 157/200 [4:45:55<1:28:00, 122.81s/it]Processing QAs:  79%|███████▉  | 158/200 [4:46:49<1:11:41, 102.42s/it]Processing QAs:  80%|███████▉  | 159/200 [4:47:34<58:13, 85.20s/it]   Processing QAs:  80%|████████  | 160/200 [4:48:05<45:46, 68.67s/it]Processing QAs:  80%|████████  | 161/200 [4:48:53<40:39, 62.55s/it]Processing QAs:  81%|████████  | 162/200 [4:49:34<35:28, 56.02s/it]Processing QAs:  82%|████████▏ | 163/200 [4:50:18<32:24, 52.56s/it]Processing QAs:  82%|████████▏ | 164/200 [4:52:40<47:34, 79.30s/it]Processing QAs:  82%|████████▎ | 165/200 [4:54:17<49:21, 84.62s/it]Processing QAs:  83%|████████▎ | 166/200 [4:56:42<58:12, 102.72s/it]Processing QAs:  84%|████████▎ | 167/200 [4:57:20<45:50, 83.33s/it] Processing QAs:  84%|████████▍ | 168/200 [4:58:09<38:55, 72.99s/it]Processing QAs:  84%|████████▍ | 169/200 [4:59:25<38:17, 74.11s/it]Processing QAs:  85%|████████▌ | 170/200 [5:01:37<45:40, 91.35s/it]Processing QAs:  86%|████████▌ | 171/200 [5:02:24<37:41, 77.99s/it]Processing QAs:  86%|████████▌ | 172/200 [5:04:05<39:40, 85.01s/it]Processing QAs:  86%|████████▋ | 173/200 [5:04:50<32:46, 72.83s/it]Processing QAs:  87%|████████▋ | 174/200 [5:05:50<29:54, 69.03s/it]Processing QAs:  88%|████████▊ | 175/200 [5:07:43<34:17, 82.29s/it]Error during request: Invalid control character at: line 4 column 31 (char 461)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Error during request: Invalid control character at: line 4 column 31 (char 348)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs:  88%|████████▊ | 176/200 [5:12:57<1:00:46, 151.93s/it]Processing QAs:  88%|████████▊ | 177/200 [5:14:06<48:42, 127.06s/it]  Processing QAs:  89%|████████▉ | 178/200 [5:16:00<45:07, 123.06s/it]Processing QAs:  90%|████████▉ | 179/200 [5:16:36<33:52, 96.81s/it] Processing QAs:  90%|█████████ | 180/200 [5:17:09<25:55, 77.77s/it]Processing QAs:  90%|█████████ | 181/200 [5:17:38<19:57, 63.01s/it]Processing QAs:  91%|█████████ | 182/200 [5:18:14<16:28, 54.90s/it]Processing QAs:  92%|█████████▏| 183/200 [5:19:05<15:14, 53.77s/it]Processing QAs:  92%|█████████▏| 184/200 [5:19:56<14:07, 52.97s/it]Processing QAs:  92%|█████████▎| 185/200 [5:20:51<13:22, 53.52s/it]Processing QAs:  93%|█████████▎| 186/200 [5:22:20<14:58, 64.21s/it]Processing QAs:  94%|█████████▎| 187/200 [5:22:59<12:17, 56.73s/it]Processing QAs:  94%|█████████▍| 188/200 [5:24:23<12:57, 64.83s/it]Processing QAs:  94%|█████████▍| 189/200 [5:27:55<19:59, 109.03s/it]Processing QAs:  95%|█████████▌| 190/200 [5:28:38<14:52, 89.30s/it] Processing QAs:  96%|█████████▌| 191/200 [5:30:01<13:07, 87.47s/it]Processing QAs:  96%|█████████▌| 192/200 [5:32:22<13:47, 103.49s/it]Processing QAs:  96%|█████████▋| 193/200 [5:33:08<10:03, 86.22s/it] Processing QAs:  97%|█████████▋| 194/200 [5:34:52<09:08, 91.38s/it]Processing QAs:  98%|█████████▊| 195/200 [5:36:26<07:41, 92.37s/it]Processing QAs:  98%|█████████▊| 196/200 [5:37:57<06:07, 91.93s/it]Processing QAs:  98%|█████████▊| 197/200 [5:40:14<05:15, 105.25s/it]Processing QAs:  99%|█████████▉| 198/200 [5:41:33<03:14, 97.37s/it] Processing QAs: 100%|█████████▉| 199/200 [5:42:09<01:19, 79.13s/it]Error during request: Invalid control character at: line 4 column 76 (char 633)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Error during request: Invalid control character at: line 4 column 76 (char 597)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Error during request: Invalid control character at: line 4 column 76 (char 398)
+Error occurred during processing. Retrying...
+argument of type 'NoneType' is not iterable
+Error occurred during processing. Retrying...
+Processing QAs: 100%|██████████| 200/200 [5:45:43<00:00, 119.58s/it]Processing QAs: 100%|██████████| 200/200 [5:45:43<00:00, 103.72s/it]
+Model Name: ds_reasoner
+Dataset Name: carllm

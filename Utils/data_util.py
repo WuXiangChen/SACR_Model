@@ -1,4 +1,7 @@
 import json
+import json
+import os
+import queue
 
 class JSONLReader:
 
@@ -49,3 +52,47 @@ class JSONLReader:
     :return: Number of lines in the file.
     """
     return len(self.read_lines())
+  
+def save_results(results_queue, model_name, dataset_name, output_dir="Results"):
+    """
+    Save results from the queue to a JSON file incrementally.
+    Uses a consistent filename and appends new results to the existing file.
+    """
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Generate consistent filename (without timestamp)
+    filename = f"{model_name}_{dataset_name}.json"
+    filepath = os.path.join(output_dir, filename)
+    
+    # Collect all results from the queue
+    results = []
+    while True:
+        try:
+            item = results_queue.get_nowait()
+            if item is None:  # Our signal to stop
+                break
+            results.append(item)
+        except queue.Empty:
+            break
+    
+    # Append to JSON file if we have results
+    if results:
+        existing_data = []
+        # Read existing data if file exists
+        if os.path.exists(filepath):
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+            except (json.JSONDecodeError, IOError) as e:
+                print(f"Warning: Could not read existing file ({e}), starting fresh")
+        
+        # Combine old and new data
+        combined_data = existing_data + results
+        
+        # Write back to file
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(combined_data, f, ensure_ascii=False, indent=2)
+        
+        print(f"\nAdded {len(results)} results to {filepath} (now {len(combined_data)} total)")
+    return len(results)

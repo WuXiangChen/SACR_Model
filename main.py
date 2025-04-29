@@ -1,14 +1,13 @@
 import argparse
+import datetime
 from tqdm import tqdm
-from Utils.data_util import JSONLReader
+from Utils.data_util import JSONLReader, save_results
 from Model.remote_server import DeepSeekClient
 from Utils.evaluation import MetricsEvaluator
 import os
-import pandas as pd
 import json
 import concurrent.futures
 from tqdm import tqdm
-import pandas as pd
 import queue
 
 def process_qa(qa, cli, results_queue):
@@ -26,59 +25,37 @@ def process_qa(qa, cli, results_queue):
             print(f"Error occurred during processing: {e}. Retrying...")
             continue
 
-def save_results(results_queue, model_name, dataset_name, save_interval=20):
-    results = []
-    counter = 0
-    while True:
-        try:
-            item = results_queue.get(timeout=30)  # Timeout for safety
-            results.append(item)
-            counter += 1
-            if counter % save_interval == 0:
-                temp_output_file = f"Results/{model_name}_{dataset_name}.xlsx"
-                df = pd.DataFrame(results)
-                df.to_excel(temp_output_file, index=False)
-                
-        except queue.Empty:
-            # Final save if queue is empty and no more items expected
-            if results:
-                temp_output_file = f"Results/{model_name}_{dataset_name}.xlsx"
-                df = pd.DataFrame(results)
-                df.to_excel(temp_output_file, index=False)
-            break
 
 def process_concurrently(QAs, cli, args, save_interval=5, max_workers=1):
     results_queue = queue.Queue()
-    # Start the saver thread
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as saver_executor:
-        saver_future = saver_executor.submit(
-            save_results, 
-            results_queue, 
-            args.model_name, 
-            args.dataset_name, 
-            save_interval
-        )
+    processed_count = 0
+    
+    # Process QAs concurrently
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = []
+        for qa in QAs:
+            futures.append(executor.submit(
+                process_qa,
+                qa=qa,
+                cli=cli,
+                results_queue=results_queue
+            ))
         
-        # Process QAs concurrently
-        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-            futures = []
-            for qa in QAs:
-                futures.append(executor.submit(
-                    process_qa,
-                    qa=qa,
-                    cli=cli,
-                    results_queue=results_queue
-                ))
+        # Progress bar
+        for _ in tqdm(concurrent.futures.as_completed(futures), 
+                     total=len(QAs), 
+                     desc="Processing QAs"):
+            processed_count += 1
             
-            # Progress bar
-            for _ in tqdm(concurrent.futures.as_completed(futures), 
-                         total=len(QAs), 
-                         desc="Processing QAs"):
-                pass
+            # Save every save_interval iterations
+            if processed_count % save_interval == 0:
+                save_results(results_queue, model_name=args.model_name, dataset_name=args.dataset_name)
+        
+        # Save any remaining results at the end
+        if processed_count % save_interval != 0:
+            results_queue.put(None)
+            save_results(results_queue, model_name=args.model_name, dataset_name=args.dataset_name)
 
-        # Signal saver to finish
-        results_queue.put(None)
-        concurrent.futures.wait([saver_future])
 
 def process(data_path:str = None):
   if data_path==None:
@@ -86,7 +63,7 @@ def process(data_path:str = None):
   
   jsReader = JSONLReader(data_path)
   count_len =jsReader.count_lines()
-  QAs = jsReader.read_lines(start=count_len//2, end=count_len//2+200)
+  QAs = jsReader.read_lines(start=count_len//2, end=count_len//2+20)
   cli = DeepSeekClient(base_model=args.model_name)
   # 并发处理所有的问题
   process_concurrently(QAs, cli, args)
@@ -94,7 +71,7 @@ def process(data_path:str = None):
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="The entrence function for S-ACR process.")
-  parser.add_argument("-m", "--model_name", type=str,choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="ds_reasoner",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
+  parser.add_argument("-m", "--model_name", type=str,choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="qwen_2.5",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
   parser.add_argument("-d", "--dataset_name", type=str, default="carllm", help="The dataset given to be used")
   args = parser.parse_args()
   ##########################
