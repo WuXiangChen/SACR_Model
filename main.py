@@ -63,7 +63,7 @@ def process(data_path:str = None):
   
   jsReader = JSONLReader(data_path)
   count_len =jsReader.count_lines()
-  QAs = jsReader.read_lines(start=count_len//2, end=count_len//2+20)
+  QAs = jsReader.read_lines(start=count_len//2, end=count_len//2+200)
   cli = DeepSeekClient(base_model=args.model_name)
   # 并发处理所有的问题
   process_concurrently(QAs, cli, args)
