@@ -12,3 +12,79 @@ Added 5 results to Results/ds_reasoner_carllm.json (now 11 total)
 Processing QAs:   5%|▌         | 10/200 [10:10<3:42:50, 70.37s/it]Processing QAs:   6%|▌         | 11/200 [12:04<4:24:29, 83.96s/it]Processing QAs:   6%|▌         | 12/200 [15:16<6:05:51, 116.76s/it]Processing QAs:   6%|▋         | 13/200 [15:56<4:51:03, 93.39s/it] Processing QAs:   7%|▋         | 14/200 [17:17<4:37:38, 89.56s/it]
 Added 5 results to Results/ds_reasoner_carllm.json (now 16 total)
 Processing QAs:   8%|▊         | 15/200 [18:24<4:15:08, 82.75s/it]Processing QAs:   8%|▊         | 16/200 [19:48<4:15:07, 83.19s/it]Processing QAs:   8%|▊         | 17/200 [20:27<3:33:29, 70.00s/it]Processing QAs:   9%|▉         | 18/200 [21:27<3:22:48, 66.86s/it]Processing QAs:  10%|▉         | 19/200 [22:31<3:19:47, 66.23s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 21 total)
+Processing QAs:  10%|█         | 20/200 [25:06<4:38:31, 92.84s/it]Processing QAs:  10%|█         | 21/200 [26:14<4:14:40, 85.37s/it]Processing QAs:  11%|█         | 22/200 [26:49<3:27:52, 70.07s/it]Processing QAs:  12%|█▏        | 23/200 [27:32<3:03:14, 62.12s/it]Processing QAs:  12%|█▏        | 24/200 [29:06<3:29:51, 71.54s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 26 total)
+Processing QAs:  12%|█▎        | 25/200 [30:24<3:34:21, 73.49s/it]Processing QAs:  13%|█▎        | 26/200 [31:25<3:22:32, 69.84s/it]Processing QAs:  14%|█▎        | 27/200 [32:38<3:24:15, 70.84s/it]Processing QAs:  14%|█▍        | 28/200 [35:28<4:48:26, 100.62s/it]Processing QAs:  14%|█▍        | 29/200 [36:13<3:59:11, 83.93s/it] 
+Added 5 results to Results/ds_reasoner_carllm.json (now 31 total)
+Processing QAs:  15%|█▌        | 30/200 [39:28<5:31:53, 117.14s/it]Processing QAs:  16%|█▌        | 31/200 [40:27<4:40:49, 99.70s/it] Processing QAs:  16%|█▌        | 32/200 [44:03<6:16:46, 134.56s/it]Processing QAs:  16%|█▋        | 33/200 [45:11<5:18:40, 114.49s/it]Processing QAs:  17%|█▋        | 34/200 [46:05<4:26:54, 96.47s/it] 
+Added 5 results to Results/ds_reasoner_carllm.json (now 36 total)
+Processing QAs:  18%|█▊        | 35/200 [46:38<3:32:37, 77.32s/it]Processing QAs:  18%|█▊        | 36/200 [47:06<2:51:22, 62.70s/it]Processing QAs:  18%|█▊        | 37/200 [48:14<2:54:07, 64.10s/it]Processing QAs:  19%|█▉        | 38/200 [49:41<3:12:13, 71.19s/it]Processing QAs:  20%|█▉        | 39/200 [51:29<3:40:23, 82.13s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 41 total)
+Processing QAs:  20%|██        | 40/200 [54:55<5:18:28, 119.43s/it]Processing QAs:  20%|██        | 41/200 [55:30<4:08:53, 93.92s/it] Processing QAs:  21%|██        | 42/200 [56:31<3:41:24, 84.08s/it]Processing QAs:  22%|██▏       | 43/200 [57:37<3:25:45, 78.63s/it]Processing QAs:  22%|██▏       | 44/200 [58:37<3:10:10, 73.14s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 46 total)
+Processing QAs:  22%|██▎       | 45/200 [59:39<3:00:12, 69.76s/it]Processing QAs:  23%|██▎       | 46/200 [1:01:01<3:08:34, 73.47s/it]Processing QAs:  24%|██▎       | 47/200 [1:01:34<2:36:31, 61.38s/it]Processing QAs:  24%|██▍       | 48/200 [1:02:07<2:13:53, 52.85s/it]Processing QAs:  24%|██▍       | 49/200 [1:02:45<2:01:22, 48.23s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 51 total)
+Processing QAs:  25%|██▌       | 50/200 [1:04:53<3:00:47, 72.32s/it]Processing QAs:  26%|██▌       | 51/200 [1:06:32<3:19:24, 80.30s/it]Processing QAs:  26%|██▌       | 52/200 [1:08:44<3:56:14, 95.77s/it]Processing QAs:  26%|██▋       | 53/200 [1:09:22<3:11:52, 78.31s/it]Processing QAs:  27%|██▋       | 54/200 [1:10:07<2:46:32, 68.44s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 56 total)
+Processing QAs:  28%|██▊       | 55/200 [1:12:09<3:24:14, 84.51s/it]Processing QAs:  28%|██▊       | 56/200 [1:13:29<3:19:48, 83.25s/it]Processing QAs:  28%|██▊       | 57/200 [1:16:47<4:40:32, 117.71s/it]Processing QAs:  29%|██▉       | 58/200 [1:18:52<4:43:22, 119.74s/it]Processing QAs:  30%|██▉       | 59/200 [1:20:44<4:36:10, 117.52s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 61 total)
+Processing QAs:  30%|███       | 60/200 [1:22:14<4:14:35, 109.11s/it]Processing QAs:  30%|███       | 61/200 [1:24:21<4:25:33, 114.63s/it]Processing QAs:  31%|███       | 62/200 [1:26:44<4:42:42, 122.91s/it]Processing QAs:  32%|███▏      | 63/200 [1:27:53<4:04:12, 106.95s/it]Processing QAs:  32%|███▏      | 64/200 [1:29:28<3:53:56, 103.21s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 66 total)
+Processing QAs:  32%|███▎      | 65/200 [1:30:09<3:10:24, 84.62s/it] Processing QAs:  33%|███▎      | 66/200 [1:30:51<2:40:39, 71.94s/it]Processing QAs:  34%|███▎      | 67/200 [1:32:31<2:57:45, 80.19s/it]Processing QAs:  34%|███▍      | 68/200 [1:34:55<3:38:59, 99.54s/it]Processing QAs:  34%|███▍      | 69/200 [1:36:08<3:19:25, 91.34s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 71 total)
+Processing QAs:  35%|███▌      | 70/200 [1:37:26<3:09:25, 87.43s/it]Processing QAs:  36%|███▌      | 71/200 [1:39:01<3:12:36, 89.59s/it]Processing QAs:  36%|███▌      | 72/200 [1:39:41<2:39:50, 74.93s/it]Processing QAs:  36%|███▋      | 73/200 [1:41:25<2:56:55, 83.58s/it]Processing QAs:  37%|███▋      | 74/200 [1:43:07<3:07:11, 89.14s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 76 total)
+Processing QAs:  38%|███▊      | 75/200 [1:45:09<3:26:12, 98.98s/it]Processing QAs:  38%|███▊      | 76/200 [1:45:51<2:49:26, 81.99s/it]Processing QAs:  38%|███▊      | 77/200 [1:46:43<2:29:25, 72.89s/it]Processing QAs:  39%|███▉      | 78/200 [1:47:28<2:10:50, 64.35s/it]Processing QAs:  40%|███▉      | 79/200 [1:48:11<1:57:26, 58.23s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 81 total)
+Processing QAs:  40%|████      | 80/200 [1:48:44<1:41:06, 50.56s/it]Processing QAs:  40%|████      | 81/200 [1:49:21<1:31:51, 46.32s/it]Processing QAs:  41%|████      | 82/200 [1:49:55<1:24:00, 42.72s/it]Processing QAs:  42%|████▏     | 83/200 [1:50:44<1:27:10, 44.70s/it]Processing QAs:  42%|████▏     | 84/200 [1:51:45<1:35:43, 49.51s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 86 total)
+Processing QAs:  42%|████▎     | 85/200 [1:53:05<1:52:44, 58.82s/it]Processing QAs:  43%|████▎     | 86/200 [1:55:48<2:50:45, 89.87s/it]Processing QAs:  44%|████▎     | 87/200 [1:56:33<2:23:43, 76.32s/it]Processing QAs:  44%|████▍     | 88/200 [1:57:16<2:03:48, 66.32s/it]Processing QAs:  44%|████▍     | 89/200 [1:57:46<1:42:50, 55.59s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 91 total)
+Processing QAs:  45%|████▌     | 90/200 [1:58:38<1:39:38, 54.35s/it]Processing QAs:  46%|████▌     | 91/200 [2:00:34<2:12:44, 73.07s/it]Processing QAs:  46%|████▌     | 92/200 [2:02:32<2:35:33, 86.42s/it]Processing QAs:  46%|████▋     | 93/200 [2:03:25<2:16:08, 76.34s/it]Processing QAs:  47%|████▋     | 94/200 [2:05:08<2:28:55, 84.30s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 96 total)
+Processing QAs:  48%|████▊     | 95/200 [2:05:51<2:06:06, 72.06s/it]Processing QAs:  48%|████▊     | 96/200 [2:06:51<1:58:40, 68.47s/it]Processing QAs:  48%|████▊     | 97/200 [2:07:35<1:44:51, 61.08s/it]Processing QAs:  49%|████▉     | 98/200 [2:08:30<1:40:36, 59.18s/it]Processing QAs:  50%|████▉     | 99/200 [2:09:28<1:39:17, 58.98s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 101 total)
+Processing QAs:  50%|█████     | 100/200 [2:10:40<1:44:56, 62.97s/it]Processing QAs:  50%|█████     | 101/200 [2:11:44<1:43:59, 63.02s/it]Processing QAs:  51%|█████     | 102/200 [2:12:25<1:32:19, 56.53s/it]Processing QAs:  52%|█████▏    | 103/200 [2:13:38<1:39:26, 61.51s/it]Processing QAs:  52%|█████▏    | 104/200 [2:15:00<1:47:56, 67.47s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 106 total)
+Processing QAs:  52%|█████▎    | 105/200 [2:17:42<2:31:57, 95.97s/it]Processing QAs:  53%|█████▎    | 106/200 [2:19:59<2:49:40, 108.31s/it]Processing QAs:  54%|█████▎    | 107/200 [2:21:02<2:26:52, 94.76s/it] Processing QAs:  54%|█████▍    | 108/200 [2:21:55<2:05:59, 82.17s/it]Processing QAs:  55%|█████▍    | 109/200 [2:22:34<1:45:04, 69.28s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 111 total)
+Processing QAs:  55%|█████▌    | 110/200 [2:23:14<1:30:42, 60.47s/it]Processing QAs:  56%|█████▌    | 111/200 [2:23:49<1:18:23, 52.85s/it]Processing QAs:  56%|█████▌    | 112/200 [2:25:51<1:47:49, 73.52s/it]Processing QAs:  56%|█████▋    | 113/200 [2:27:15<1:51:09, 76.66s/it]Processing QAs:  57%|█████▋    | 114/200 [2:28:20<1:44:53, 73.18s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 116 total)
+Processing QAs:  57%|█████▊    | 115/200 [2:29:16<1:36:11, 67.90s/it]Processing QAs:  58%|█████▊    | 116/200 [2:30:01<1:25:37, 61.17s/it]Processing QAs:  58%|█████▊    | 117/200 [2:31:06<1:26:12, 62.32s/it]Processing QAs:  59%|█████▉    | 118/200 [2:33:19<1:54:03, 83.46s/it]Processing QAs:  60%|█████▉    | 119/200 [2:35:16<2:06:10, 93.46s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 121 total)
+Processing QAs:  60%|██████    | 120/200 [2:36:21<1:53:33, 85.17s/it]Processing QAs:  60%|██████    | 121/200 [2:37:20<1:41:47, 77.31s/it]Processing QAs:  61%|██████    | 122/200 [2:38:52<1:45:54, 81.47s/it]Processing QAs:  62%|██████▏   | 123/200 [2:39:35<1:30:05, 70.19s/it]Processing QAs:  62%|██████▏   | 124/200 [2:41:10<1:38:14, 77.56s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 126 total)
+Processing QAs:  62%|██████▎   | 125/200 [2:41:46<1:21:22, 65.10s/it]Processing QAs:  63%|██████▎   | 126/200 [2:44:30<1:56:56, 94.81s/it]Processing QAs:  64%|██████▎   | 127/200 [2:45:14<1:36:36, 79.41s/it]Processing QAs:  64%|██████▍   | 128/200 [2:48:05<2:08:27, 107.05s/it]Processing QAs:  64%|██████▍   | 129/200 [2:48:44<1:42:13, 86.39s/it] 
+Added 5 results to Results/ds_reasoner_carllm.json (now 131 total)
+Processing QAs:  65%|██████▌   | 130/200 [2:49:28<1:26:00, 73.73s/it]Processing QAs:  66%|██████▌   | 131/200 [2:50:34<1:22:02, 71.34s/it]Processing QAs:  66%|██████▌   | 132/200 [2:52:17<1:31:40, 80.89s/it]Processing QAs:  66%|██████▋   | 133/200 [2:53:30<1:27:48, 78.64s/it]Processing QAs:  67%|██████▋   | 134/200 [2:54:20<1:16:52, 69.89s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 136 total)
+Processing QAs:  68%|██████▊   | 135/200 [2:54:52<1:03:25, 58.55s/it]Processing QAs:  68%|██████▊   | 136/200 [2:56:09<1:08:30, 64.22s/it]Processing QAs:  68%|██████▊   | 137/200 [2:57:05<1:04:48, 61.72s/it]Processing QAs:  69%|██████▉   | 138/200 [2:58:01<1:02:03, 60.05s/it]Processing QAs:  70%|██████▉   | 139/200 [2:59:22<1:07:31, 66.42s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 141 total)
+Processing QAs:  70%|███████   | 140/200 [3:01:21<1:22:01, 82.02s/it]Processing QAs:  70%|███████   | 141/200 [3:02:16<1:12:44, 73.97s/it]Processing QAs:  71%|███████   | 142/200 [3:02:59<1:02:28, 64.64s/it]Processing QAs:  72%|███████▏  | 143/200 [3:04:31<1:09:20, 72.98s/it]Processing QAs:  72%|███████▏  | 144/200 [3:05:23<1:02:10, 66.62s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 146 total)
+Processing QAs:  72%|███████▎  | 145/200 [3:07:44<1:21:35, 89.02s/it]Processing QAs:  73%|███████▎  | 146/200 [3:08:48<1:13:16, 81.41s/it]Processing QAs:  74%|███████▎  | 147/200 [3:10:53<1:23:31, 94.56s/it]Processing QAs:  74%|███████▍  | 148/200 [3:11:26<1:05:47, 75.92s/it]Processing QAs:  74%|███████▍  | 149/200 [3:12:22<59:36, 70.13s/it]  
+Added 5 results to Results/ds_reasoner_carllm.json (now 151 total)
+Processing QAs:  75%|███████▌  | 150/200 [3:15:36<1:29:17, 107.14s/it]Processing QAs:  76%|███████▌  | 151/200 [3:16:35<1:15:50, 92.87s/it] Processing QAs:  76%|███████▌  | 152/200 [3:18:17<1:16:20, 95.43s/it]Processing QAs:  76%|███████▋  | 153/200 [3:20:11<1:19:11, 101.11s/it]Processing QAs:  77%|███████▋  | 154/200 [3:20:48<1:02:41, 81.78s/it] 
+Added 5 results to Results/ds_reasoner_carllm.json (now 156 total)
+Processing QAs:  78%|███████▊  | 155/200 [3:21:20<50:14, 66.99s/it]  Processing QAs:  78%|███████▊  | 156/200 [3:22:30<49:42, 67.79s/it]Processing QAs:  78%|███████▊  | 157/200 [3:23:15<43:44, 61.03s/it]Processing QAs:  79%|███████▉  | 158/200 [3:24:52<50:15, 71.80s/it]Processing QAs:  80%|███████▉  | 159/200 [3:25:33<42:40, 62.45s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 161 total)
+Processing QAs:  80%|████████  | 160/200 [3:26:28<40:14, 60.37s/it]Processing QAs:  80%|████████  | 161/200 [3:27:22<37:55, 58.35s/it]Processing QAs:  81%|████████  | 162/200 [3:28:18<36:26, 57.54s/it]Processing QAs:  82%|████████▏ | 163/200 [3:29:04<33:20, 54.07s/it]Processing QAs:  82%|████████▏ | 164/200 [3:29:36<28:36, 47.67s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 166 total)
+Processing QAs:  82%|████████▎ | 165/200 [3:31:25<38:32, 66.08s/it]Processing QAs:  83%|████████▎ | 166/200 [3:33:03<42:51, 75.63s/it]Processing QAs:  84%|████████▎ | 167/200 [3:33:52<37:12, 67.66s/it]Processing QAs:  84%|████████▍ | 168/200 [3:35:26<40:13, 75.42s/it]Processing QAs:  84%|████████▍ | 169/200 [3:36:05<33:23, 64.64s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 171 total)
+Processing QAs:  85%|████████▌ | 170/200 [3:36:31<26:25, 52.86s/it]Processing QAs:  86%|████████▌ | 171/200 [3:38:13<32:42, 67.66s/it]Processing QAs:  86%|████████▌ | 172/200 [3:39:14<30:36, 65.60s/it]Processing QAs:  86%|████████▋ | 173/200 [3:39:58<26:35, 59.11s/it]Processing QAs:  87%|████████▋ | 174/200 [3:41:43<31:36, 72.92s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 176 total)
+Processing QAs:  88%|████████▊ | 175/200 [3:42:26<26:37, 63.90s/it]Processing QAs:  88%|████████▊ | 176/200 [3:45:16<38:19, 95.80s/it]Processing QAs:  88%|████████▊ | 177/200 [3:46:16<32:33, 84.95s/it]Processing QAs:  89%|████████▉ | 178/200 [3:47:18<28:41, 78.27s/it]Processing QAs:  90%|████████▉ | 179/200 [3:47:56<23:05, 65.97s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 181 total)
+Processing QAs:  90%|█████████ | 180/200 [3:50:36<31:23, 94.19s/it]Processing QAs:  90%|█████████ | 181/200 [3:52:30<31:42, 100.13s/it]Processing QAs:  91%|█████████ | 182/200 [3:53:34<26:48, 89.34s/it] Processing QAs:  92%|█████████▏| 183/200 [3:54:14<21:06, 74.52s/it]Processing QAs:  92%|█████████▏| 184/200 [3:56:06<22:51, 85.71s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 186 total)
+Processing QAs:  92%|█████████▎| 185/200 [3:56:37<17:19, 69.30s/it]Processing QAs:  93%|█████████▎| 186/200 [3:58:21<18:37, 79.81s/it]Processing QAs:  94%|█████████▎| 187/200 [4:01:16<23:28, 108.33s/it]Processing QAs:  94%|█████████▍| 188/200 [4:03:26<22:59, 114.98s/it]Processing QAs:  94%|█████████▍| 189/200 [4:06:14<23:59, 130.89s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 191 total)
+Processing QAs:  95%|█████████▌| 190/200 [4:07:15<18:18, 109.88s/it]Processing QAs:  96%|█████████▌| 191/200 [4:08:09<13:57, 93.03s/it] Processing QAs:  96%|█████████▌| 192/200 [4:09:48<12:39, 94.99s/it]Processing QAs:  96%|█████████▋| 193/200 [4:11:28<11:15, 96.48s/it]Processing QAs:  97%|█████████▋| 194/200 [4:14:22<11:57, 119.62s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 196 total)
+Processing QAs:  98%|█████████▊| 195/200 [4:15:09<08:09, 97.98s/it] Processing QAs:  98%|█████████▊| 196/200 [4:15:51<05:24, 81.15s/it]Processing QAs:  98%|█████████▊| 197/200 [4:17:19<04:09, 83.05s/it]Processing QAs:  99%|█████████▉| 198/200 [4:18:20<02:33, 76.62s/it]Processing QAs: 100%|█████████▉| 199/200 [4:19:09<01:08, 68.07s/it]
+Added 5 results to Results/ds_reasoner_carllm.json (now 201 total)
+Processing QAs: 100%|██████████| 200/200 [4:20:37<00:00, 74.25s/it]Processing QAs: 100%|██████████| 200/200 [4:20:37<00:00, 78.19s/it]
+Model Name: ds_reasoner
+Dataset Name: carllm

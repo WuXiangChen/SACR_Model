@@ -73,6 +73,11 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser(description="The entrence function for S-ACR process.")
   parser.add_argument("-m", "--model_name", type=str,choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="qwen_2.5",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
   parser.add_argument("-d", "--dataset_name", type=str, default="carllm", help="The dataset given to be used")
+
+  ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
+  parser.add_argument("-ms", "--model_specific_name", type=str, choices=["codereivewer", "t5cr", "codefinder", "llaMa-reviewer", "codedoctor", "codeT5-shepherd", "inferFix", "auger","jLED", "DAC"])
+
+
   args = parser.parse_args()
   ##########################
   print("="*50)
