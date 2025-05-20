@@ -2,8 +2,8 @@ import os
 import json
 import torch
 from torch.utils.data import DistributedSampler
-from base_trainer import BaseTrainer
-from utils import RefineDataset, SimpleRefineDataset
+from .base_trainer import BaseTrainer
+from .utils import RefineDataset, SimpleRefineDataset
 from .smooth_bleu import bleu_fromstr
 from torch.utils.data import DataLoader, SequentialSampler, RandomSampler
 from torch.utils.data.distributed import DistributedSampler

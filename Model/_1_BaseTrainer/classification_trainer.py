@@ -16,11 +16,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class ClassificationTrainer(BaseTrainer):
-    def get_data_loader(self, data_file, eval_=False):
-        dataset = (SimpleClsDataset if self.args.raw_input else CommentClsDataset)(
-            self.tokenizer, self.pool, self.args, data_file)
-        sampler = SequentialSampler(dataset) if eval_ else DistributedSampler(dataset)
-        return DataLoader(dataset, sampler=sampler, batch_size=self.args.eval_batch_size if eval_ else self.args.train_batch_size)
+    def  __init__(self, args, data_file, model, eval_=False):
+        super().__init__(args=args, model=model)
+        self.args = args
+        self.data_file = data_file
+        self.eval_ = eval_
+
+    def get_data_loader(self):
+        dataset = (SimpleClsDataset if self.args.raw_input else CommentClsDataset)(self.tokenizer, self.pool, self.args, self.data_file)
+        sampler = SequentialSampler(dataset) if self.eval_ else DistributedSampler(dataset)
+        return DataLoader(dataset, sampler=sampler, batch_size=self.args.eval_batch_size if self.eval_ else self.args.train_batch_size)
 
     def train_step(self, examples):
         source_ids = torch.tensor([ex.source_ids for ex in examples], dtype=torch.long).to(self.local_rank)

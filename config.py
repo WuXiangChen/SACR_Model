@@ -7,25 +7,22 @@ def get_args():
     parser.add_argument("-d", "--dataset_name", type=str, choices=["CR", "CarLLM", "T5CR"], default="CR", help="The dataset given to be used")
     ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
     parser.add_argument("-md", "--model_type", type=str, default="codereviewer", choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codeT5_shepherd", "inferFix", "auger","jLED", "DAC"])
-    parser.add_argument("-ts", "--task_type", type=str, choices=["cls", "msg", "ref"], required=True)
-    parser.add_argument("--eval_NE", action="store_true")
+    parser.add_argument("-ts", "--task_type", type=str, choices=["cls", "msg", "ref"], default="cls")
+    parser.add_argument("--train_eval", action="store_true", default=True)
     parser.add_argument("--add_lang_ids", action="store_true")
     parser.add_argument("--from_scratch", action="store_true")
     parser.add_argument("--debug", action="store_true")
     parser.add_argument("--start_epoch", default=0, type=int)
     parser.add_argument("--train_epochs", default=10, type=int)
     parser.add_argument("--tokenizer_path", type=str, required=False)
-    parser.add_argument(
-        "--output_dir", default=None, type=str, required=False,
+    parser.add_argument("--output_dir", default=None, type=str, required=False,
         help="The output directory where the model predictions and checkpoints will be written.")
-    parser.add_argument(
-        "--load_model_path", default=None, type=str, required=False)
-    parser.add_argument(
-        "--model_name_or_path", default=None, type=str,
+    parser.add_argument("--load_model_path", default=None, type=str, required=False)
+    parser.add_argument("--model_name_or_path", default=None, type=str,
         help="Path to trained model: Should contain the .bin files")
-    parser.add_argument("--do_train", action="store_true", help="Whether to run eval on the train set.")
-    parser.add_argument("--do_eval", action="store_true", help="Whether to run eval on the dev set.")
-    parser.add_argument("--do_test", action="store_true", help="Whether to run eval on the dev set.")
+    # parser.add_argument("--do_train", action="store_true", help="Whether to run eval on the train set.")
+    # parser.add_argument("--do_eval", action="store_true", help="Whether to run eval on the dev set.")
+    # parser.add_argument("--do_test", action="store_true", help="Whether to run eval on the dev set.")
     parser.add_argument(
         "--no_cuda", action="store_true", help="Avoid using CUDA when available"
     )
@@ -81,8 +78,22 @@ def get_args():
         default=-1,
         help="For distributed training: local_rank",
     )
+
     parser.add_argument(
-        "--seed", type=int, default=2233, help="random seed for initialization"
-    )  # previous one 42
+        "--max_source_length",
+        default=64,
+        type=int,
+        help="The maximum total source sequence length after tokenization. Sequences longer "
+        "than this will be truncated, sequences shorter will be padded.",
+    )
+    parser.add_argument(
+        "--max_target_length",
+        default=32,
+        type=int,
+        help="The maximum total target sequence length after tokenization. Sequences longer "
+        "than this will be truncated, sequences shorter will be padded.",
+    )
+    
+    parser.add_argument("--seed", type=int, default=2233, help="random seed for initialization")  # previous one 42
     args = parser.parse_args()
     return args

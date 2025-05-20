@@ -14,13 +14,15 @@ import logging
 logger = logging.getLogger(__name__)
 
 # 这里做显式的分离，将模型信息的定义 和 加载进行分割
-class CodeReviewerModel(T5ForConditionalGeneration):
-    def __init__(self, config):
-        super().__init__(config)
-        self.cls_head = nn.Linear(self.config.d_model, 2, bias=True)
+class codereviewerModel(T5ForConditionalGeneration):
+    def __init__(self, args, config):
+        self.args = args
         self._init_model_classes()
+        self.config = self.config_class.from_pretrained(config)
+        super().__init__(self.config)
+        self.cls_head = nn.Linear(self.config.d_model, 2, bias=True)
         self.init()
-
+        
     def init(self):
         nn.init.xavier_uniform_(self.lm_head.weight)
         factor = self.config.initializer_factor
@@ -31,7 +33,7 @@ class CodeReviewerModel(T5ForConditionalGeneration):
         """动态设置模型相关类"""
         # 默认使用T5系列组件
         self.config_class = getattr(self.args, 'config_class', T5Config)
-        self.model_class = getattr(self.args, 'model_class', CodeReviewerModel)
+        self.model_class = getattr(self.args, 'model_class', codereviewerModel)
         self.tokenizer_class = getattr(self.args, 'tokenizer_class', T5Tokenizer)
         
         # 如果args中有指定其他组件（如替换为Roberta）

@@ -16,15 +16,15 @@ logger = logging.getLogger(__name__)
 
 ## 分别以CodeReviewer的基本代码 实现三个需求逻辑
 # 这里只是复用 Trainer的过程，还不是Model的定义过程
-class CodeReviewerCLS(ClassificationTrainer):
-  def __init__(self, args, datafile: str, model=None,  eval_=False):
-    super().__init__(args=args, datafile=datafile, model=model, eval_=eval_)
+class codereviewerCLS(ClassificationTrainer):
+  def __init__(self, args, data_file: str, model=None,  eval_=False):
+    super().__init__(args=args, data_file=data_file, model=model, eval_=eval_)
   
   def run(self):
     return super().run()
 
-class CodeReviewerMSG(GenerationTrainer):
+class codereviewerMSG(GenerationTrainer):
   pass
 
-class CodeReviewerREF(RefinementTrainer):
+class codereviewerREF(RefinementTrainer):
   pass

@@ -1,6 +1,6 @@
-from typing import get_args
 import os
 from Model import *
+from config import get_args
 from general_LLMs_hooker import QAProcessor
 
 
@@ -9,7 +9,10 @@ if __name__ == "__main__":
   ##########################
   print("="*50)
   print("Program Starting with Parameters:")
-  print(f"Model Name: {args.model_name}")
+  if args.general_model:
+    print(f"Model Name: {args.model_name}")
+  else:
+    print(f"Model Name: {args.model_type}")
   print(f"Dataset Name: {args.dataset_name}")
   print("="*50)
   print()
@@ -30,18 +33,21 @@ if __name__ == "__main__":
   else:
     configPath = f"./Model/{args.model_type}"
     config = os.path.join(configPath, "config.json")
-    model = eval(f"{args.model_type}Model")(config)
+    model = eval(f"{args.model_type}Model")(args=args, config=config)
     # 将模型注入到训练过程中
     ## 增加数据集的路径信息
-    if args.eval_NE:
+    if args.train_eval:
       args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/"
       args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
       args.train_filename = f"../ACR_Dataset/{args.model_type}/{args.task_type}/"
-      args.dev_filename = f"../ACR_Dataset/{args.model_type}/{args.task_type}/{args.task_type}-valid.jsonl"
-      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, datafile=args.train_filename, model=model, eval_=False)
+      os.makedirs(args.output_dir, exist_ok=True)
+      os.makedirs(args.train_filename, exist_ok=True)
+
+      args.dev_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-valid.jsonl"
+      trainer = eval(f"{args.model_type}{args.task_type.upper()}")(args=args, data_file=args.train_filename, model=model, eval_=False)
     else:
       args.datafilePath = f"{args.dataset_name}/{args.task_type}/"
-      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, datafile=args.datafilePath, model=model, eval_=True)
+      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, data_file=args.datafilePath, model=model, eval_=True)
 
   # Create Results directory if it doesn't exist
   print(f"Model Name: {args.model_type}")

@@ -1,0 +1,119 @@
+nohup: ignoring input
+[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] 
+[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] *****************************************
+[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] *****************************************
+==================================================
+Program Starting with Parameters:
+Model Name: qwen_2.5
+Dataset Name: CR
+==================================================
+
+Traceback (most recent call last):
+  File "./main.py", line 32, in <module>
+    processor.process_dataset(data_path=datafile_path, sample_size=200)
+  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
+    count_len = jsReader.count_lines()
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
+    return len(self.read_lines())
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
+    with open(self.file_path, 'r', encoding='utf-8') as file:
+IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
+==================================================
+Program Starting with Parameters:
+Model Name: qwen_2.5
+Dataset Name: CR
+==================================================
+
+Traceback (most recent call last):
+  File "./main.py", line 32, in <module>
+    processor.process_dataset(data_path=datafile_path, sample_size=200)
+  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
+    count_len = jsReader.count_lines()
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
+    return len(self.read_lines())
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
+    with open(self.file_path, 'r', encoding='utf-8') as file:
+IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
+==================================================
+Program Starting with Parameters:
+Model Name: qwen_2.5
+Dataset Name: CR
+==================================================
+
+Traceback (most recent call last):
+  File "./main.py", line 32, in <module>
+    processor.process_dataset(data_path=datafile_path, sample_size=200)
+  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
+    count_len = jsReader.count_lines()
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
+    return len(self.read_lines())
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
+    with open(self.file_path, 'r', encoding='utf-8') as file:
+IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
+==================================================
+Program Starting with Parameters:
+Model Name: qwen_2.5
+Dataset Name: CR
+==================================================
+
+Traceback (most recent call last):
+  File "./main.py", line 32, in <module>
+    processor.process_dataset(data_path=datafile_path, sample_size=200)
+  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
+    count_len = jsReader.count_lines()
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
+    return len(self.read_lines())
+  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
+    with open(self.file_path, 'r', encoding='utf-8') as file:
+IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
+[2025-05-20 15:15:07,543] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 39475) of binary: /root/miniconda3/envs/mmseg/bin/python3.8
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/mmseg/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./main.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-05-20_15:15:07
+  host      : a7dc54a48c09
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 39476)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2025-05-20_15:15:07
+  host      : a7dc54a48c09
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 39477)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2025-05-20_15:15:07
+  host      : a7dc54a48c09
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 39478)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-20_15:15:07
+  host      : a7dc54a48c09
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 39475)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

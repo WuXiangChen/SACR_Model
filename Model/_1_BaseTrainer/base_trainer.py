@@ -1,4 +1,5 @@
 import os
+from SimpleITK import Rank
 import torch
 import logging
 import argparse
@@ -31,6 +32,15 @@ class BaseTrainer:
         self._setup_training()
 
     def _init_distributed(self): # 这里主要是对分布式训练的必要参数进行初始化
+        if 'RANK' in os.environ and 'WORLD_SIZE' in os.environ:
+            self.args.rank = int(os.environ['RANK'])
+            self.args.world_size = int(os.environ['WORLD_SIZE'])
+            self.args.gpu = self.args.local_rank = int(os.environ['LOCAL_RANK'])
+    
+        elif hasattr(self.args, 'gpu_per_node'):
+            self.args.rank = self.args.local_rank  # 假设 args.local_rank 已定义
+            self.args.world_size = self.args.gpu_per_node
+            
         dist.init_process_group(backend="nccl", timeout=timedelta(seconds=7200))
         self.local_rank = dist.get_rank() % self.args.gpu_per_node
         self.args.global_rank = self.local_rank + self.args.node_index * self.args.gpu_per_node
