@@ -76,6 +76,7 @@ if __name__ == "__main__":
 
   ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
   parser.add_argument("-ms", "--model_specific_name", type=str, choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codeT5_shepherd", "inferFix", "auger","jLED", "DAC"])
+  parser.add_argument("-ts", "--task_type", type=str, choices=["cls", "msg", "ref"], required=True)
 
 
   args = parser.parse_args()
