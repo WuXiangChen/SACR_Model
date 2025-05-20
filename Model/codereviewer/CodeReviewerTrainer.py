@@ -6,10 +6,7 @@
   导包区
 '''
 import logging
-import torch
-from _1_BaseTrainer.classification_trainer import ClassificationTrainer
-from _1_BaseTrainer.generation_trainer import GenerationTrainer
-from _1_BaseTrainer.refinement_trainer import RefinementTrainer
+from Model._1_BaseTrainer import ClassificationTrainer, GenerationTrainer, RefinementTrainer
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",

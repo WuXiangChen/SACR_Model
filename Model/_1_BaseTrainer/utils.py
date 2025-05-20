@@ -9,13 +9,11 @@ import os
 import torch
 import torch.nn.functional as F
 import numpy as np
-from utils import MyTokenizer
 from transformers import (
     RobertaTokenizer,
     T5Config,
     T5ForConditionalGeneration,
-    T5Tokenizer,
-)
+    T5Tokenizer)
 import logging
 
 logging.basicConfig(

@@ -1,8 +1,8 @@
 import torch
 from torch.utils.data import DistributedSampler
 from torch.utils.data import DataLoader, SequentialSampler, RandomSampler
-from base_trainer import BaseTrainer
-from utils import CommentGenDataset, SimpleGenDataset
+from .base_trainer import BaseTrainer
+from .utils import CommentGenDataset, SimpleGenDataset
 from .smooth_bleu import bleu_fromstr
 
 class GenerationTrainer(BaseTrainer):

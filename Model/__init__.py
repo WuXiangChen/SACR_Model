@@ -1,1 +1,1 @@
-from codereviewer import CodeReviewerModel, CodeReviewerCLS, CodeReviewerMSG, CodeReviewerREF
+from .codereviewer import CodeReviewerModel, CodeReviewerCLS, CodeReviewerMSG, CodeReviewerREF

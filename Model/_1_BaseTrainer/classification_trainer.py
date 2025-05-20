@@ -1,8 +1,8 @@
 # classification_trainer.py
 import os
-from _1_BaseTrainer.configs import set_seed
-from base_trainer import BaseTrainer
-from utils import CommentClsDataset, SimpleClsDataset
+from Model._1_BaseTrainer.configs import set_seed
+from .base_trainer import BaseTrainer
+from .utils import CommentClsDataset, SimpleClsDataset
 from sklearn.metrics import accuracy_score
 from torch.utils.data import DataLoader, SequentialSampler, RandomSampler
 from torch.utils.data.distributed import DistributedSampler
