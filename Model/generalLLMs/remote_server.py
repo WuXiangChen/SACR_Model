@@ -1,7 +1,7 @@
 import json
 import requests
 from openai import OpenAI
-from .CONSTANT import *
+from ..CONSTANT import *
 # 25.4.22 本节的主要目标，利用本地服务（DS系列）实现S-ACR的基本任务
 
 class DeepSeekClient:

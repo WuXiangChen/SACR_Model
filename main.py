@@ -2,7 +2,7 @@ import argparse
 import datetime
 from tqdm import tqdm
 from Utils.data_util import JSONLReader, save_results
-from Model.remote_server import DeepSeekClient
+from Model.generalLLMs.remote_server import DeepSeekClient
 from Utils.evaluation import MetricsEvaluator
 import os
 import json
@@ -75,7 +75,7 @@ if __name__ == "__main__":
   parser.add_argument("-d", "--dataset_name", type=str, default="carllm", help="The dataset given to be used")
 
   ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
-  parser.add_argument("-ms", "--model_specific_name", type=str, choices=["codereivewer", "t5cr", "codefinder", "llaMa-reviewer", "codedoctor", "codeT5-shepherd", "inferFix", "auger","jLED", "DAC"])
+  parser.add_argument("-ms", "--model_specific_name", type=str, choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codeT5_shepherd", "inferFix", "auger","jLED", "DAC"])
 
 
   args = parser.parse_args()
