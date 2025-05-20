@@ -5,28 +5,20 @@ import torch
 import torch.nn.functional as F
 from torch.nn import CrossEntropyLoss, BCEWithLogitsLoss
 import numpy as np
-from .utils import MyTokenizer
 from transformers import (
-    RobertaConfig,
-    RobertaModel,
-    RobertaTokenizer,
-    BartConfig,
-    BartForConditionalGeneration,
-    BartTokenizer,
     T5Config,
     T5ForConditionalGeneration,
-    T5Tokenizer,
-)
+    T5Tokenizer)
 import logging
 
 logger = logging.getLogger(__name__)
 
-
-class ReviewerModel(T5ForConditionalGeneration):
-
+# 这里做显式的分离，将模型信息的定义 和 加载进行分割
+class CodeReviewerModel(T5ForConditionalGeneration):
     def __init__(self, config):
         super().__init__(config)
         self.cls_head = nn.Linear(self.config.d_model, 2, bias=True)
+        self._init_model_classes()
         self.init()
 
     def init(self):
@@ -34,6 +26,19 @@ class ReviewerModel(T5ForConditionalGeneration):
         factor = self.config.initializer_factor
         self.cls_head.weight.data.normal_(mean=0.0, std=factor * ((self.config.d_model) ** -0.5))
         self.cls_head.bias.data.zero_()
+
+    def _init_model_classes(self):
+        """动态设置模型相关类"""
+        # 默认使用T5系列组件
+        self.config_class = getattr(self.args, 'config_class', T5Config)
+        self.model_class = getattr(self.args, 'model_class', CodeReviewerModel)
+        self.tokenizer_class = getattr(self.args, 'tokenizer_class', T5Tokenizer)
+        
+        # 如果args中有指定其他组件（如替换为Roberta）
+        if hasattr(self.args, 'replace_with_roberta'):
+            from transformers import RobertaConfig, RobertaTokenizer
+            self.config_class = RobertaConfig
+            self.tokenizer_class = RobertaTokenizer
 
     def forward(self, *argv, **kwargs):
         r"""
@@ -151,59 +156,4 @@ class ReviewerModel(T5ForConditionalGeneration):
                 loss += cls_loss_fct(cls_logits.view(-1, cls_logits.size(-1)), input_labels.view(-1))
             return loss
         return cls_logits, lm_logits
-
-def get_model_size(model):
-    model_parameters = filter(lambda p: p.requires_grad, model.parameters())
-    model_size = sum([np.prod(p.size()) for p in model_parameters]) # np.prod计算给定array内所有元素的乘积
-    return "{}M".format(round(model_size / 1e6))
-
-
-def build_or_load_gen_model(args):
-    config_class, model_class, tokenizer_class = T5Config, ReviewerModel, RobertaTokenizer
-    logger.info("==========")
-    if args.model_name_or_path!="T5CR":
-        config = config_class.from_pretrained(args.model_name_or_path)
-        tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
-        model = model_class.from_pretrained(args.model_name_or_path, config=config)
-    else:
-        config = os.path.join(args.load_model_path, "config.json")
-        t5_config = T5Config.from_pretrained(config)
-        tokenizer_name = os.path.join(args.load_model_path, "tokenizer/TokenizerModel.model")
-        tokenizer = T5Tokenizer.from_pretrained(tokenizer_name)
-        model = T5ForConditionalGeneration.from_pretrained(args.load_model_path, config=t5_config).to("cpu")
-        return config, model, tokenizer
-    
-    # 第一个问题，这里的tokenizer是如何定义的？从哪里继承的？它的<e{i}>的符号是什么意思。
-    tokenizer.special_dict = {f"<e{i}>" : tokenizer.get_vocab()[f"<e{i}>"] for i in range(99, -1, -1)}
-
-    # 加入特殊token，这些特殊的字符应该都是预定义的。
-    tokenizer.mask_id = tokenizer.get_vocab()["<mask>"]
-    tokenizer.bos_id = tokenizer.get_vocab()["<s>"]
-    tokenizer.pad_id = tokenizer.get_vocab()["<pad>"]
-    tokenizer.eos_id = tokenizer.get_vocab()["</s>"]
-    tokenizer.msg_id = tokenizer.get_vocab()["<msg>"]
-    tokenizer.keep_id = tokenizer.get_vocab()["<keep>"]
-    tokenizer.add_id = tokenizer.get_vocab()["<add>"]
-    tokenizer.del_id = tokenizer.get_vocab()["<del>"]
-    tokenizer.start_id = tokenizer.get_vocab()["<start>"]
-    tokenizer.end_id = tokenizer.get_vocab()["<end>"]
-
-
-    logger.info("Finish loading model [%s] from %s", get_model_size(model), args.model_name_or_path)
-
-    # 确定模型存在，然后利用load_state_dict加载模型
-    if args.load_model_path is not None:
-        model_path = os.path.join(args.load_model_path, "pytorch_model.bin")
-        logger.info("Reload model from {}".format(model_path))
-        try:
-            model.load_state_dict(torch.load(model_path, map_location="cpu")) # 那也就是说，现在所有模型都在cpu上了？
-        except RuntimeError:
-            saved = model.cls_head
-            model.cls_head = None
-            model.load_state_dict(torch.load(model_path, map_location="cpu"))
-            model.cls_head = saved
-        model.to(args.local_rank)
-
-    return config, model, tokenizer
-
 

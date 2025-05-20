@@ -118,16 +118,16 @@ class QAProcessor:
         self._process_concurrently(QAs, cli)
 
 
-# 使用示例
-if __name__ == "__main__":
-    processor = QAProcessor(
-        model_name="deepseek-code",
-        dataset_name="code_review",
-        max_workers=4,
-        save_interval=10
-    )
+# # 使用示例
+# if __name__ == "__main__":
+#     processor = QAProcessor(
+#         model_name="deepseek-code",
+#         dataset_name="code_review",
+#         max_workers=4,
+#         save_interval=10
+#     )
     
-    processor.process_dataset(
-        data_path="path/to/your/data.jsonl",
-        sample_size=200
-    )
+#     processor.process_dataset(
+#         data_path="path/to/your/data.jsonl",
+#         sample_size=200
+#     )

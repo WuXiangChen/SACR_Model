@@ -5,7 +5,18 @@ from copy import deepcopy as cp
 from torch.utils.data import Dataset
 from tokenizers import ByteLevelBPETokenizer
 from transformers import T5Tokenizer, RobertaTokenizer
-import nltk
+import os
+import torch
+import torch.nn.functional as F
+import numpy as np
+from utils import MyTokenizer
+from transformers import (
+    RobertaTokenizer,
+    T5Config,
+    T5ForConditionalGeneration,
+    T5Tokenizer,
+)
+import logging
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -797,7 +808,6 @@ def read_review_examples(filename, data_num=-1, tokenizer=None):
                 
     return examples
 
-
 def read_jsonl(path):
     data = []
     with open(path) as f:
@@ -809,3 +819,57 @@ def read_jsonl(path):
                 continue
             data.append(js)
     return data
+
+def get_model_size(model):
+    model_parameters = filter(lambda p: p.requires_grad, model.parameters())
+    model_size = sum([np.prod(p.size()) for p in model_parameters]) # np.prod计算给定array内所有元素的乘积
+    return "{}M".format(round(model_size / 1e6))
+
+# 这部分的信息都是需要根据不同的模型显式的注入
+def build_or_load_gen_model(args, model):
+    config_class, model_class, tokenizer_class = model.config_class, model.model_class, model.tokenizer_class
+    logger.info("==========")
+    if args.model_name_or_path!="T5CR":
+        config = config_class.from_pretrained(args.model_name_or_path)
+        tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
+        model = model_class.from_pretrained(args.model_name_or_path, config=config)
+    else:
+        config = os.path.join(args.load_model_path, "config.json")
+        t5_config = T5Config.from_pretrained(config)
+        tokenizer_name = os.path.join(args.load_model_path, "tokenizer/TokenizerModel.model")
+        tokenizer = T5Tokenizer.from_pretrained(tokenizer_name)
+        model = T5ForConditionalGeneration.from_pretrained(args.load_model_path, config=t5_config).to("cpu")
+        return config, model, tokenizer
+    
+    # 第一个问题，这里的tokenizer是如何定义的？从哪里继承的？它的<e{i}>的符号是什么意思。
+    tokenizer.special_dict = {f"<e{i}>" : tokenizer.get_vocab()[f"<e{i}>"] for i in range(99, -1, -1)}
+
+    # 加入特殊token，这些特殊的字符应该都是预定义的。
+    tokenizer.mask_id = tokenizer.get_vocab()["<mask>"]
+    tokenizer.bos_id = tokenizer.get_vocab()["<s>"]
+    tokenizer.pad_id = tokenizer.get_vocab()["<pad>"]
+    tokenizer.eos_id = tokenizer.get_vocab()["</s>"]
+    tokenizer.msg_id = tokenizer.get_vocab()["<msg>"]
+    tokenizer.keep_id = tokenizer.get_vocab()["<keep>"]
+    tokenizer.add_id = tokenizer.get_vocab()["<add>"]
+    tokenizer.del_id = tokenizer.get_vocab()["<del>"]
+    tokenizer.start_id = tokenizer.get_vocab()["<start>"]
+    tokenizer.end_id = tokenizer.get_vocab()["<end>"]
+
+
+    logger.info("Finish loading model [%s] from %s", get_model_size(model), args.model_name_or_path)
+
+    # 确定模型存在，然后利用load_state_dict加载模型
+    if args.load_model_path is not None:
+        model_path = os.path.join(args.load_model_path, "pytorch_model.bin")
+        logger.info("Reload model from {}".format(model_path))
+        try:
+            model.load_state_dict(torch.load(model_path, map_location="cpu")) # 那也就是说，现在所有模型都在cpu上了？
+        except RuntimeError:
+            saved = model.cls_head
+            model.cls_head = None
+            model.load_state_dict(torch.load(model_path, map_location="cpu"))
+            model.cls_head = saved
+        model.to(args.local_rank)
+
+    return config, model, tokenizer

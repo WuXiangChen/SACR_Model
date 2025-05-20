@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader, SequentialSampler
 from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.distributed as dist
 from transformers import AdamW, get_linear_schedule_with_warmup
-from .models import build_or_load_gen_model
+from .utils import build_or_load_gen_model
 from .configs import set_seed
 
 logging.basicConfig(
@@ -23,8 +23,9 @@ logger = logging.getLogger(__name__)
 
 # 这里基本思路虽然是没问题的，但是和codereviewer绑定的太过紧了，不适合一般工作的训练泛化
 class BaseTrainer:
-    def __init__(self, args):
+    def __init__(self, args, model):
         self.args = args
+        self.model = model
         self._init_distributed()
         self._load_components()
         self._setup_training()
@@ -40,7 +41,7 @@ class BaseTrainer:
 
     def _load_components(self): # 这里主要是进行基础模型的加载，这一点没问题，可以在不同的模型中共享
         set_seed(self.args) # 这里必须指定所有关于args的参数，也就是说所有的专有模型应该维护一个自己的config和tokenizer
-        self.config, self.model, self.tokenizer = build_or_load_gen_model(self.args) 
+        self.config, self.model, self.tokenizer = build_or_load_gen_model(self.args, self.model) 
         self.model = DDP(self.model.cuda(), device_ids=[self.local_rank], find_unused_parameters=True)
         self.pool = multiprocessing.Pool(self.args.cpu_count)
 

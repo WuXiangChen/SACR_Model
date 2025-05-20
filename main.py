@@ -1,27 +1,12 @@
-import argparse
-import datetime
-from tqdm import tqdm
-from Utils.data_util import JSONLReader, save_results
-from Model.generalLLMs.remote_server import DeepSeekClient
+from typing import get_args
 from Utils.evaluation import MetricsEvaluator
 import os
-import json
-import concurrent.futures
-from tqdm import tqdm
-import queue
-
+from Model import *
 from general_LLMs_hooker import QAProcessor
 
 
 if __name__ == "__main__":
-  parser = argparse.ArgumentParser(description="The entrence function for S-ACR process.")
-  parser.add_argument("-m", "--model_name", type=str, choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="qwen_2.5",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
-  parser.add_argument("-d", "--dataset_name", type=str, choices=["CR", "CarLLM", "T5CR"], default="CR", help="The dataset given to be used")
-  parser.add_argument("-g", "--general_model", type=bool, default=True, help="The general LLMs are used, rather than dedicated")
-  ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
-  parser.add_argument("-ms", "--model_specific_name", type=str, choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codeT5_shepherd", "inferFix", "auger","jLED", "DAC"])
-  parser.add_argument("-ts", "--task_type", type=str, choices=["cls", "msg", "ref"], required=True)
-  args = parser.parse_args()
+  args = get_args()
   ##########################
   print("="*50)
   print("Program Starting with Parameters:")
@@ -46,9 +31,19 @@ if __name__ == "__main__":
 
   else:
     # 这里根据不同的dedicated model name进行eval不同模型
-    pass
-    
+    ## 这里用eval直接承接不同的模型参数注入
+    configPath = f"./Model/{args.model_type}"
+    config = os.path.join(configPath, "config.json")
+    model = eval(f"{args.model_type}Model")(config)
+    # 将模型注入到训练过程中
+    ## 增加数据集的路径信息
+    if args.eval_NE:
+      args.datafilePath = f"{args.dataset_name}/{args.task_type}/"
+      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, datafile=args.datafilePath, model=model, eval_=False)
+    else:
+      args.datafilePath = f"{args.dataset_name}/{args.task_type}/"
+      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, datafile=args.datafilePath, model=model, eval_=True)
 
   # Create Results directory if it doesn't exist
-  print(f"Model Name: {args.model_name}")
+  print(f"Model Name: {args.model_type}")
   print(f"Dataset Name: {args.dataset_name}")
