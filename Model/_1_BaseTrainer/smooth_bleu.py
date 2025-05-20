@@ -200,7 +200,6 @@ def computeMaps(predictions, goldfile):
     sys.stderr.write('Total: ' + str(len(goldMap)) + '\n')
     return (goldMap, predictionMap)
 
-
 # m1 is the reference map
 # m2 is the prediction map
 def bleuFromMaps(m1, m2):
@@ -215,6 +214,11 @@ def bleuFromMaps(m1, m2):
     return [s * 100.0 / num for s in score]
 
 
+# 当作为模块导入时，如下所示，这部分的内容不会直接运行
+# from this_module import bleu_fromstr
+# bleu_score = bleu_fromstr(predictions, references)
+# cat predictions.txt | python this_script.py references.txt
+# 作为脚本直接运行时，这部分的内容会接收脚本参数
 if __name__ == '__main__':
     reference_file = sys.argv[1]
     predictions = []

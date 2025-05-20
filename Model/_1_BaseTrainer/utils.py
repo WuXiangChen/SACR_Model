@@ -56,7 +56,6 @@ class MyTokenizer(object):
     def __len__(self):
         return len(self.tokenizer.get_vocab())
 
-
 class RefineFeatures(object):
     def __init__(self, example_id, source_ids, target_ids):
         self.example_id = example_id
@@ -158,7 +157,6 @@ class SimpleRefineDataset(RefineDataset):
         pred = " ".join(pred.split())
         return pred, gold
 
-
 class Seq2SeqDataset(RefineDataset):
     def tokenize(self, item):
         example, tokenizer, args = item
@@ -175,7 +173,6 @@ class Seq2SeqDataset(RefineDataset):
         gold = " ".join(gold.split())
         pred = " ".join(pred.split())
         return pred, gold
-
 
 class TextDataset(Dataset):
     def __init__(self, tokenizer, pool, args, file_path, samplenum=-1):
@@ -426,7 +423,6 @@ class TextDataset(Dataset):
         else:
             raise NotImplementedError
 
-
 class CommentGenDataset(TextDataset):
     def __init__(self, tokenizer, pool, args, file_path, samplenum=-1):
         self.tokenizer = tokenizer
@@ -462,7 +458,6 @@ class CommentGenDataset(TextDataset):
             return None
         return self.genmsg_example(item)
 
-
 class CommentClsDataset(TextDataset):
     def __init__(self, tokenizer, pool, args, file_path, samplenum=-1):
         self.tokenizer = tokenizer
@@ -494,7 +489,6 @@ class CommentClsDataset(TextDataset):
         example, tokenizer, args = item
         tmpfeature = self.genmsg_example(item)
         return ClsFeatures(tmpfeature.example_id, tmpfeature.source_ids, example.y)
-
 
 class SimpleClsDataset(TextDataset):
     def __init__(self, tokenizer, pool, args, file_path, samplenum=-1):
@@ -542,7 +536,6 @@ class SimpleClsDataset(TextDataset):
         example_id = example.idx
         y = example.y
         return ClsFeatures(example_id, source_ids, y)
-
 
 class SimpleGenDataset(TextDataset):
     def __init__(self, tokenizer, pool, args, file_path, samplenum=-1):
@@ -601,7 +594,6 @@ class SimpleGenDataset(TextDataset):
         input_labels = [-100] * len(source_ids)
         return ReviewFeatures(dic["idx"], source_ids, input_labels, target_ids, type="genmsg")
 
-
 class InputFeatures(object):
     """A single training/test features for a example."""
 
@@ -610,7 +602,6 @@ class InputFeatures(object):
         self.source_ids = source_ids
         self.target_ids = target_ids
         self.url = url
-
 
 class ReviewFeatures(object):
     def __init__(self, example_id, source_ids, source_labels, target_ids, type):
@@ -766,7 +757,6 @@ class ReviewExample(object):
         # tuple->list, convenient for later operation
         self.lines = list(self.lines)
         self.labels = list(self.labels)
-
 
 def read_review_examples(filename, data_num=-1, tokenizer=None):
     """Read examples from filename."""
