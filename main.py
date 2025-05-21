@@ -2,7 +2,7 @@ import os
 from Model import *
 from config import get_args
 from general_LLMs_hooker import QAProcessor
-
+import pdb; 
 
 if __name__ == "__main__":
   args = get_args()
@@ -33,22 +33,23 @@ if __name__ == "__main__":
   else:
     configPath = f"./Model/{args.model_type}"
     config = os.path.join(configPath, "config.json")
-    model = eval(f"{args.model_type}Model")(args=args, config=config)
+    model = eval(f"{args.model_type}Model")(args=args, config=None)
     # 将模型注入到训练过程中
     ## 增加数据集的路径信息
     if args.train_eval:
       args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/"
       args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
-      args.train_filename = f"../ACR_Dataset/{args.model_type}/{args.task_type}/"
       os.makedirs(args.output_dir, exist_ok=True)
-      os.makedirs(args.train_filename, exist_ok=True)
 
       args.dev_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-valid.jsonl"
+      args.train_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/"
       trainer = eval(f"{args.model_type}{args.task_type.upper()}")(args=args, data_file=args.train_filename, model=model, eval_=False)
+      trainer.run()
     else:
       args.datafilePath = f"{args.dataset_name}/{args.task_type}/"
       trainer = eval(f"{args.model_type}{args.task_type}")(args=args, data_file=args.datafilePath, model=model, eval_=True)
 
   # Create Results directory if it doesn't exist
-  print(f"Model Name: {args.model_type}")
-  print(f"Dataset Name: {args.dataset_name}")
+  print("&"*50)
+  print(f"Final Model Name: {args.model_type}")
+  print(f"Final Dataset Name: {args.dataset_name}")

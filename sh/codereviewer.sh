@@ -3,8 +3,7 @@
 
 # 用于code detection问题的启动命令
 nohup torchrun \
-    --nproc_per_node=4 ./main.py \
-    --general_model false \
+    --nproc_per_node=1 ./main.py \
     --dataset_name "CR"\
     --train_epochs 30 \
     --model_type "codereviewer" \

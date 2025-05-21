@@ -205,8 +205,7 @@ class TextDataset(Dataset):
             logger.info("Reading examples from {}".format(file_path))
             examples = read_review_examples(file_path, samplenum, tokenizer)
             logger.info(f"Tokenize examples: {file_path}")
-            examples = pool.map(self.tokenize, \
-                [(example, tokenizer, args) for example in examples])
+            examples = pool.map(self.tokenize, [(example, tokenizer, args) for example in examples])
             torch.save(examples, savep)
         logger.info("Convert examples to features...")
         self.set_start_end_ids(examples)
@@ -457,8 +456,7 @@ class CommentGenDataset(TextDataset):
             torch.save(examples, savep)
         logger.info("Convert examples to features...")
         self.set_start_end_ids(examples)
-        self.feats = pool.map(self.convert_examples_to_features, \
-            [(example, tokenizer, args) for example in examples])
+        self.feats = pool.map(self.convert_examples_to_features, [(example, tokenizer, args) for example in examples])
         self.feats = [feat for feat in self.feats if feat is not None]
 
     def convert_examples_to_features(self, item):
@@ -486,13 +484,11 @@ class CommentClsDataset(TextDataset):
             logger.info("Reading examples from {}".format(file_path))
             examples = read_review_examples(file_path, samplenum, tokenizer)
             logger.info(f"Tokenize examples: {file_path}")
-            examples = pool.map(self.tokenize, \
-                [(example, tokenizer, args) for example in examples])
+            examples = pool.map(self.tokenize, [(example, tokenizer, args) for example in examples])
             torch.save(examples, savep)
         logger.info("Convert examples to features...")
         self.set_start_end_ids(examples)
-        self.feats = pool.map(self.convert_examples_to_features, \
-            [(example, tokenizer, args) for example in examples])
+        self.feats = pool.map(self.convert_examples_to_features,[(example, tokenizer, args) for example in examples])
 
     def convert_examples_to_features(self, item):
         example, tokenizer, args = item
@@ -627,6 +623,7 @@ class ClsFeatures(object):
         self.source_ids = source_ids
         self.y = y
 
+# ReviewExample的后处理工作
 class ReviewExample(object):
     """A single training/test example."""
 
@@ -791,8 +788,7 @@ def read_review_examples(filename, data_num=-1, tokenizer=None):
                         msg=js["msg"] if "msg" in js else "",
                         cmtid=js["cmtid"] if "cmtid" in js else "",
                         max_len=maxl,
-                        y=js["y"]
-                    )
+                        y=js["y"])
             if example.avail:
                 examples.append(example)
                 idx += 1
@@ -828,9 +824,10 @@ def build_or_load_gen_model(args, model):
     config_class, model_class, tokenizer_class = model.config_class, model.model_class, model.tokenizer_class
     logger.info("==========")
     if args.model_name_or_path!="T5CR":
+        print(args.model_name_or_path)
         config = config_class.from_pretrained(args.model_name_or_path)
         tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
-        model = model_class.from_pretrained(args.model_name_or_path, config=config)
+        model = model_class.from_pretrained(pretrained_model_name_or_path=args.model_name_or_path, config=args.model_name_or_path)
     else:
         config = os.path.join(args.load_model_path, "config.json")
         t5_config = T5Config.from_pretrained(config)

@@ -8,20 +8,22 @@ import numpy as np
 from transformers import (
     T5Config,
     T5ForConditionalGeneration,
-    T5Tokenizer)
+    T5Tokenizer,
+    RobertaTokenizer)
 import logging
 
 logger = logging.getLogger(__name__)
 
 # 这里做显式的分离，将模型信息的定义 和 加载进行分割
 class codereviewerModel(T5ForConditionalGeneration):
-    def __init__(self, args, config):
+    def __init__(self, config, args=None):
+        if config!=None:
+            super().__init__(config)
+            self.cls_head = nn.Linear(self.config.d_model, 2, bias=True)                     
+            self.init()
+  
         self.args = args
         self._init_model_classes()
-        self.config = self.config_class.from_pretrained(config)
-        super().__init__(self.config)
-        self.cls_head = nn.Linear(self.config.d_model, 2, bias=True)
-        self.init()
         
     def init(self):
         nn.init.xavier_uniform_(self.lm_head.weight)
@@ -34,13 +36,13 @@ class codereviewerModel(T5ForConditionalGeneration):
         # 默认使用T5系列组件
         self.config_class = getattr(self.args, 'config_class', T5Config)
         self.model_class = getattr(self.args, 'model_class', codereviewerModel)
-        self.tokenizer_class = getattr(self.args, 'tokenizer_class', T5Tokenizer)
+        self.tokenizer_class = getattr(self.args, 'tokenizer_class', RobertaTokenizer)
         
         # 如果args中有指定其他组件（如替换为Roberta）
-        if hasattr(self.args, 'replace_with_roberta'):
-            from transformers import RobertaConfig, RobertaTokenizer
-            self.config_class = RobertaConfig
-            self.tokenizer_class = RobertaTokenizer
+        # if hasattr(self.args, 'replace_with_roberta'):
+        #     from transformers import RobertaConfig, RobertaTokenizer
+        #     self.config_class = RobertaConfig
+        #     self.tokenizer_class = RobertaTokenizer
 
     def forward(self, *argv, **kwargs):
         r"""

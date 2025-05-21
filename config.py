@@ -15,6 +15,7 @@ def get_args():
     parser.add_argument("--start_epoch", default=0, type=int)
     parser.add_argument("--train_epochs", default=10, type=int)
     parser.add_argument("--tokenizer_path", type=str, required=False)
+    parser.add_argument("--raw_input", action="store_true", help="Whether to use simple input format (set for baselines).")
     parser.add_argument("--output_dir", default=None, type=str, required=False,
         help="The output directory where the model predictions and checkpoints will be written.")
     parser.add_argument("--load_model_path", default=None, type=str, required=False)

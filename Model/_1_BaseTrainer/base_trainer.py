@@ -1,5 +1,4 @@
 import os
-from SimpleITK import Rank
 import torch
 import logging
 import argparse
@@ -12,7 +11,7 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 import torch.distributed as dist
 from transformers import AdamW, get_linear_schedule_with_warmup
 from .utils import build_or_load_gen_model
-from .configs import set_seed
+from .configs import set_dist, set_seed
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -53,6 +52,7 @@ class BaseTrainer:
         set_seed(self.args) # 这里必须指定所有关于args的参数，也就是说所有的专有模型应该维护一个自己的config和tokenizer
         self.config, self.model, self.tokenizer = build_or_load_gen_model(self.args, self.model) 
         self.model = DDP(self.model.cuda(), device_ids=[self.local_rank], find_unused_parameters=True)
+        set_dist(self.args)
         self.pool = multiprocessing.Pool(self.args.cpu_count)
 
     def _setup_training(self): # 初始化训练参数，与基本训练机制

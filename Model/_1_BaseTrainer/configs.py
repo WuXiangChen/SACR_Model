@@ -15,7 +15,7 @@ def set_dist(args):
         # Setup for distributed data parallel
         torch.cuda.set_device(args.local_rank)
         device = torch.device("cuda", args.local_rank)
-        torch.distributed.init_process_group(backend="nccl")
+        # torch.distributed.init_process_group(backend="nccl")
         args.n_gpu = 1
     cpu_count = multiprocessing.cpu_count()
     logger.warning(
@@ -28,6 +28,7 @@ def set_dist(args):
     )
     args.device = device
     args.cpu_count = cpu_count
+
 
 
 def set_seed(args):

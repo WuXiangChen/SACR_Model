@@ -1,73 +1,219 @@
-nohup: ignoring input
-[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] 
-[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] *****************************************
-[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-[2025-05-20 15:15:02,494] torch.distributed.run: [WARNING] *****************************************
+[2025-05-21 04:11:36,629] torch.distributed.run: [WARNING] 
+[2025-05-21 04:11:36,629] torch.distributed.run: [WARNING] *****************************************
+[2025-05-21 04:11:36,629] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-05-21 04:11:36,629] torch.distributed.run: [WARNING] *****************************************
 ==================================================
 Program Starting with Parameters:
-Model Name: qwen_2.5
+Model Name: codereviewer
 Dataset Name: CR
 ==================================================
 
-Traceback (most recent call last):
-  File "./main.py", line 32, in <module>
-    processor.process_dataset(data_path=datafile_path, sample_size=200)
-  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
-    count_len = jsReader.count_lines()
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
-    return len(self.read_lines())
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
-    with open(self.file_path, 'r', encoding='utf-8') as file:
-IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
 ==================================================
 Program Starting with Parameters:
-Model Name: qwen_2.5
+Model Name: codereviewer
 Dataset Name: CR
 ==================================================
 
-Traceback (most recent call last):
-  File "./main.py", line 32, in <module>
-    processor.process_dataset(data_path=datafile_path, sample_size=200)
-  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
-    count_len = jsReader.count_lines()
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
-    return len(self.read_lines())
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
-    with open(self.file_path, 'r', encoding='utf-8') as file:
-IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
 ==================================================
 Program Starting with Parameters:
-Model Name: qwen_2.5
+Model Name: codereviewer
 Dataset Name: CR
 ==================================================
 
-Traceback (most recent call last):
-  File "./main.py", line 32, in <module>
-    processor.process_dataset(data_path=datafile_path, sample_size=200)
-  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
-    count_len = jsReader.count_lines()
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
-    return len(self.read_lines())
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
-    with open(self.file_path, 'r', encoding='utf-8') as file:
-IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
 ==================================================
 Program Starting with Parameters:
-Model Name: qwen_2.5
+Model Name: codereviewer
 Dataset Name: CR
 ==================================================
 
-Traceback (most recent call last):
-  File "./main.py", line 32, in <module>
-    processor.process_dataset(data_path=datafile_path, sample_size=200)
-  File "/root/workspace/SACR_GeneralLanguageModel/general_LLMs_hooker.py", line 107, in process_dataset
-    count_len = jsReader.count_lines()
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 54, in count_lines
-    return len(self.read_lines())
-  File "/root/workspace/SACR_GeneralLanguageModel/Utils/data_util.py", line 20, in read_lines
-    with open(self.file_path, 'r', encoding='utf-8') as file:
-IsADirectoryError: [Errno 21] Is a directory: '../ACR_Dataset/CR/cls'
-[2025-05-20 15:15:07,543] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 39475) of binary: /root/miniconda3/envs/mmseg/bin/python3.8
+05/21/2025 04:11:41 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 4
+05/21/2025 04:11:41 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:41 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 2, global rank: 2, world size: 4
+05/21/2025 04:11:41 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 4
+05/21/2025 04:11:41 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:41 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:41 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 3, global rank: 3, world size: 4
+05/21/2025 04:11:41 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/codereviewer/originalModel/
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/21/2025 04:11:42 - INFO - Model._1_BaseTrainer.utils -   Finish loading model [223M] from ../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:42 - INFO - Model._1_BaseTrainer.utils -   Finish loading model [223M] from ../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:42 - INFO - Model._1_BaseTrainer.utils -   Finish loading model [223M] from ../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:42 - INFO - Model._1_BaseTrainer.utils -   Finish loading model [223M] from ../ACR_Model_Saved/codereviewer/originalModel/
+05/21/2025 04:11:44 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 40
+05/21/2025 04:11:44 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 3, device: cuda:3, n_gpu: 1, distributed training: True, cpu count: 40
+05/21/2025 04:11:44 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 2, device: cuda:2, n_gpu: 1, distributed training: True, cpu count: 40
+05/21/2025 04:11:44 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, cpu count: 40
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+../ACR_Dataset/CR/cls/
+05/21/2025 04:11:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/21/2025 04:11:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/21/2025 04:11:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/21/2025 04:11:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/21/2025 04:12:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:12:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:12:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:12:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:12:41 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:12:41 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:12:41 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:12:41 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:19:19 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 100/120000, Loss: 0.6947
+05/21/2025 04:27:42 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 200/120000, Loss: 0.6927
+05/21/2025 04:32:10 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:32:10 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:32:10 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:32:10 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:35:33 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:35:33 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:35:33 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:35:34 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-2.jsonl
+05/21/2025 04:38:58 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:38:58 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:38:58 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:38:58 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 04:39:28 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:39:28 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:39:28 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:39:28 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 04:42:17 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 300/120000, Loss: 0.6527
+05/21/2025 04:50:26 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 400/120000, Loss: 0.5714
+05/21/2025 04:58:57 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 500/120000, Loss: 0.4832
+05/21/2025 04:59:21 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 04:59:21 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 04:59:21 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 04:59:21 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 05:02:40 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 05:02:40 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 05:02:41 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 05:02:42 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-0.jsonl
+05/21/2025 05:06:06 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:06:06 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:06:06 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:06:07 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:06:34 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:06:34 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:06:35 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:06:35 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:13:14 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 600/120000, Loss: 0.4750
+05/21/2025 05:21:19 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 700/120000, Loss: 0.4525
+05/21/2025 05:26:04 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:26:04 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:26:04 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:26:04 - INFO - Model._1_BaseTrainer.utils -   Reading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:29:23 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:29:24 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:29:24 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:29:24 - INFO - Model._1_BaseTrainer.utils -   Tokenize examples: ../ACR_Dataset/CR/cls/cls-train-chunk-3.jsonl
+05/21/2025 05:29:33 - INFO - Model._1_BaseTrainer.utils -   Not equal length in TextDataset.tokenize.
+05/21/2025 05:29:37 - INFO - Model._1_BaseTrainer.utils -   Not equal length in TextDataset.tokenize.
+05/21/2025 05:29:38 - INFO - Model._1_BaseTrainer.utils -   Not equal length in TextDataset.tokenize.
+05/21/2025 05:29:40 - INFO - Model._1_BaseTrainer.utils -   Not equal length in TextDataset.tokenize.
+05/21/2025 05:32:47 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:32:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:32:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:32:49 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:33:16 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:33:17 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:33:19 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:33:19 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:35:57 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 800/120000, Loss: 0.4403
+05/21/2025 05:44:14 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 900/120000, Loss: 0.4454
+05/21/2025 05:52:16 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1000/120000, Loss: 0.4407
+../ACR_Dataset/CR/cls/
+05/21/2025 05:52:59 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/21/2025 05:52:59 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/21/2025 05:52:59 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/21/2025 05:52:59 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/21/2025 05:53:27 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:53:28 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:53:28 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:53:28 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 05:53:55 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:53:56 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:53:57 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 05:53:57 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:01:11 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1100/120000, Loss: 0.4252
+05/21/2025 06:09:40 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1200/120000, Loss: 0.4500
+05/21/2025 06:14:45 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/21/2025 06:14:45 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/21/2025 06:14:45 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/21/2025 06:14:45 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/21/2025 06:15:14 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:15:14 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:15:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:15:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:15:43 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:15:44 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:15:44 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:15:44 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:18:32 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1300/120000, Loss: 0.4352
+05/21/2025 06:26:46 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1400/120000, Loss: 0.4354
+05/21/2025 06:35:15 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1500/120000, Loss: 0.4277
+05/21/2025 06:36:20 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/21/2025 06:36:20 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/21/2025 06:36:20 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/21/2025 06:36:20 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/21/2025 06:36:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:36:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:36:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:36:49 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:37:17 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:37:19 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:37:20 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:37:20 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:44:24 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1600/120000, Loss: 0.4329
+05/21/2025 06:52:36 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1700/120000, Loss: 0.4139
+05/21/2025 06:57:53 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/21/2025 06:57:53 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/21/2025 06:57:53 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/21/2025 06:57:53 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/21/2025 06:58:21 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:58:21 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:58:22 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:58:23 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/21/2025 06:58:50 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:58:52 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:58:52 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 06:58:53 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/21/2025 07:01:31 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1800/120000, Loss: 0.3998
+05/21/2025 07:09:56 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 1900/120000, Loss: 0.4084
+[2025-05-21 07:18:10,170] torch.distributed.elastic.agent.server.api: [WARNING] Received Signals.SIGHUP death signal, shutting down workers
+[2025-05-21 07:18:10,171] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 29358 closing signal SIGHUP
+[2025-05-21 07:18:10,171] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 29359 closing signal SIGHUP
+[2025-05-21 07:18:10,171] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 29360 closing signal SIGHUP
+[2025-05-21 07:18:10,171] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 29361 closing signal SIGHUP
 Traceback (most recent call last):
   File "/root/miniconda3/envs/mmseg/bin/torchrun", line 8, in <module>
     sys.exit(main())
@@ -79,41 +225,14 @@ Traceback (most recent call last):
     elastic_launch(
   File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
     return launch_agent(self._config, self._entrypoint, list(args))
-  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-./main.py FAILED
-------------------------------------------------------------
-Failures:
-[1]:
-  time      : 2025-05-20_15:15:07
-  host      : a7dc54a48c09
-  rank      : 1 (local_rank: 1)
-  exitcode  : 1 (pid: 39476)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-[2]:
-  time      : 2025-05-20_15:15:07
-  host      : a7dc54a48c09
-  rank      : 2 (local_rank: 2)
-  exitcode  : 1 (pid: 39477)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-[3]:
-  time      : 2025-05-20_15:15:07
-  host      : a7dc54a48c09
-  rank      : 3 (local_rank: 3)
-  exitcode  : 1 (pid: 39478)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-05-20_15:15:07
-  host      : a7dc54a48c09
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 39475)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/elastic/agent/server/api.py", line 736, in run
+    result = self._invoke_run(role)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/elastic/agent/server/api.py", line 877, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 29277 got signal: 1
