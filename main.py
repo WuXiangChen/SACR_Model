@@ -35,7 +35,6 @@ if __name__ == "__main__":
     config = os.path.join(configPath, "config.json")
     model = eval(f"{args.model_type}Model")(args=args, config=None)
     # 将模型注入到训练过程中
-    ## 增加数据集的路径信息
     if args.train_eval:
       args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/"
       args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
@@ -45,9 +44,15 @@ if __name__ == "__main__":
       args.train_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/"
       trainer = eval(f"{args.model_type}{args.task_type.upper()}")(args=args, data_file=args.train_filename, model=model, eval_=False)
       trainer.run()
+
     else:
-      args.datafilePath = f"{args.dataset_name}/{args.task_type}/"
-      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, data_file=args.datafilePath, model=model, eval_=True)
+      # 测试
+      args.test_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-test.jsonl"
+      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, data_file=args.test_filename, model=model, eval_=True)
+      re = trainer.evaluate()
+      '''
+        这里缺少评估、指标和对结果的整理
+      '''
 
   # Create Results directory if it doesn't exist
   print("&"*50)

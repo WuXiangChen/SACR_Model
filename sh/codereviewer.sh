@@ -1,7 +1,7 @@
 # batch size 12 for 16 GB GPU
 
 
-# 用于code detection问题的启动命令
+# 用于code detection finetuning的启动命令
 nohup torchrun \
     --nproc_per_node=1 ./main.py \
     --dataset_name "CR"\
@@ -18,9 +18,4 @@ nohup torchrun \
     --train_steps 120000 \
     --gpu_per_node=4 \
     --node_index=0 \
-    --seed 2233 > Output/Log/codereviewer_cls_finetune.log 2>&1 &
-
-# --model_name_or_path ../ACR_Model_Saved/codereviewer/originalModel/CLS_Model/ \
-# --output_dir ./save/cls \
-# --train_filename ./dataset/Diff_Quality_Estimation \
-# --dev_filename ./dataset/Diff_Quality_Estimation/cls-valid.jsonl \
+    --seed 2233 > Output/Log/codereviewer_cls_finetune.log 2>&1 & disown

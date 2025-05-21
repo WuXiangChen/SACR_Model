@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader, SequentialSampler, RandomSampler
 from torch.utils.data.distributed import DistributedSampler
 import torch
 import logging
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -27,12 +28,14 @@ class ClassificationTrainer(BaseTrainer):
         print(self.data_file)
         def fn(features):
             return features
-        if not train_eval_:
+        if not train_eval_ and os.path.isdir(self.data_file):
             train_files = [file for file in os.listdir(self.data_file) if file.startswith("cls-train-chunk") and file.endswith(".jsonl")]
             train_files = [os.path.join(self.data_file, file) for file in train_files]
-        else:
+        elif train_eval_ and os.path.isdir(self.data_file):
             train_files = [file for file in os.listdir(self.data_file) if file.startswith("cls-valid") and file.endswith(".jsonl")]
             train_files = [os.path.join(self.data_file, file) for file in train_files]
+        else:# 这里对应着test的过程
+            train_files = [self.data_file]
         
         for data_file in train_files:
             dataset = (SimpleClsDataset if self.args.raw_input else CommentClsDataset)(self.tokenizer, self.pool, self.args, data_file)
@@ -57,7 +60,10 @@ class ClassificationTrainer(BaseTrainer):
                 logits = self.model(cls=True, input_ids=torch.tensor([ex.source_ids for ex in examples]).to(self.local_rank))
                 pred.extend(torch.argmax(logits, dim=-1).cpu().numpy())
                 gold.extend([ex.y for ex in examples])
-        return accuracy_score(gold, pred)
+        acc = accuracy_score(gold, pred)
+        precision, recall, f1, _ = precision_recall_fscore_support(gold, pred, average='macro', zero_division=0)
+        logger.info(f"Eval Results - ACC: {acc:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}")
+        return acc, precision, recall, f1
     
     def run(self):
         try:
