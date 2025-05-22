@@ -1,0 +1,110 @@
+nohup: ignoring input
+[2025-05-22 03:08:16,627] torch.distributed.run: [WARNING] 
+[2025-05-22 03:08:16,627] torch.distributed.run: [WARNING] *****************************************
+[2025-05-22 03:08:16,627] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-05-22 03:08:16,627] torch.distributed.run: [WARNING] *****************************************
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/22/2025 03:08:20 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/22/2025 03:08:20 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/22/2025 03:08:20 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+05/22/2025 03:08:20 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+05/22/2025 03:08:21 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 2, global rank: 2, world size: 4
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/t5cr/originalModel/
+05/22/2025 03:08:21 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 4
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/t5cr/originalModel/
+05/22/2025 03:08:21 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 4
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/t5cr/originalModel/
+05/22/2025 03:08:21 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 3, global rank: 3, world size: 4
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/t5cr/originalModel/
+Tokenizer vocabulary size: 32100
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Tokenizer vocabulary size: 32100
+Tokenizer vocabulary size: 32100
+Tokenizer vocabulary size: 32100
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/miniconda3/envs/mmseg/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/22/2025 03:08:21 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/22/2025 03:08:24 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 2, device: cuda:2, n_gpu: 1, distributed training: True, cpu count: 40
+05/22/2025 03:08:24 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 40
+05/22/2025 03:08:24 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, cpu count: 40
+05/22/2025 03:08:24 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 3, device: cuda:3, n_gpu: 1, distributed training: True, cpu count: 40
+../ACR_Dataset/CR/cls/
+05/22/2025 03:08:26 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/22/2025 03:08:26 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/22/2025 03:08:26 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/22/2025 03:08:26 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/22/2025 03:08:55 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:08:55 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:08:55 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:08:55 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:09:21 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:09:21 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:09:21 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:09:22 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:10:32 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 100/120000, Loss: 0.7975
+05/22/2025 03:12:05 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 200/120000, Loss: 0.7781
+05/22/2025 03:13:02 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/22/2025 03:13:02 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/22/2025 03:13:03 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/22/2025 03:13:03 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/22/2025 03:13:31 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:13:32 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:13:32 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:13:32 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:14:01 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:14:01 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:14:01 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:14:01 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:14:46 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 300/120000, Loss: 0.7377
+05/22/2025 03:16:40 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 400/120000, Loss: 0.7074
+05/22/2025 03:18:40 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 500/120000, Loss: 0.6747
+05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps

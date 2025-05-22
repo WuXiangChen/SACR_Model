@@ -1,0 +1,29 @@
+{
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "d_ff": 2048,
+  "d_kv": 64,
+  "d_model": 512,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 2,
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "gradient_checkpointing": false,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_heads": 8,
+  "num_layers": 6,
+  "output_past": true,
+  "start_token_id": 32103,
+  "pad_token_id": 0,
+  "add_token_id": 32101,
+  "del_token_id": 32102,
+  "end_token_id": 32104,
+  "bos_token_id": 1,
+  "relative_attention_num_buckets": 32,
+  "use_cache": true,
+  "vocab_size": 32216
+}

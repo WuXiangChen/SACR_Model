@@ -827,13 +827,18 @@ def build_or_load_gen_model(args, model):
         print(args.model_name_or_path)
         config = config_class.from_pretrained(args.model_name_or_path)
         tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
+        print(f"Tokenizer vocabulary size: {tokenizer.vocab_size}")
         model = model_class.from_pretrained(pretrained_model_name_or_path=args.model_name_or_path, config=args.model_name_or_path)
+        # from transformers import T5Model
+        # model = T5Model.from_pretrained("google-t5/t5-small")
     else:
         config = os.path.join(args.load_model_path, "config.json")
         t5_config = T5Config.from_pretrained(config)
         tokenizer_name = os.path.join(args.load_model_path, "tokenizer/TokenizerModel.model")
         tokenizer = T5Tokenizer.from_pretrained(tokenizer_name)
-        model = T5ForConditionalGeneration.from_pretrained(args.load_model_path, config=t5_config).to("cpu")
+        # model = T5ForConditionalGeneration.from_pretrained(args.load_model_path, config=t5_config).to("cpu")
+        from transformers import T5Model
+        model = T5Model.from_pretrained("google-t5/t5-small")
         return config, model, tokenizer
     
     # 第一个问题，这里的tokenizer是如何定义的？从哪里继承的？它的<e{i}>的符号是什么意思。
@@ -851,9 +856,24 @@ def build_or_load_gen_model(args, model):
     tokenizer.start_id = tokenizer.get_vocab()["<start>"]
     tokenizer.end_id = tokenizer.get_vocab()["<end>"]
 
-
-    logger.info("Finish loading model [%s] from %s", get_model_size(model), args.model_name_or_path)
-
+    # 这里判断model的embedding层大小是是否合适，如果不合适则手动扩展
+    if hasattr(model, "get_input_embeddings"):
+        old_num_tokens = model.get_input_embeddings().weight.size(0)
+        new_num_tokens = len(tokenizer)
+        if old_num_tokens != new_num_tokens:
+            logger.info(f"Resizing token embeddings from {old_num_tokens} to {new_num_tokens}")
+            # 这里是直接拓展，丢失了部分预训练的内容？
+            model.resize_token_embeddings(new_num_tokens)
+        if hasattr(model, "config"):
+            model.config.vocab_size = new_num_tokens
+        if hasattr(model, "encoder") and hasattr(model.encoder, "config"):
+            model.encoder.config.vocab_size = new_num_tokens
+            
+    # logger.info("Finish loading model [%s] from %s", get_model_size(model), args.model_name_or_path)
+    # print(f"Max tokenizer vocab_size: {tokenizer.vocab_size}")
+    # real_vocab_size = model.get_input_embeddings().weight.shape[0]
+    # print(f"Resized Model Vocab size: {real_vocab_size}")
+    
     # 确定模型存在，然后利用load_state_dict加载模型
     if args.load_model_path is not None:
         model_path = os.path.join(args.load_model_path, "pytorch_model.bin")

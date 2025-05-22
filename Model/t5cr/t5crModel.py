@@ -1,3 +1,4 @@
+# 这里是t5cr的基本代码，这里应该是直接对应着T5部分的内容
 import os
 from safetensors import safe_open
 import torch.nn as nn
@@ -13,9 +14,9 @@ from transformers import (
 import logging
 
 logger = logging.getLogger(__name__)
-
-# 这里做显式的分离，将模型信息的定义 和 加载进行分割
-class codereviewerModel(T5ForConditionalGeneration):
+# 这里可以模仿着codeReviewer对t5cr进行设计
+# 除了config基础配置信息不一样，其它的好像都没有特别的差别
+class t5crModel(T5ForConditionalGeneration):
     def __init__(self, config, args=None):
         if config!=None:
             super().__init__(config)
@@ -35,51 +36,19 @@ class codereviewerModel(T5ForConditionalGeneration):
         """动态设置模型相关类"""
         # 默认使用T5系列组件
         self.config_class = getattr(self.args, 'config_class', T5Config)
-        self.model_class = getattr(self.args, 'model_class', codereviewerModel)
+        self.model_class = getattr(self.args, 'model_class', t5crModel)
         self.tokenizer_class = getattr(self.args, 'tokenizer_class', RobertaTokenizer)
-        
-
+    
+    # 这里用t5cr调用的时候，有一个问题，词表访问越界
+    ## 例子：https://blog.51cto.com/lawsonabs/5786590
     def forward(self, *argv, **kwargs):
-        r"""
-        Doc from Huggingface transformers:
-        labels (:obj:`torch.LongTensor` of shape :obj:`(batch_size,)`, `optional`):
-            Labels for computing the sequence classification/regression loss. Indices should be in :obj:`[-100, 0, ...,
-            config.vocab_size - 1]`. All labels set to ``-100`` are ignored (masked), the loss is only computed for
-            labels in ``[0, ..., config.vocab_size]``
-        Returns:
-        Examples::
-            >>> from transformers import T5Tokenizer, T5ForConditionalGeneration
-            >>> tokenizer = T5Tokenizer.from_pretrained('t5-small')
-            >>> model = T5ForConditionalGeneration.from_pretrained('t5-small')
-            >>> # training
-            >>> input_ids = tokenizer('The <extra_id_0> walks in <extra_id_1> park', return_tensors='pt').input_ids
-            >>> labels = tokenizer('<extra_id_0> cute dog <extra_id_1> the <extra_id_2>', return_tensors='pt').input_ids
-            >>> outputs = model(input_ids=input_ids, labels=labels)
-            >>> loss = outputs.loss
-            >>> logits = outputs.logits
-            >>> # inference
-            >>> input_ids = tokenizer("summarize: studies have shown that owning a dog is good for you", return_tensors="pt").input_ids  # Batch size 1
-            >>> outputs = model.generate(input_ids)
-            >>> print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-            >>> # studies have shown that owning a dog is good for you.
-        """
         if "cls" in kwargs:
-            assert (
-                "input_ids" in kwargs and \
-                "labels" in kwargs and \
-                "attention_mask" in kwargs)
-            return self.cls(
-                input_ids=kwargs["input_ids"],
-                labels=kwargs["labels"],
-                attention_mask=kwargs["attention_mask"],)
+            assert ("input_ids" in kwargs and "labels" in kwargs and "attention_mask" in kwargs)
+            return self.cls(input_ids=kwargs["input_ids"], labels=kwargs["labels"], attention_mask=kwargs["attention_mask"])
+        
         if "input_labels" in kwargs:
-            assert (
-                "input_ids" in kwargs and \
-                "input_labels" in kwargs and \
-                "decoder_input_ids" in kwargs and \
-                "attention_mask" in kwargs and \
-                "decoder_attention_mask" in kwargs
-            ), "Please give these arg keys."
+            assert ("input_ids" in kwargs and "input_labels" in kwargs and "decoder_input_ids" in kwargs and "attention_mask" in kwargs and "decoder_attention_mask" in kwargs),\
+            "Please give these arg keys."
             input_ids = kwargs["input_ids"]
             input_labels = kwargs["input_labels"]
             decoder_input_ids = kwargs["decoder_input_ids"]
@@ -93,17 +62,13 @@ class codereviewerModel(T5ForConditionalGeneration):
         return super().forward(*argv, **kwargs)
 
     # 做cls的话 就只使用encoder就可以了
-    def cls(
-        self,
-        input_ids,
-        labels,
-        attention_mask):
-        encoder_outputs = self.encoder( \
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            output_attentions=False,
-            return_dict=False
-        )
+    def cls(self, input_ids, labels, attention_mask):
+        # print("AAAAAAAAAAAA")
+        # print(f"Max input_id: {torch.max(input_ids)}")
+        # real_vocab_size = self.get_input_embeddings().weight.shape[0]
+        # print(f"Vocab size: {real_vocab_size}")
+        assert torch.all(input_ids < self.encoder.config.vocab_size), "Input IDs contain out-of-vocabulary tokens"
+        encoder_outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask, output_attentions=False, return_dict=False)
         hidden_states = encoder_outputs[0]
         first_hidden = hidden_states[:, 0, :]
         first_hidden = nn.Dropout(0.3)(first_hidden)
@@ -111,6 +76,7 @@ class codereviewerModel(T5ForConditionalGeneration):
         loss_fct = CrossEntropyLoss()
         if labels != None:
             loss = loss_fct(logits, labels)
+            # logger.info(f"DONE FOR TRAINING Logits:{logits}")
             return loss
         return logits
 

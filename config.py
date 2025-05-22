@@ -16,57 +16,27 @@ def get_args():
     parser.add_argument("--train_epochs", default=10, type=int)
     parser.add_argument("--tokenizer_path", type=str, required=False)
     parser.add_argument("--raw_input", action="store_true", help="Whether to use simple input format (set for baselines).")
-    parser.add_argument("--output_dir", default=None, type=str, required=False,
-        help="The output directory where the model predictions and checkpoints will be written.")
+    parser.add_argument("--output_dir", default=None, type=str, required=False, help="The output directory where the model predictions and checkpoints will be written.")
     parser.add_argument("--load_model_path", default=None, type=str, required=False)
-    parser.add_argument("--model_name_or_path", default=None, type=str,
-        help="Path to trained model: Should contain the .bin files")
+    parser.add_argument("--model_name_or_path", default=None, type=str, help="Path to trained model: Should contain the .bin files")
     # parser.add_argument("--do_train", action="store_true", help="Whether to run eval on the train set.")
     # parser.add_argument("--do_eval", action="store_true", help="Whether to run eval on the dev set.")
     # parser.add_argument("--do_test", action="store_true", help="Whether to run eval on the dev set.")
-    parser.add_argument(
-        "--no_cuda", action="store_true", help="Avoid using CUDA when available"
-    )
-    parser.add_argument(
-        "--train_batch_size", default=8, type=int,
-        help="Batch size per GPU/CPU for training.",
-    )
-    parser.add_argument(
-        "--eval_batch_size", default=8, type=int,
-        help="Batch size per GPU/CPU for evaluation.",
-    )
-    parser.add_argument(
-        "--gradient_accumulation_steps", type=int, default=1,
-        help="Number of updates steps to accumulate before performing a backward/update pass.",
-    )
-    parser.add_argument(
-        "--learning_rate", default=5e-5, type=float,
-        help="The initial learning rate for Adam."
-    )
-    parser.add_argument(
-        "--mask_rate", default=0.15, type=float, help="The masked rate of input lines.")
-    parser.add_argument(
-        "--beam_size", default=6, type=int, help="beam size for beam search")
-    parser.add_argument(
-        "--weight_decay", default=0.0, type=float, help="Weight deay if we apply some.")
-    parser.add_argument(
-        "--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
-    parser.add_argument(
-        "--max_grad_norm", default=1.0, type=float, help="Max gradient norm.")
-    parser.add_argument(
-        "--save_steps", default=-1, type=int,)
-    parser.add_argument(
-        "--log_steps", default=-1, type=int,)
+    parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
+    parser.add_argument("--train_batch_size", default=8, type=int,help="Batch size per GPU/CPU for training.")
+    parser.add_argument("--eval_batch_size", default=8, type=int, help="Batch size per GPU/CPU for evaluation.")
+    parser.add_argument("--gradient_accumulation_steps", type=int, default=1,help="Number of updates steps to accumulate before performing a backward/update pass.")
+    parser.add_argument("--learning_rate", default=5e-5, type=float,help="The initial learning rate for Adam.")
+    parser.add_argument("--mask_rate", default=0.15, type=float, help="The masked rate of input lines.")
+    parser.add_argument("--beam_size", default=6, type=int, help="beam size for beam search")
+    parser.add_argument("--weight_decay", default=0.0, type=float, help="Weight deay if we apply some.")
+    parser.add_argument("--adam_epsilon", default=1e-8, type=float, help="Epsilon for Adam optimizer.")
+    parser.add_argument("--max_grad_norm", default=1.0, type=float, help="Max gradient norm.")
+    parser.add_argument("--save_steps", default=-1, type=int,)
+    parser.add_argument("--log_steps", default=-1, type=int,)
     parser.add_argument("--train_steps", default=-1, type=int, help="")
-    parser.add_argument(
-        "--warmup_steps", default=100, type=int, help="Linear warmup over warmup_steps."
-    )
-    parser.add_argument(
-        "--gpu_per_node",
-        type=int,
-        default=4,
-        help="gpus per node",
-    )
+    parser.add_argument("--warmup_steps", default=100, type=int, help="Linear warmup over warmup_steps.")
+    parser.add_argument("--gpu_per_node",type=int,default=4,help="gpus per node")
     parser.add_argument(
         "--node_index",
         type=int,

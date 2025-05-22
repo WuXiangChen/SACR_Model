@@ -1,8 +1,12 @@
+import logging
 import os
+# os.environ["CUDA_LAUNCH_BLOCKING"] = "1"  # 必须在导入 torch 前设置！
 from Model import *
 from config import get_args
 from general_LLMs_hooker import QAProcessor
-import pdb; 
+
+
+logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
   args = get_args()
@@ -36,12 +40,15 @@ if __name__ == "__main__":
     model = eval(f"{args.model_type}Model")(args=args, config=None)
     # 将模型注入到训练过程中
     if args.train_eval:
-      args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/"
+      args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/" # 这里集中了模型信息加载的基本内容，包括config、base_model
       args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
       os.makedirs(args.output_dir, exist_ok=True)
 
       args.dev_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-valid.jsonl"
       args.train_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/"
+      
+      logger.info(f"Training/eval parameters: model_name_or_path={args.model_name_or_path}, output_dir={args.output_dir}, dev_filename={args.dev_filename}, train_filename={args.train_filename}")
+
       trainer = eval(f"{args.model_type}{args.task_type.upper()}")(args=args, data_file=args.train_filename, model=model, eval_=False)
       trainer.run()
 
