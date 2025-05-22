@@ -1,4 +1,4 @@
-# 这里是t5cr的基本代码，这里应该是直接对应着T5部分的内容
+# 这里是codet5的基本代码，这里应该是直接对应着T5部分的内容
 import os
 from safetensors import safe_open
 import torch.nn as nn
@@ -14,9 +14,9 @@ from transformers import (
 import logging
 
 logger = logging.getLogger(__name__)
-# 这里可以模仿着codeReviewer对t5cr进行设计
+# 这里可以模仿着codeReviewer对codet5进行设计
 # 除了config基础配置信息不一样，其它的好像都没有特别的差别
-class t5crModel(T5ForConditionalGeneration):
+class codet5Model(T5ForConditionalGeneration):
     def __init__(self, config, args=None):
         if config!=None:
             super().__init__(config)
@@ -36,7 +36,7 @@ class t5crModel(T5ForConditionalGeneration):
         """动态设置模型相关类"""
         # 默认使用T5系列组件
         self.config_class = getattr(self.args, 'config_class', T5Config)
-        self.model_class = getattr(self.args, 'model_class', t5crModel)
+        self.model_class = getattr(self.args, 'model_class', codet5Model)
         self.tokenizer_class = getattr(self.args, 'tokenizer_class', RobertaTokenizer)
     
     def forward(self, *argv, **kwargs):

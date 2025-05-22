@@ -108,3 +108,40 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
 05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
 05/22/2025 03:18:47 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/22/2025 03:19:18 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:19:18 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:19:18 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:19:19 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:19:49 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:19:49 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:19:51 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:19:52 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:21:40 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 600/120000, Loss: 0.6531
+05/22/2025 03:23:45 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 700/120000, Loss: 0.6303
+05/22/2025 03:24:58 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/22/2025 03:24:58 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/22/2025 03:24:58 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/22/2025 03:24:58 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/22/2025 03:25:27 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:25:29 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:25:29 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:25:29 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:25:58 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:26:00 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:26:00 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:26:00 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 22
+05/22/2025 03:26:44 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 800/120000, Loss: 0.6034
+05/22/2025 03:28:45 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 900/120000, Loss: 0.6109
+05/22/2025 03:30:52 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1000/120000, Loss: 0.6031
+../ACR_Dataset/CR/cls/
+05/22/2025 03:31:05 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/22/2025 03:31:05 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/22/2025 03:31:05 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+../ACR_Dataset/CR/cls/
+05/22/2025 03:31:05 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/22/2025 03:31:36 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:31:36 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:31:36 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/22/2025 03:31:36 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
