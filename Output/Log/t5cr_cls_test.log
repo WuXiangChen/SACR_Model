@@ -1,0 +1,33 @@
+nohup: ignoring input
+2025-05-23 05:22:17.625044: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/23/2025 05:22:20 - INFO - __main__ -   Start Testing
+05/23/2025 05:22:20 - INFO - __main__ -   Testing/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/cls/, test_filename=../ACR_Dataset/CR/cls/cls-test.jsonl
+05/23/2025 05:22:20 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
+05/23/2025 05:22:20 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+05/23/2025 05:22:20 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 1
+05/23/2025 05:22:20 - INFO - Model._1_BaseTrainer.utils -   ==========
+../ACR_Model_Saved/t5cr/originalModel/
+Tokenizer vocabulary size: 32100
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/23/2025 05:22:21 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+05/23/2025 05:22:21 - INFO - Model._1_BaseTrainer.utils -   Loading model weights from ../ACR_Model_Saved/t5cr/cls/checkpoint-28800-0.6907/model.safetensors
+05/23/2025 05:22:36 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 192
+../ACR_Dataset/CR/cls/cls-test.jsonl
+05/23/2025 05:23:19 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-testrb.exps
+05/23/2025 05:23:28 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 05:25:18 - INFO - Model._1_BaseTrainer.classification_trainer -   Confusion Matrix:[[12385  3241]
+ [ 6538  9079]]
+05/23/2025 05:25:18 - INFO - Model._1_BaseTrainer.classification_trainer -   Eval Results - ACC: 0.6870, Precision: 0.7369, Recall: 0.5814, F1: 0.6500
+(0.6870018884230068, 0.7369318181818182, 0.581353653070372, 0.6499624154347282)
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Final Model Name: t5cr
+Final Dataset Name: CR

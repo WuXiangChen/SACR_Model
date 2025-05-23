@@ -4,12 +4,11 @@ import pdb
 from Model._1_BaseTrainer.configs import set_seed
 from .base_trainer import BaseTrainer
 from .utils import CommentClsDataset, SimpleClsDataset
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, confusion_matrix, precision_recall_fscore_support
 from torch.utils.data import DataLoader, SequentialSampler, RandomSampler
 from torch.utils.data.distributed import DistributedSampler
 import torch
 import logging
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -75,7 +74,10 @@ class ClassificationTrainer(BaseTrainer):
                 pred.extend(torch.argmax(logits, dim=-1).cpu().numpy())
                 gold.extend([ex.y for ex in examples])
         acc = accuracy_score(gold, pred)
-        precision, recall, f1, _ = precision_recall_fscore_support(gold, pred, average='macro', zero_division=0)
+        precision, recall, f1, _ = precision_recall_fscore_support(gold, pred, average='binary', zero_division=0)
+        # 打印混淆矩阵
+        cm = confusion_matrix(gold, pred)
+        logger.info(f"Confusion Matrix:{cm}")
         logger.info(f"Eval Results - ACC: {acc:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1: {f1:.4f}")
         return acc, precision, recall, f1
     

@@ -2,10 +2,9 @@ import logging
 import os
 # os.environ["CUDA_LAUNCH_BLOCKING"] = "1"  # 必须在导入 torch 前设置！
 from Model import *
+from Model._1_BaseTrainer.utils import load_model_weights
 from config import get_args
 from general_LLMs_hooker import QAProcessor
-
-
 logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
@@ -38,12 +37,12 @@ if __name__ == "__main__":
     configPath = f"./Model/{args.model_type}"
     config = os.path.join(configPath, "config.json")
     model = eval(f"{args.model_type}Model")(args=args, config=None)
+    args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/" # 这里集中了模型信息加载的基本内容，包括config、base_model
+    args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
+    os.makedirs(args.output_dir, exist_ok=True)
     # 将模型注入到训练过程中
     if args.train_eval:
-      args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/" # 这里集中了模型信息加载的基本内容，包括config、base_model
-      args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
-      os.makedirs(args.output_dir, exist_ok=True)
-
+      logger.info("Start Training")
       args.dev_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-valid.jsonl"
       args.train_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/"
       
@@ -54,9 +53,15 @@ if __name__ == "__main__":
 
     else:
       # 测试
+      logger.info("Start Testing")
+      
       args.test_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-test.jsonl"
-      trainer = eval(f"{args.model_type}{args.task_type}")(args=args, data_file=args.test_filename, model=model, eval_=True)
-      re = trainer.evaluate()
+      logger.info(f"Testing/eval parameters: model_name_or_path={args.model_name_or_path}, output_dir={args.output_dir}, test_filename={args.test_filename}")
+      tester = eval(f"{args.model_type}{args.task_type.upper()}")(args=args, data_file=args.test_filename, model=model)
+      test_dataloader = tester.get_data_loader(args.test_filename)
+      # test = load_model_weights(test, args.load_model_path, logger=logger)
+      re = tester.evaluate(test_dataloader)
+      print(re)
       '''
         这里缺少评估、指标和对结果的整理
       '''

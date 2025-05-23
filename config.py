@@ -8,7 +8,7 @@ def get_args():
     ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
     parser.add_argument("-md", "--model_type", type=str, default="codereviewer", choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codeT5_shepherd", "inferFix", "auger","jLED", "DAC"])
     parser.add_argument("-ts", "--task_type", type=str, choices=["cls", "msg", "ref"], default="cls")
-    parser.add_argument("--train_eval", action="store_true", default=True)
+    parser.add_argument("--train_eval", action="store_false", default=True)
     parser.add_argument("--add_lang_ids", action="store_true")
     parser.add_argument("--from_scratch", action="store_true")
     parser.add_argument("--debug", action="store_true")

@@ -868,23 +868,72 @@ def build_or_load_gen_model(args, model):
             model.config.vocab_size = new_num_tokens
         if hasattr(model, "encoder") and hasattr(model.encoder, "config"):
             model.encoder.config.vocab_size = new_num_tokens
-            
-    # logger.info("Finish loading model [%s] from %s", get_model_size(model), args.model_name_or_path)
-    # print(f"Max tokenizer vocab_size: {tokenizer.vocab_size}")
-    # real_vocab_size = model.get_input_embeddings().weight.shape[0]
-    # print(f"Resized Model Vocab size: {real_vocab_size}")
     
     # 确定模型存在，然后利用load_state_dict加载模型
     if args.load_model_path is not None:
-        model_path = os.path.join(args.load_model_path, "pytorch_model.bin")
-        logger.info("Reload model from {}".format(model_path))
-        try:
-            model.load_state_dict(torch.load(model_path, map_location="cpu")) # 那也就是说，现在所有模型都在cpu上了？
-        except RuntimeError:
-            saved = model.cls_head
-            model.cls_head = None
-            model.load_state_dict(torch.load(model_path, map_location="cpu"))
-            model.cls_head = saved
-        model.to(args.local_rank)
+        model = load_model_weights(model, args.load_model_path, logger)
 
     return config, model, tokenizer
+
+
+def load_model_weights(model, model_dir, logger=None):
+    """
+    Load model weights from a directory supporting multiple file formats.
+    
+    Args:
+        model: The model instance to load weights into
+        model_dir: Directory containing the model file
+        logger: Optional logger for info/error messages
+        
+    Supported formats:
+        - pytorch_model.bin, model.pt, model.pth (PyTorch)
+        - model.safetensors (SafeTensors)
+        - model.ckpt (PyTorch Lightning checkpoint)
+    """
+    # List of possible model file names to check (in order of priority)
+    model_files = [
+        "pytorch_model.bin",  # Standard PyTorch model
+        "model.safetensors",  # SafeTensors format
+        "model.ckpt",        # Checkpoint format
+        "model.pth",         # Alternative PyTorch extension
+        "model.pt"           # Another PyTorch extension
+    ]
+    
+    model_path = None
+    # Check which model file exists
+    for file in model_files:
+        potential_path = os.path.join(model_dir, file)
+        if os.path.exists(potential_path):
+            model_path = potential_path
+            break
+    
+    if model_path is None:
+        raise FileNotFoundError(f"No model file found in {model_dir}. Tried: {', '.join(model_files)}")
+    
+    if logger:
+        logger.info(f"Loading model weights from {model_path}")
+    
+    try:
+        # Handle different file formats
+        if model_path.endswith('.safetensors'):
+            from safetensors.torch import load_file
+            state_dict = load_file(model_path, device="cpu")
+            model.load_state_dict(state_dict,strict=False)
+        elif model_path.endswith(('.bin', '.pth', '.pt', '.ckpt')):
+            # For .ckpt files, handle the state dict structure
+            state_dict = torch.load(model_path, map_location="cpu")
+            if 'state_dict' in state_dict:  # Common in Lightning checkpoints
+                state_dict = state_dict['state_dict']
+            # Remove possible prefixes from key names
+            state_dict = {k.replace('model.', '').replace('module.', ''): v 
+                         for k, v in state_dict.items()}
+            model.load_state_dict(state_dict,strict=False)
+        else:
+            raise ValueError(f"Unsupported model file format: {model_path}")
+            
+    except Exception as e:
+        if logger:
+            logger.error(f"Error loading model from {model_path}: {str(e)}")
+        raise RuntimeError(f"Failed to load model weights: {str(e)}")
+
+    return model
