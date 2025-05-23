@@ -9,7 +9,7 @@ CUDA_VISIBLE_DEVICES=2,3 nohup torchrun \
     --model_type "codereviewer" \
     --max_source_length 512 \
     --max_target_length 128 \
-    --train_batch_size 22 \
+    --train_batch_size 8 \
     --learning_rate 3e-4 \
     --gradient_accumulation_steps 3 \
     --mask_rate 0.15 \

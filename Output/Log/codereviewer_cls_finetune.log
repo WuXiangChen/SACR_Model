@@ -3,9 +3,9 @@ WARNING:torch.distributed.run:
 *****************************************
 Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
 *****************************************
-2025-05-23 05:27:06.728053: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2025-05-23 06:46:32.218403: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-05-23 05:27:06.787503: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+2025-05-23 06:46:32.252185: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
 ==================================================
 Program Starting with Parameters:
@@ -13,25 +13,25 @@ Model Name: codereviewer
 Dataset Name: CR
 ==================================================
 
-05/23/2025 05:27:09 - INFO - __main__ -   Start Training
-05/23/2025 05:27:09 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codereviewer/originalModel/, output_dir=../ACR_Model_Saved/codereviewer/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+05/23/2025 06:46:34 - INFO - __main__ -   Start Training
+05/23/2025 06:46:34 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codereviewer/originalModel/, output_dir=../ACR_Model_Saved/codereviewer/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
 ==================================================
 Program Starting with Parameters:
 Model Name: codereviewer
 Dataset Name: CR
 ==================================================
 
-05/23/2025 05:27:09 - INFO - __main__ -   Start Training
-05/23/2025 05:27:09 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codereviewer/originalModel/, output_dir=../ACR_Model_Saved/codereviewer/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
-05/23/2025 05:27:09 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 1
-05/23/2025 05:27:09 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
-05/23/2025 05:27:09 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
-05/23/2025 05:27:09 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 2
-05/23/2025 05:27:09 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/23/2025 06:46:35 - INFO - __main__ -   Start Training
+05/23/2025 06:46:35 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codereviewer/originalModel/, output_dir=../ACR_Model_Saved/codereviewer/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+05/23/2025 06:46:35 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 1
+05/23/2025 06:46:35 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
+05/23/2025 06:46:35 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+05/23/2025 06:46:35 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 2
+05/23/2025 06:46:35 - INFO - Model._1_BaseTrainer.utils -   ==========
 ../ACR_Model_Saved/codereviewer/originalModel/
-05/23/2025 05:27:09 - INFO - torch.distributed.distributed_c10d -   Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
-05/23/2025 05:27:09 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 2
-05/23/2025 05:27:09 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/23/2025 06:46:35 - INFO - torch.distributed.distributed_c10d -   Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+05/23/2025 06:46:35 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 2
+05/23/2025 06:46:35 - INFO - Model._1_BaseTrainer.utils -   ==========
 ../ACR_Model_Saved/codereviewer/originalModel/
 Tokenizer vocabulary size: 32100
 Tokenizer vocabulary size: 32100
@@ -39,3 +39,157 @@ Some weights of codereviewerModel were not initialized from the model checkpoint
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
 Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/23/2025 06:47:14 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, cpu count: 192
+05/23/2025 06:47:14 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 192
+/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+../ACR_Dataset/CR/cls/
+05/23/2025 06:47:46 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+../ACR_Dataset/CR/cls/
+05/23/2025 06:47:48 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/23/2025 06:48:09 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:48:18 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:48:42 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/23/2025 06:48:52 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/23/2025 06:49:05 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:49:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:49:41 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/23/2025 06:50:02 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/23/2025 06:50:18 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:50:37 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:50:59 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/23/2025 06:51:16 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/23/2025 06:51:32 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:51:41 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/cls/
+05/23/2025 06:52:07 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-validrb.exps
+../ACR_Dataset/CR/cls/
+05/23/2025 06:52:15 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-validrb.exps
+05/23/2025 06:52:20 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:52:29 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 06:54:25 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 8
+05/23/2025 06:54:33 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 8
+05/23/2025 06:55:57 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 100/120000, Loss: 0.6933
+05/23/2025 06:57:22 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 200/120000, Loss: 0.6934
+05/23/2025 06:58:55 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 300/120000, Loss: 0.6769
+05/23/2025 07:00:24 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 400/120000, Loss: 0.6205
+05/23/2025 07:01:51 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 500/120000, Loss: 0.5020
+05/23/2025 07:03:17 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 600/120000, Loss: 0.4898
+05/23/2025 07:04:46 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 700/120000, Loss: 0.4866
+05/23/2025 07:06:14 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 800/120000, Loss: 0.4493
+05/23/2025 07:07:38 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 900/120000, Loss: 0.4497
+05/23/2025 07:09:08 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1000/120000, Loss: 0.4499
+05/23/2025 07:10:34 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1100/120000, Loss: 0.4556
+05/23/2025 07:12:00 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1200/120000, Loss: 0.4550
+05/23/2025 07:13:27 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1300/120000, Loss: 0.4554
+05/23/2025 07:14:53 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1400/120000, Loss: 0.4499
+05/23/2025 07:16:16 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1500/120000, Loss: 0.4466
+05/23/2025 07:17:39 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1600/120000, Loss: 0.4515
+05/23/2025 07:19:09 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1700/120000, Loss: 0.4409
+05/23/2025 07:20:42 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1800/120000, Loss: 0.4414
+05/23/2025 07:22:14 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 1900/120000, Loss: 0.4247
+05/23/2025 07:23:37 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2000/120000, Loss: 0.4494
+05/23/2025 07:25:00 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2100/120000, Loss: 0.4334
+05/23/2025 07:26:23 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2200/120000, Loss: 0.4370
+05/23/2025 07:27:55 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2300/120000, Loss: 0.4482
+05/23/2025 07:29:32 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2400/120000, Loss: 0.4505
+05/23/2025 07:31:09 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2500/120000, Loss: 0.4466
+05/23/2025 07:32:32 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2600/120000, Loss: 0.4390
+05/23/2025 07:33:56 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2700/120000, Loss: 0.4375
+05/23/2025 07:35:20 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2800/120000, Loss: 0.4481
+05/23/2025 07:36:43 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 2900/120000, Loss: 0.4430
+05/23/2025 07:38:08 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3000/120000, Loss: 0.4536
+05/23/2025 07:39:32 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3100/120000, Loss: 0.4298
+05/23/2025 07:40:59 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3200/120000, Loss: 0.4373
+05/23/2025 07:42:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3300/120000, Loss: 0.4277
+05/23/2025 07:44:02 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3400/120000, Loss: 0.4313
+05/23/2025 07:45:35 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3500/120000, Loss: 0.4374
+05/23/2025 07:46:58 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3600/120000, Loss: 0.4288
+05/23/2025 07:49:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Confusion Matrix:[[6377 1457]
+ [2500 5286]]
+05/23/2025 07:49:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Eval Results - ACC: 0.7467, Precision: 0.7839, Recall: 0.6789, F1: 0.7276
+05/23/2025 07:49:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Validation Accuracy at step 3600: 0.7276
+05/23/2025 07:49:29 - INFO - Model._1_BaseTrainer.classification_trainer -   New best model saved to ../ACR_Model_Saved/codereviewer/cls/checkpoint-3600-0.7276
+05/23/2025 07:51:10 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3700/120000, Loss: 0.4199
+05/23/2025 07:52:52 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3800/120000, Loss: 0.4354
+05/23/2025 07:54:34 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 3900/120000, Loss: 0.4359
+05/23/2025 07:56:15 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4000/120000, Loss: 0.4012
+05/23/2025 07:57:58 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4100/120000, Loss: 0.4094
+05/23/2025 07:59:39 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4200/120000, Loss: 0.4156
+05/23/2025 08:01:10 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4300/120000, Loss: 0.4325
+05/23/2025 08:02:33 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4400/120000, Loss: 0.4275
+05/23/2025 08:04:07 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4500/120000, Loss: 0.4214
+05/23/2025 08:05:38 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4600/120000, Loss: 0.4379
+05/23/2025 08:07:08 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4700/120000, Loss: 0.4374
+05/23/2025 08:08:29 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4800/120000, Loss: 0.4326
+05/23/2025 08:09:50 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 4900/120000, Loss: 0.4228
+05/23/2025 08:11:13 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 5000/120000, Loss: 0.4355
+05/23/2025 08:12:36 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 5100/120000, Loss: 0.4263
+05/23/2025 08:13:59 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 5200/120000, Loss: 0.4255
+05/23/2025 08:15:21 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 5300/120000, Loss: 0.4120
+05/23/2025 08:16:43 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 5400/120000, Loss: 0.4104
+05/23/2025 08:18:05 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 1, Step: 5500/120000, Loss: 0.4231
+../ACR_Dataset/CR/cls/
+05/23/2025 08:18:39 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+../ACR_Dataset/CR/cls/
+05/23/2025 08:18:39 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-0rb.exps
+05/23/2025 08:19:15 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:19:16 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:19:53 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/23/2025 08:19:53 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-3rb.exps
+05/23/2025 08:20:23 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:20:25 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:20:59 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/23/2025 08:21:00 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-1rb.exps
+05/23/2025 08:21:28 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:21:29 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:22:04 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/23/2025 08:22:09 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+05/23/2025 08:22:36 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:22:42 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/cls/
+05/23/2025 08:23:16 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-validrb.exps
+../ACR_Dataset/CR/cls/
+05/23/2025 08:23:22 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-validrb.exps
+05/23/2025 08:23:31 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:23:36 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/23/2025 08:25:55 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 8
+05/23/2025 08:26:02 - INFO - Model._1_BaseTrainer.classification_trainer -   batch size: 8
+05/23/2025 08:26:53 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 5600/120000, Loss: 0.4385
+05/23/2025 08:28:15 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 5700/120000, Loss: 0.4191
+05/23/2025 08:29:35 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 5800/120000, Loss: 0.4189
+05/23/2025 08:30:56 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 5900/120000, Loss: 0.4309
+05/23/2025 08:32:17 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6000/120000, Loss: 0.4134
+05/23/2025 08:33:38 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6100/120000, Loss: 0.4284
+05/23/2025 08:35:00 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6200/120000, Loss: 0.4203
+05/23/2025 08:36:22 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6300/120000, Loss: 0.4181
+05/23/2025 08:37:44 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6400/120000, Loss: 0.4079
+05/23/2025 08:39:07 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6500/120000, Loss: 0.4032
+05/23/2025 08:40:29 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6600/120000, Loss: 0.4111
+05/23/2025 08:41:51 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6700/120000, Loss: 0.4046
+05/23/2025 08:43:14 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6800/120000, Loss: 0.4188
+05/23/2025 08:44:35 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 6900/120000, Loss: 0.4278
+05/23/2025 08:45:56 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7000/120000, Loss: 0.4244
+05/23/2025 08:47:17 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7100/120000, Loss: 0.4139
+05/23/2025 08:48:39 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7200/120000, Loss: 0.4120
+05/23/2025 08:51:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Confusion Matrix:[[6341 1493]
+ [2560 5226]]
+05/23/2025 08:51:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Eval Results - ACC: 0.7405, Precision: 0.7778, Recall: 0.6712, F1: 0.7206
+05/23/2025 08:51:25 - INFO - Model._1_BaseTrainer.classification_trainer -   Validation Accuracy at step 7200: 0.7206
+05/23/2025 08:52:46 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7300/120000, Loss: 0.3854
+05/23/2025 08:54:07 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7400/120000, Loss: 0.3869
+05/23/2025 08:55:28 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7500/120000, Loss: 0.4087
+05/23/2025 08:56:49 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7600/120000, Loss: 0.3924
+05/23/2025 08:58:10 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7700/120000, Loss: 0.3908
+05/23/2025 08:59:31 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7800/120000, Loss: 0.4069
+05/23/2025 09:00:52 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 7900/120000, Loss: 0.4170
+05/23/2025 09:02:14 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8000/120000, Loss: 0.4195
+05/23/2025 09:03:35 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8100/120000, Loss: 0.3994
+05/23/2025 09:04:55 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8200/120000, Loss: 0.3966
+05/23/2025 09:06:16 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8300/120000, Loss: 0.4135
+05/23/2025 09:07:37 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8400/120000, Loss: 0.3871
+05/23/2025 09:08:58 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8500/120000, Loss: 0.3951
+05/23/2025 09:10:22 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8600/120000, Loss: 0.3972
+05/23/2025 09:11:46 - INFO - Model._1_BaseTrainer.classification_trainer -   Epoch: 2, Step: 8700/120000, Loss: 0.3940
