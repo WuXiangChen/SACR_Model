@@ -16,6 +16,6 @@ nohup torchrun \
     --save_steps 3600 \
     --log_steps 100 \
     --train_steps 120000 \
-    --gpu_per_node=4 \
+    --gpu_per_node=1 \
     --node_index=0 \
     --seed 2233 > Output/Log/codereviewer_cls_finetune.log 2>&1 & disown

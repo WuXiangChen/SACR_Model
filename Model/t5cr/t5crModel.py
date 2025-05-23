@@ -85,8 +85,7 @@ class t5crModel(T5ForConditionalGeneration):
         decoder_input_ids,
         attention_mask,
         decoder_attention_mask,
-        encoder_loss=True
-    ):
+        encoder_loss=True):
         encoder_outputs = self.encoder( \
             input_ids=input_ids,
             attention_mask=attention_mask,

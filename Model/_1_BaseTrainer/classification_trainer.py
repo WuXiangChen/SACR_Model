@@ -37,13 +37,25 @@ class ClassificationTrainer(BaseTrainer):
         else:# 这里对应着test的过程
             train_files = [self.data_file]
         
+          # 合并所有文件的数据
+        all_datasets = []
         for data_file in train_files:
-            dataset = (SimpleClsDataset if self.args.raw_input else CommentClsDataset)(self.tokenizer, self.pool, self.args, data_file)
-            # print("dataset:",type(dataset))
-            sampler = SequentialSampler(dataset) if self.eval_ else DistributedSampler(dataset)
-            # print("sampler:",type(sampler))
-            yield DataLoader(dataset, sampler=sampler, batch_size=self.args.eval_batch_size if self.eval_ else self.args.train_batch_size, \
-                             num_workers=self.args.cpu_count, collate_fn=fn)
+            dataset = (SimpleClsDataset if self.args.raw_input else CommentClsDataset)(
+                self.tokenizer, self.pool, self.args, data_file)
+            all_datasets.append(dataset)
+        
+        # 使用ConcatDataset合并所有数据集
+        combined_dataset = torch.utils.data.ConcatDataset(all_datasets)
+        
+        # 创建DataLoader
+        sampler = SequentialSampler(combined_dataset) if self.eval_ else DistributedSampler(combined_dataset)
+        dataloader = DataLoader(
+            combined_dataset,
+            sampler=sampler,
+            batch_size=self.args.eval_batch_size if self.eval_ else self.args.train_batch_size,
+            num_workers=self.args.cpu_count,
+            collate_fn=fn)
+        return dataloader
 
     def train_step(self, examples):
         source_ids = torch.tensor([ex.source_ids for ex in examples], dtype=torch.long).to(self.local_rank)
@@ -57,7 +69,9 @@ class ClassificationTrainer(BaseTrainer):
         pred, gold = [], []
         with torch.no_grad():
             for examples in dataloader:
-                logits = self.model(cls=True, input_ids=torch.tensor([ex.source_ids for ex in examples]).to(self.local_rank))
+                source_ids = torch.tensor([ex.source_ids for ex in examples], dtype=torch.long).to(self.local_rank)
+                source_mask = source_ids.ne(self.tokenizer.pad_id)
+                logits = self.model(cls=True, input_ids=source_ids, labels=None, attention_mask=source_mask).to(self.local_rank)
                 pred.extend(torch.argmax(logits, dim=-1).cpu().numpy())
                 gold.extend([ex.y for ex in examples])
         acc = accuracy_score(gold, pred)
@@ -70,7 +84,7 @@ class ClassificationTrainer(BaseTrainer):
             # Initialize training
             global_step = 0
             tr_loss, logging_loss = 0.0, 0.0
-            best_acc = 0.0
+            best_f1 = 0.0
 
             # Training loop
             for epoch in range(1, self.args.train_epochs + 1):
@@ -81,67 +95,66 @@ class ClassificationTrainer(BaseTrainer):
                 self.args.seed = save_seed
                 
                 self.model.train()
-                for train_dataloader in self.get_data_loader():
-                    for step, examples in enumerate(train_dataloader, 1):
-                        if step == 1:
-                            # ex = examples[0]
-                            logger.info(f"batch size: {len(examples)}")
-                            # logger.info(f"example source: {tokenizer.convert_ids_to_tokens(ex.source_ids)}")
-                        step+=1
-                        # print("examples:",type(examples))
-                        loss = self.train_step(examples)
-                        if self.args.gpu_per_node > 1:
-                            loss = loss.mean()
+                train_dataloader = self.get_data_loader()
+                eval_dataloader  = self.get_data_loader(train_eval_=True)
+                for step, examples in enumerate(train_dataloader, 1):
+                    if step == 1:
+                        # ex = examples[0]
+                        logger.info(f"batch size: {len(examples)}")
+                        # logger.info(f"example source: {tokenizer.convert_ids_to_tokens(ex.source_ids)}")
+                    step+=1
+                    # print("examples:",type(examples))
+                    loss = self.train_step(examples)
+                    if self.args.gpu_per_node > 1:
+                        loss = loss.mean()
+                    
+                    if self.args.gradient_accumulation_steps > 1:
+                        loss = loss / self.args.gradient_accumulation_steps
+                    
+                    loss.backward()
+                    tr_loss += loss.item()
+                    
+                    # Gradient accumulation and parameter update
+                    if (step + 1) % self.args.gradient_accumulation_steps == 0:
+                        torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.args.max_grad_norm)
+                        self.optimizer.step()
+                        self.scheduler.step()
+                        self.optimizer.zero_grad()
+                        global_step += 1
                         
-                        if self.args.gradient_accumulation_steps > 1:
-                            loss = loss / self.args.gradient_accumulation_steps
+                        # Logging
+                        if self.args.global_rank == 0 and global_step % self.args.log_steps == 0:
+                            current_loss = (tr_loss - logging_loss) / self.args.log_steps
+                            logger.info(
+                                f"Epoch: {epoch}, Step: {global_step}/{self.args.train_steps}, "
+                                f"Loss: {current_loss:.4f}")
+                            logging_loss = tr_loss
                         
-                        loss.backward()
-                        tr_loss += loss.item()
-                        
-                        # Gradient accumulation and parameter update
-                        if (step + 1) % self.args.gradient_accumulation_steps == 0:
-                            torch.nn.utils.clip_grad_norm_(self.model.parameters(), self.args.max_grad_norm)
-                            self.optimizer.step()
-                            self.scheduler.step()
-                            self.optimizer.zero_grad()
-                            global_step += 1
+                        # Evaluation and model saving
+                        if self.args.global_rank == 0 and (
+                            global_step % self.args.save_steps == 0 or 
+                            global_step == self.args.train_steps):
+                            acc, precision, recall, f1 = self.evaluate(eval_dataloader)
+                            logger.info(f"Validation Accuracy at step {global_step}: {f1:.4f}")
                             
-                            # Logging
-                            if self.args.global_rank == 0 and global_step % self.args.log_steps == 0:
-                                current_loss = (tr_loss - logging_loss) / self.args.log_steps
-                                logger.info(
-                                    f"Epoch: {epoch}, Step: {global_step}/{self.args.train_steps}, "
-                                    f"Loss: {current_loss:.4f}")
-                                logging_loss = tr_loss
-                            
-                            # Evaluation and model saving
-                            if self.args.global_rank == 0 and (
-                                global_step % self.args.save_steps == 0 or 
-                                global_step == self.args.train_steps):
-                                eval_dataloader = next(self.get_data_loader(train_eval_=True))
-                                acc = self.evaluate(eval_dataloader)
-                                logger.info(f"Validation Accuracy at step {global_step}: {acc:.4f}")
-                                
-                                # Save checkpoint
-                                if acc > best_acc:
-                                    best_acc = acc
-                                    output_dir = os.path.join(self.args.output_dir, f"checkpoint-{global_step}-{acc:.4f}")
-                                    os.makedirs(output_dir, exist_ok=True)
-                                    self.save_model(output_dir, acc)
-                                    logger.info(f"New best model saved to {output_dir}")
-                        
-                        # Early stopping if reach max steps
-                        if global_step >= self.args.train_steps:
-                            if self.args.global_rank == 0:
-                                eval_dataloader = next(self.get_data_loader(train_eval_=True))
-                                acc = self.evaluate(eval_dataloader)
-                                output_dir = os.path.join(
-                                    self.args.output_dir, 
-                                    f"checkpoint-last-{acc:.4f}")
-                                self.save_model(output_dir, acc)
-                                logger.info(f"Training completed. Final model saved to {output_dir}")
-                            return
+                            # Save checkpoint
+                            if f1 > best_f1:
+                                best_f1 = f1
+                                output_dir = os.path.join(self.args.output_dir, f"checkpoint-{global_step}-{f1:.4f}")
+                                os.makedirs(output_dir, exist_ok=True)
+                                self.save_model(output_dir, f1)
+                                logger.info(f"New best model saved to {output_dir}")
+                    
+                    # Early stopping if reach max steps
+                    if global_step >= self.args.train_steps:
+                        if self.args.global_rank == 0:
+                            f1, precision, recall, f1 = self.evaluate(eval_dataloader)
+                            output_dir = os.path.join(
+                                self.args.output_dir, 
+                                f"checkpoint-last-{f1:.4f}")
+                            self.save_model(output_dir, f1)
+                            logger.info(f"Training completed. Final model saved to {output_dir}")
+                        return
         finally:
             self.pool.close()
             if self.args.global_rank == 0:

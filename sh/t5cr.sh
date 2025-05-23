@@ -1,7 +1,7 @@
 # batch size 12 for 16 GB GPU
 
 # 用于code detection finetuning的启动命令
-nohup torchrun \
+CUDA_VISIBLE_DEVICES=3  nohup torchrun \
     --nproc_per_node=1 ./main.py \
     --dataset_name "CR"\
     --train_epochs 30 \

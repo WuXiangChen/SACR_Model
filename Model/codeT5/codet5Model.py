@@ -61,10 +61,6 @@ class codet5Model(T5ForConditionalGeneration):
 
     # 做cls的话 就只使用encoder就可以了
     def cls(self, input_ids, labels, attention_mask):
-        # print("AAAAAAAAAAAA")
-        # print(f"Max input_id: {torch.max(input_ids)}")
-        # real_vocab_size = self.get_input_embeddings().weight.shape[0]
-        # print(f"Vocab size: {real_vocab_size}")
         assert torch.all(input_ids < self.encoder.config.vocab_size), "Input IDs contain out-of-vocabulary tokens"
         encoder_outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask, output_attentions=False, return_dict=False)
         hidden_states = encoder_outputs[0]
@@ -85,8 +81,7 @@ class codet5Model(T5ForConditionalGeneration):
         decoder_input_ids,
         attention_mask,
         decoder_attention_mask,
-        encoder_loss=True
-    ):
+        encoder_loss=True):
         encoder_outputs = self.encoder( \
             input_ids=input_ids,
             attention_mask=attention_mask,
@@ -119,4 +114,3 @@ class codet5Model(T5ForConditionalGeneration):
                 loss += cls_loss_fct(cls_logits.view(-1, cls_logits.size(-1)), input_labels.view(-1))
             return loss
         return cls_logits, lm_logits
-
