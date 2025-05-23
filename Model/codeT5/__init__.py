@@ -1,2 +1,2 @@
-from .codet5Model import t5crModel
-from .codet5Trainer import t5crCLS, t5crMSG, t5crREF
+from .codet5Model import codet5Model
+from .codet5Trainer import codet5CLS, codet5MSG, codet5REF

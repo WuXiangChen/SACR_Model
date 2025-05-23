@@ -6,7 +6,7 @@ def get_args():
     parser.add_argument("-m", "--model_name", type=str, choices=["gpt_4o", "ds_671B", "ds_reasoner", "qwen_2.5", "llama_3.1"], default="qwen_2.5",help="The model to be used (options: gpt_4o, ds_671B, qwen_2.5, llama_3.1)")
     parser.add_argument("-d", "--dataset_name", type=str, choices=["CR", "CarLLM", "T5CR"], default="CR", help="The dataset given to be used")
     ########### 以上是为，通用模型的模型参数选择；以下是为专用模型的参数选择 ###########
-    parser.add_argument("-md", "--model_type", type=str, default="codereviewer", choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codeT5_shepherd", "inferFix", "auger","jLED", "DAC"])
+    parser.add_argument("-md", "--model_type", type=str, default="codereviewer", choices=["codereviewer", "t5cr", "codefinder", "llaMa_reviewer", "codedoctor", "codet5", "inferFix", "auger","jLED", "DAC"])
     parser.add_argument("-ts", "--task_type", type=str, choices=["cls", "msg", "ref"], default="cls")
     parser.add_argument("--train_eval", action="store_false", default=True)
     parser.add_argument("--add_lang_ids", action="store_true")
