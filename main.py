@@ -36,8 +36,8 @@ if __name__ == "__main__":
   else:
     configPath = f"./Model/{args.model_type}"
     config = os.path.join(configPath, "config.json")
-    model = eval(f"{args.model_type}Model")(args=args, config=None)
     args.model_name_or_path = f"../ACR_Model_Saved/{args.model_type}/originalModel/" # 这里集中了模型信息加载的基本内容，包括config、base_model
+    model = eval(f"{args.model_type}Model")(args=args, config=None)
     args.output_dir = f"../ACR_Model_Saved/{args.model_type}/{args.task_type}/"
     os.makedirs(args.output_dir, exist_ok=True)
     # 将模型注入到训练过程中
@@ -54,7 +54,6 @@ if __name__ == "__main__":
     else:
       # 测试
       logger.info("Start Testing")
-      
       args.test_filename = f"../ACR_Dataset/{args.dataset_name}/{args.task_type}/{args.task_type}-test.jsonl"
       logger.info(f"Testing/eval parameters: model_name_or_path={args.model_name_or_path}, output_dir={args.output_dir}, test_filename={args.test_filename}")
       tester = eval(f"{args.model_type}{args.task_type.upper()}")(args=args, data_file=args.test_filename, model=model)
