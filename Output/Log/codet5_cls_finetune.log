@@ -1,2 +1,181 @@
 nohup: ignoring input
-nohup: failed to run command 'torchrun': No such file or directory
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+==================================================
+Program Starting with Parameters:
+==================================================Model Name: codet5
+
+Program Starting with Parameters:Dataset Name: CR
+
+Model Name: codet5==================================================
+
+Dataset Name: CR
+
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/24/2025 11:55:55 - INFO - __main__ -   Start Training
+05/24/2025 11:55:55 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/cls/, dev_filename=../ACR_Dataset/CR/cls/cls-valid.jsonl, train_filename=../ACR_Dataset/CR/cls/
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 5
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 7
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 2
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 6
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 1
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 4
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 3
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - INFO - torch.distributed.distributed_c10d -   Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 3, global rank: 3, world size: 8
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 8
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 2, global rank: 2, world size: 8
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 5, global rank: 5, world size: 8
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 4, global rank: 4, world size: 8
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 6, global rank: 6, world size: 8
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 8
+05/24/2025 11:55:56 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 7, global rank: 7, world size: 8
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/24/2025 11:55:56 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/24/2025 11:56:02 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:02 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:02 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:02 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/24/2025 11:56:03 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:03 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:03 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:04 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 7, device: cuda:7, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 5, device: cuda:5, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 4, device: cuda:4, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 2, device: cuda:2, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 3, device: cuda:3, n_gpu: 1, distributed training: True, cpu count: 40
+05/24/2025 11:56:09 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 6, device: cuda:6, n_gpu: 1, distributed training: True, cpu count: 40
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps
+../ACR_Dataset/CR/cls/
+05/24/2025 11:56:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/cls/cls-train-chunk-2rb.exps

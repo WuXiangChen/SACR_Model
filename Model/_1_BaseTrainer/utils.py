@@ -824,10 +824,9 @@ def build_or_load_gen_model(args, model):
     config_class, model_class, tokenizer_class = model.config_class, model.model_class, model.tokenizer_class
     logger.info("==========")
     if args.model_name_or_path!="T5CR":
-        print(args.model_name_or_path)
+        logger.info(f"loaded model path:{args.model_name_or_path}")
         config = config_class.from_pretrained(args.model_name_or_path)
         tokenizer = tokenizer_class.from_pretrained(args.model_name_or_path)
-        print(f"Tokenizer vocabulary size: {tokenizer.vocab_size}")
         model = model_class.from_pretrained(pretrained_model_name_or_path=args.model_name_or_path, config=args.model_name_or_path)
         # from transformers import T5Model
         # model = T5Model.from_pretrained("google-t5/t5-small")

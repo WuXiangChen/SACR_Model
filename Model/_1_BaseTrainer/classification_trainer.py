@@ -87,7 +87,8 @@ class ClassificationTrainer(BaseTrainer):
             global_step = 0
             tr_loss, logging_loss = 0.0, 0.0
             best_f1 = 0.0
-
+            train_dataloader = self.get_data_loader()
+            eval_dataloader  = self.get_data_loader(train_eval_=True)
             # Training loop
             for epoch in range(1, self.args.train_epochs + 1):
                 # Set seed for reproducible data split
@@ -95,10 +96,7 @@ class ClassificationTrainer(BaseTrainer):
                 self.args.seed += epoch
                 set_seed(self.args)
                 self.args.seed = save_seed
-                
                 self.model.train()
-                train_dataloader = self.get_data_loader()
-                eval_dataloader  = self.get_data_loader(train_eval_=True)
                 for step, examples in enumerate(train_dataloader, 1):
                     if step == 1:
                         # ex = examples[0]

@@ -18,14 +18,7 @@ logger = logging.getLogger(__name__)
 class codet5CLS(ClassificationTrainer):
   def __init__(self, args, data_file: str, model=None,  eval_=False):
     super().__init__(args=args, data_file=data_file, model=model, eval_=eval_)
-  
-  def evaluate(self, data_file:str=None):
-    if data_file!=None:
-      self.data_file = data_file
-      dataloader = self.get_data_loader(train_eval_=True)
-      return super().evaluate(dataloader)  
-    else:
-      raise ValueError("No data_file provided for evaluation.")
+
 
   # 这里可以独立的设计 _setup_training, 来初始化它自己的optimizer和scheduler的设计
   def _setup_training(self,
