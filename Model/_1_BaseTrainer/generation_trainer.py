@@ -8,6 +8,8 @@ from Model._1_BaseTrainer.configs import set_seed
 import os
 import logging
 import pdb
+from transformers import GenerationConfig
+from pprint import pprint
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
@@ -40,8 +42,8 @@ class GenerationTrainer(BaseTrainer):
         # 加载所有数据
         all_datasets = []
         for data_file in train_files:
-            dataset_cls = SimpleGenDataset if self.args.raw_input else CommentGenDataset
-            dataset = dataset_cls(self.tokenizer, self.pool, self.args, data_file) # 这里数据集的信息应当也是共有的，包括cls数据；msg数据；以及ref数据
+            dataset_gen = SimpleGenDataset if self.args.raw_input else CommentGenDataset
+            dataset = dataset_gen(self.tokenizer, self.pool, self.args, data_file) # 这里数据集的信息应当也是共有的，包括cls数据；msg数据；以及ref数据
             all_datasets.append(dataset)
         combined_dataset = torch.utils.data.ConcatDataset(all_datasets)
         
@@ -76,26 +78,30 @@ class GenerationTrainer(BaseTrainer):
         else:
             model = self.model
         pred_nls, golds = [], []
+        
         with torch.no_grad():
             for examples in dataloader:
                 # 生成预测
+                    
                 source_ids = torch.tensor([ex.source_ids for ex in examples], dtype=torch.long).to(self.local_rank)
                 preds = model.generate(
                     input_ids=source_ids,
                     attention_mask=source_ids.ne(self.tokenizer.pad_id),
                     use_cache=True,
+                    synced_gpus = False,
                     num_beams=self.args.beam_size,
                     early_stopping=True,
                     max_length=self.args.max_target_length)
                 
                 # 解码预测结果
-                batch_preds = [self.tokenizer.decode(
-                    ids[1:],  # 跳过起始token
-                    skip_special_tokens=True,
+                batch_preds = [self.tokenizer.decode(ids[1:],skip_special_tokens=True,
                     clean_up_tokenization_spaces=False) for ids in preds.cpu().numpy()]
-    
+                
+                batch_golds = [self.tokenizer.decode(ex.target_ids,skip_special_tokens=True,
+                    clean_up_tokenization_spaces=False) for ex in examples]
+                
                 pred_nls.extend(batch_preds)
-                golds.extend([ex.msg for ex in examples])
+                golds.extend(batch_golds)
 
         # 计算BLEU
         return bleu_fromstr(pred_nls, golds, rmstop=False)

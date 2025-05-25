@@ -1,0 +1,63 @@
+nohup: ignoring input
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2025-05-25 00:13:43.609887: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-25 00:13:43.690767: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+==================================================
+Program Starting with Parameters:
+Model Name: codereviewer
+Dataset Name: CR
+==================================================
+
+05/25/2025 00:13:46 - INFO - __main__ -   Start Testing
+05/25/2025 00:13:46 - INFO - __main__ -   Testing/eval parameters: model_name_or_path=../ACR_Model_Saved/codereviewer/originalModel/, output_dir=../ACR_Model_Saved/codereviewer/msg/, test_filename=../ACR_Dataset/CR/msg/msg-test.jsonl
+05/25/2025 00:13:46 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
+==================================================
+Program Starting with Parameters:
+Model Name: codereviewer
+Dataset Name: CR
+==================================================
+
+05/25/2025 00:13:46 - INFO - __main__ -   Start Testing
+05/25/2025 00:13:46 - INFO - __main__ -   Testing/eval parameters: model_name_or_path=../ACR_Model_Saved/codereviewer/originalModel/, output_dir=../ACR_Model_Saved/codereviewer/msg/, test_filename=../ACR_Dataset/CR/msg/msg-test.jsonl
+05/25/2025 00:13:47 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 1
+05/25/2025 00:13:47 - INFO - torch.distributed.distributed_c10d -   Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+05/25/2025 00:13:47 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 2 nodes.
+05/25/2025 00:13:47 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 2
+05/25/2025 00:13:47 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/25/2025 00:13:47 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codereviewer/originalModel/
+05/25/2025 00:13:47 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 2
+05/25/2025 00:13:47 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/25/2025 00:13:47 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codereviewer/originalModel/
+Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of codereviewerModel were not initialized from the model checkpoint at ../ACR_Model_Saved/codereviewer/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/25/2025 00:13:48 - INFO - Model._1_BaseTrainer.utils -   Loading model weights from ../ACR_Model_Saved/codereviewer/msg/checkpoint-100-0.0000/model.safetensors
+05/25/2025 00:13:48 - INFO - Model._1_BaseTrainer.utils -   Loading model weights from ../ACR_Model_Saved/codereviewer/msg/checkpoint-100-0.0000/model.safetensors
+05/25/2025 00:14:04 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, cpu count: 192
+05/25/2025 00:14:04 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 192
+/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+../ACR_Dataset/CR/msg/msg-test.jsonl
+05/25/2025 00:14:44 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-testrb.exps
+/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+../ACR_Dataset/CR/msg/msg-test.jsonl
+05/25/2025 00:14:46 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-testrb.exps
+05/25/2025 00:14:47 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/25/2025 00:14:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+Total: 10157
+Total: 10157
+10.61
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Final Model Name: codereviewer
+Final Dataset Name: CR
+10.61
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Final Model Name: codereviewer
+Final Dataset Name: CR
