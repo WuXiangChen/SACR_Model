@@ -41,7 +41,7 @@ CUDA_VISIBLE_DEVICES=2,3 nohup torchrun \
     --seed 2233 > Output/Log/codereviewer_msg_finetune.log 2>&1 & disown
 
 # 测试命令
-CUDA_VISIBLE_DEVICES=2,3 nohup torchrun \
+CUDA_VISIBLE_DEVICES=2 nohup torchrun \
     --nproc_per_node=2 ./main.py \
     --dataset_name "CR"\
     --train_epochs 30 \
