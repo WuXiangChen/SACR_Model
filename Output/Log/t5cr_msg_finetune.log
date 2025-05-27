@@ -1,0 +1,1465 @@
+nohup: ignoring input
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:03 - INFO - __main__ -   Start Training
+05/26/2025 00:44:03 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:03 - INFO - __main__ -   Start Training
+05/26/2025 00:44:03 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:04 - INFO - __main__ -   Start Training
+05/26/2025 00:44:04 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:04 - INFO - __main__ -   Start Training
+05/26/2025 00:44:04 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:04 - INFO - __main__ -   Start Training
+05/26/2025 00:44:04 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:04 - INFO - __main__ -   Start Training
+05/26/2025 00:44:04 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:04 - INFO - __main__ -   Start Training
+05/26/2025 00:44:04 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+==================================================
+Program Starting with Parameters:
+Model Name: t5cr
+Dataset Name: CR
+==================================================
+
+05/26/2025 00:44:04 - INFO - __main__ -   Start Training
+05/26/2025 00:44:04 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/t5cr/originalModel/, output_dir=../ACR_Model_Saved/t5cr/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 7
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 6
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 2
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 4
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 1
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 3
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 5
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - INFO - torch.distributed.distributed_c10d -   Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 7, global rank: 7, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 5, global rank: 5, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 2, global rank: 2, world size: 8
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 6, global rank: 6, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 4, global rank: 4, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 3, global rank: 3, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+05/26/2025 00:44:04 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 1, global rank: 1, world size: 8
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/26/2025 00:44:04 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/t5cr/originalModel/
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+/root/anaconda3/envs/transformer/lib/python3.8/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+Some weights of t5crModel were not initialized from the model checkpoint at ../ACR_Model_Saved/t5cr/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/26/2025 00:44:05 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/26/2025 00:44:06 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 4, device: cuda:4, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 6, device: cuda:6, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 3, device: cuda:3, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 2, device: cuda:2, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 5, device: cuda:5, n_gpu: 1, distributed training: True, cpu count: 40
+05/26/2025 00:44:10 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 7, device: cuda:7, n_gpu: 1, distributed training: True, cpu count: 40
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:44:11 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+05/26/2025 00:44:47 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:47 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:47 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:48 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:50 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:51 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:53 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:44:53 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:22 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:22 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:23 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:24 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+05/26/2025 00:45:24 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:45:24 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:45:24 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:25 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+05/26/2025 00:45:26 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:27 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+05/26/2025 00:45:27 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:45:29 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:30 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+../ACR_Dataset/CR/msg/
+05/26/2025 00:45:30 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+05/26/2025 00:45:32 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:45:32 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/26/2025 00:45:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:40 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:41 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:41 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:46 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:45:46 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 00:46:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 100/120000, Loss: 10.8603
+05/26/2025 00:47:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 200/120000, Loss: 10.4680
+05/26/2025 00:47:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 300/120000, Loss: 10.0629
+05/26/2025 00:48:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 400/120000, Loss: 9.8132
+05/26/2025 00:49:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 500/120000, Loss: 9.5782
+05/26/2025 00:49:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 600/120000, Loss: 9.4104
+05/26/2025 00:50:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 700/120000, Loss: 9.2685
+05/26/2025 00:51:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 800/120000, Loss: 9.1369
+05/26/2025 00:51:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 900/120000, Loss: 9.0071
+05/26/2025 00:52:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1000/120000, Loss: 8.8714
+05/26/2025 00:53:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1100/120000, Loss: 8.7232
+05/26/2025 00:53:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1200/120000, Loss: 8.6187
+05/26/2025 00:54:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1300/120000, Loss: 8.5210
+05/26/2025 00:55:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1400/120000, Loss: 8.5048
+05/26/2025 00:55:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1500/120000, Loss: 8.4865
+05/26/2025 00:56:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1600/120000, Loss: 8.3744
+05/26/2025 00:57:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1700/120000, Loss: 8.3322
+05/26/2025 00:57:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1800/120000, Loss: 8.3020
+05/26/2025 00:58:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 1900/120000, Loss: 8.2382
+05/26/2025 00:59:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2000/120000, Loss: 8.1985
+05/26/2025 00:59:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2100/120000, Loss: 8.1332
+05/26/2025 01:00:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2200/120000, Loss: 8.0890
+05/26/2025 01:01:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2300/120000, Loss: 8.0321
+05/26/2025 01:01:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2400/120000, Loss: 8.0054
+05/26/2025 01:02:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2500/120000, Loss: 7.9717
+05/26/2025 01:03:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2600/120000, Loss: 7.9416
+05/26/2025 01:03:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2700/120000, Loss: 7.8993
+05/26/2025 01:04:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2800/120000, Loss: 7.8389
+05/26/2025 01:05:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 2900/120000, Loss: 7.8080
+05/26/2025 01:05:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3000/120000, Loss: 7.7907
+05/26/2025 01:06:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3100/120000, Loss: 7.7568
+05/26/2025 01:07:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3200/120000, Loss: 7.7256
+05/26/2025 01:07:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3300/120000, Loss: 7.6610
+05/26/2025 01:08:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3400/120000, Loss: 7.6396
+05/26/2025 01:09:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3500/120000, Loss: 7.6236
+05/26/2025 01:09:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3600/120000, Loss: 7.5824
+Total: 10310
+05/26/2025 01:51:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 3600: 3.2200
+05/26/2025 01:51:35 - INFO - Model._1_BaseTrainer.generation_trainer -   New best model saved to ../ACR_Model_Saved/t5cr/msg/checkpoint-3600-3.2200
+05/26/2025 01:52:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3700/120000, Loss: 7.2588
+05/26/2025 01:52:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3800/120000, Loss: 7.2282
+05/26/2025 01:53:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 3900/120000, Loss: 7.2098
+05/26/2025 01:54:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4000/120000, Loss: 7.1442
+05/26/2025 01:54:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4100/120000, Loss: 7.1309
+05/26/2025 01:55:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4200/120000, Loss: 7.1095
+05/26/2025 01:56:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4300/120000, Loss: 7.0589
+05/26/2025 01:56:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4400/120000, Loss: 7.0302
+05/26/2025 01:57:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4500/120000, Loss: 6.9680
+05/26/2025 01:58:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4600/120000, Loss: 6.9454
+05/26/2025 01:58:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4700/120000, Loss: 6.9310
+05/26/2025 01:59:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4800/120000, Loss: 6.8580
+05/26/2025 02:00:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 1, Step: 4900/120000, Loss: 6.8395
+05/26/2025 02:00:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:00:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 02:01:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5000/120000, Loss: 7.0778
+05/26/2025 02:01:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5100/120000, Loss: 7.0824
+05/26/2025 02:02:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5200/120000, Loss: 7.1101
+05/26/2025 02:03:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5300/120000, Loss: 7.0530
+05/26/2025 02:03:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5400/120000, Loss: 7.0544
+05/26/2025 02:04:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5500/120000, Loss: 7.0062
+05/26/2025 02:05:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5600/120000, Loss: 6.9864
+05/26/2025 02:05:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5700/120000, Loss: 6.9840
+05/26/2025 02:06:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5800/120000, Loss: 6.9667
+05/26/2025 02:07:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 5900/120000, Loss: 6.9189
+05/26/2025 02:07:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6000/120000, Loss: 6.8864
+05/26/2025 02:08:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6100/120000, Loss: 6.8663
+05/26/2025 02:09:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6200/120000, Loss: 6.8001
+05/26/2025 02:09:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6300/120000, Loss: 6.8190
+05/26/2025 02:10:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6400/120000, Loss: 6.8163
+05/26/2025 02:11:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6500/120000, Loss: 6.7588
+05/26/2025 02:11:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6600/120000, Loss: 6.6862
+05/26/2025 02:12:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6700/120000, Loss: 6.7313
+05/26/2025 02:13:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6800/120000, Loss: 6.6869
+05/26/2025 02:13:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 6900/120000, Loss: 6.7047
+05/26/2025 02:14:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7000/120000, Loss: 6.6530
+05/26/2025 02:15:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7100/120000, Loss: 6.6667
+05/26/2025 02:15:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7200/120000, Loss: 6.5986
+Total: 10310
+05/26/2025 02:57:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 7200: 3.0400
+05/26/2025 02:57:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7300/120000, Loss: 6.3238
+05/26/2025 02:58:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7400/120000, Loss: 6.2650
+05/26/2025 02:59:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7500/120000, Loss: 6.2679
+05/26/2025 02:59:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7600/120000, Loss: 6.2307
+05/26/2025 03:00:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7700/120000, Loss: 6.2011
+05/26/2025 03:01:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7800/120000, Loss: 6.1668
+05/26/2025 03:01:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 7900/120000, Loss: 6.1494
+05/26/2025 03:02:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8000/120000, Loss: 6.1300
+05/26/2025 03:03:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8100/120000, Loss: 6.1352
+05/26/2025 03:03:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8200/120000, Loss: 6.0494
+05/26/2025 03:04:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8300/120000, Loss: 6.0664
+05/26/2025 03:05:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8400/120000, Loss: 6.0598
+05/26/2025 03:05:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8500/120000, Loss: 6.0181
+05/26/2025 03:06:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8600/120000, Loss: 5.9867
+05/26/2025 03:07:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8700/120000, Loss: 5.9704
+05/26/2025 03:07:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8800/120000, Loss: 5.9943
+05/26/2025 03:08:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 8900/120000, Loss: 5.9548
+05/26/2025 03:09:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9000/120000, Loss: 5.9344
+05/26/2025 03:09:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9100/120000, Loss: 5.9329
+05/26/2025 03:10:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9200/120000, Loss: 5.8892
+05/26/2025 03:11:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9300/120000, Loss: 5.8895
+05/26/2025 03:11:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9400/120000, Loss: 5.8409
+05/26/2025 03:12:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9500/120000, Loss: 5.8318
+05/26/2025 03:13:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9600/120000, Loss: 5.8251
+05/26/2025 03:13:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9700/120000, Loss: 5.7608
+05/26/2025 03:14:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 2, Step: 9800/120000, Loss: 5.7628
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:14:39 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 03:15:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 9900/120000, Loss: 6.0623
+05/26/2025 03:15:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10000/120000, Loss: 6.0802
+05/26/2025 03:16:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10100/120000, Loss: 6.1212
+05/26/2025 03:17:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10200/120000, Loss: 6.0783
+05/26/2025 03:17:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10300/120000, Loss: 6.1162
+05/26/2025 03:18:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10400/120000, Loss: 6.0884
+05/26/2025 03:19:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10500/120000, Loss: 6.0834
+05/26/2025 03:20:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10600/120000, Loss: 6.1042
+05/26/2025 03:20:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10700/120000, Loss: 6.1223
+05/26/2025 03:21:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10800/120000, Loss: 6.0809
+Total: 10310
+05/26/2025 04:03:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 10800: 2.7600
+05/26/2025 04:04:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 10900/120000, Loss: 5.7534
+05/26/2025 04:05:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11000/120000, Loss: 5.7399
+05/26/2025 04:05:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11100/120000, Loss: 5.6999
+05/26/2025 04:06:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11200/120000, Loss: 5.7353
+05/26/2025 04:07:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11300/120000, Loss: 5.7370
+05/26/2025 04:07:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11400/120000, Loss: 5.7225
+05/26/2025 04:08:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11500/120000, Loss: 5.6658
+05/26/2025 04:09:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11600/120000, Loss: 5.7296
+05/26/2025 04:09:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11700/120000, Loss: 5.7051
+05/26/2025 04:10:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11800/120000, Loss: 5.7509
+05/26/2025 04:11:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 11900/120000, Loss: 5.7098
+05/26/2025 04:11:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12000/120000, Loss: 5.7458
+05/26/2025 04:12:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12100/120000, Loss: 5.7124
+05/26/2025 04:13:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12200/120000, Loss: 5.7429
+05/26/2025 04:13:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12300/120000, Loss: 5.7168
+05/26/2025 04:14:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12400/120000, Loss: 5.7384
+05/26/2025 04:15:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12500/120000, Loss: 5.7263
+05/26/2025 04:15:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12600/120000, Loss: 5.7340
+05/26/2025 04:16:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12700/120000, Loss: 5.7027
+05/26/2025 04:17:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12800/120000, Loss: 5.7068
+05/26/2025 04:17:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 12900/120000, Loss: 5.7134
+05/26/2025 04:18:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13000/120000, Loss: 5.7530
+05/26/2025 04:19:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13100/120000, Loss: 5.6624
+05/26/2025 04:19:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13200/120000, Loss: 5.7088
+05/26/2025 04:20:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13300/120000, Loss: 5.7401
+05/26/2025 04:21:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13400/120000, Loss: 5.7005
+05/26/2025 04:21:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13500/120000, Loss: 5.6871
+05/26/2025 04:22:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13600/120000, Loss: 5.7036
+05/26/2025 04:23:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13700/120000, Loss: 5.7332
+05/26/2025 04:23:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13800/120000, Loss: 5.7143
+05/26/2025 04:24:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 13900/120000, Loss: 5.7091
+05/26/2025 04:25:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14000/120000, Loss: 5.7316
+05/26/2025 04:25:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14100/120000, Loss: 5.6898
+05/26/2025 04:26:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14200/120000, Loss: 5.7204
+05/26/2025 04:27:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14300/120000, Loss: 5.6896
+05/26/2025 04:27:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14400/120000, Loss: 5.6852
+Total: 10310
+05/26/2025 05:12:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 14400: 2.7800
+05/26/2025 05:13:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14500/120000, Loss: 5.6878
+05/26/2025 05:13:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14600/120000, Loss: 5.6644
+05/26/2025 05:14:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 3, Step: 14700/120000, Loss: 5.6508
+05/26/2025 05:14:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:14:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 05:15:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 14800/120000, Loss: 5.9697
+05/26/2025 05:16:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 14900/120000, Loss: 5.9997
+05/26/2025 05:16:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15000/120000, Loss: 6.1030
+05/26/2025 05:17:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15100/120000, Loss: 6.0692
+05/26/2025 05:18:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15200/120000, Loss: 6.1023
+05/26/2025 05:18:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15300/120000, Loss: 6.0784
+05/26/2025 05:19:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15400/120000, Loss: 6.0742
+05/26/2025 05:20:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15500/120000, Loss: 6.0851
+05/26/2025 05:20:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15600/120000, Loss: 6.1065
+05/26/2025 05:21:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15700/120000, Loss: 6.0815
+05/26/2025 05:22:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15800/120000, Loss: 6.0710
+05/26/2025 05:22:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 15900/120000, Loss: 6.0789
+05/26/2025 05:23:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16000/120000, Loss: 6.0388
+05/26/2025 05:24:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16100/120000, Loss: 6.0537
+05/26/2025 05:24:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16200/120000, Loss: 6.0751
+05/26/2025 05:25:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16300/120000, Loss: 6.0540
+05/26/2025 05:26:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16400/120000, Loss: 5.9979
+05/26/2025 05:26:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16500/120000, Loss: 6.0640
+05/26/2025 05:27:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16600/120000, Loss: 6.0483
+05/26/2025 05:28:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16700/120000, Loss: 6.0913
+05/26/2025 05:28:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16800/120000, Loss: 6.0481
+05/26/2025 05:29:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 16900/120000, Loss: 6.0559
+05/26/2025 05:30:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17000/120000, Loss: 6.0583
+05/26/2025 05:30:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17100/120000, Loss: 6.0681
+05/26/2025 05:31:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17200/120000, Loss: 6.0535
+05/26/2025 05:32:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17300/120000, Loss: 6.0805
+05/26/2025 05:32:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17400/120000, Loss: 6.0548
+05/26/2025 05:33:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17500/120000, Loss: 6.0835
+05/26/2025 05:34:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17600/120000, Loss: 6.0286
+05/26/2025 05:34:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17700/120000, Loss: 6.0464
+05/26/2025 05:35:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17800/120000, Loss: 6.0651
+05/26/2025 05:36:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 17900/120000, Loss: 6.0887
+05/26/2025 05:36:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18000/120000, Loss: 5.9973
+Total: 10310
+05/26/2025 06:18:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 18000: 2.8000
+05/26/2025 06:19:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18100/120000, Loss: 5.7067
+05/26/2025 06:20:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18200/120000, Loss: 5.7449
+05/26/2025 06:20:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18300/120000, Loss: 5.6896
+05/26/2025 06:21:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18400/120000, Loss: 5.6895
+05/26/2025 06:22:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18500/120000, Loss: 5.6983
+05/26/2025 06:22:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18600/120000, Loss: 5.7284
+05/26/2025 06:23:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18700/120000, Loss: 5.7140
+05/26/2025 06:24:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18800/120000, Loss: 5.7007
+05/26/2025 06:24:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 18900/120000, Loss: 5.7310
+05/26/2025 06:25:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19000/120000, Loss: 5.6807
+05/26/2025 06:26:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19100/120000, Loss: 5.7241
+05/26/2025 06:26:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19200/120000, Loss: 5.6859
+05/26/2025 06:27:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19300/120000, Loss: 5.6789
+05/26/2025 06:28:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19400/120000, Loss: 5.6890
+05/26/2025 06:28:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19500/120000, Loss: 5.6610
+05/26/2025 06:29:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 4, Step: 19600/120000, Loss: 5.6528
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:29:51 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 06:30:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 19700/120000, Loss: 5.9376
+05/26/2025 06:31:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 19800/120000, Loss: 6.0087
+05/26/2025 06:31:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 19900/120000, Loss: 6.0905
+05/26/2025 06:32:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20000/120000, Loss: 6.0783
+05/26/2025 06:33:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20100/120000, Loss: 6.1076
+05/26/2025 06:33:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20200/120000, Loss: 6.0762
+05/26/2025 06:34:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20300/120000, Loss: 6.0718
+05/26/2025 06:35:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20400/120000, Loss: 6.0868
+05/26/2025 06:35:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20500/120000, Loss: 6.1029
+05/26/2025 06:36:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20600/120000, Loss: 6.0809
+05/26/2025 06:37:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20700/120000, Loss: 6.0607
+05/26/2025 06:37:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20800/120000, Loss: 6.0707
+05/26/2025 06:38:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 20900/120000, Loss: 6.0411
+05/26/2025 06:39:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21000/120000, Loss: 6.0441
+05/26/2025 06:39:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21100/120000, Loss: 6.0861
+05/26/2025 06:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21200/120000, Loss: 6.0331
+05/26/2025 06:41:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21300/120000, Loss: 5.9986
+05/26/2025 06:41:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21400/120000, Loss: 6.0526
+05/26/2025 06:42:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21500/120000, Loss: 6.0412
+05/26/2025 06:43:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21600/120000, Loss: 6.0806
+Total: 10310
+05/26/2025 07:25:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 21600: 2.8000
+05/26/2025 07:25:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21700/120000, Loss: 5.6997
+05/26/2025 07:26:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21800/120000, Loss: 5.7312
+05/26/2025 07:27:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 21900/120000, Loss: 5.7123
+05/26/2025 07:27:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22000/120000, Loss: 5.7362
+05/26/2025 07:28:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22100/120000, Loss: 5.7156
+05/26/2025 07:29:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22200/120000, Loss: 5.7370
+05/26/2025 07:29:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22300/120000, Loss: 5.7092
+05/26/2025 07:30:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22400/120000, Loss: 5.7347
+05/26/2025 07:31:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22500/120000, Loss: 5.6747
+05/26/2025 07:31:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22600/120000, Loss: 5.7082
+05/26/2025 07:32:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22700/120000, Loss: 5.7146
+05/26/2025 07:33:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22800/120000, Loss: 5.7390
+05/26/2025 07:33:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 22900/120000, Loss: 5.6498
+05/26/2025 07:34:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23000/120000, Loss: 5.7002
+05/26/2025 07:35:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23100/120000, Loss: 5.7411
+05/26/2025 07:35:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23200/120000, Loss: 5.6889
+05/26/2025 07:36:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23300/120000, Loss: 5.6834
+05/26/2025 07:37:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23400/120000, Loss: 5.6891
+05/26/2025 07:37:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23500/120000, Loss: 5.7299
+05/26/2025 07:38:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23600/120000, Loss: 5.7049
+05/26/2025 07:39:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23700/120000, Loss: 5.6961
+05/26/2025 07:39:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23800/120000, Loss: 5.7294
+05/26/2025 07:40:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 23900/120000, Loss: 5.6837
+05/26/2025 07:41:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 24000/120000, Loss: 5.7094
+05/26/2025 07:41:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 24100/120000, Loss: 5.6835
+05/26/2025 07:42:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 24200/120000, Loss: 5.6763
+05/26/2025 07:43:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 24300/120000, Loss: 5.6829
+05/26/2025 07:44:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 24400/120000, Loss: 5.6553
+05/26/2025 07:44:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 5, Step: 24500/120000, Loss: 5.6518
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:44:57 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 07:45:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 24600/120000, Loss: 5.9306
+05/26/2025 07:46:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 24700/120000, Loss: 6.0057
+05/26/2025 07:46:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 24800/120000, Loss: 6.0811
+05/26/2025 07:47:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 24900/120000, Loss: 6.0767
+05/26/2025 07:48:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25000/120000, Loss: 6.1019
+05/26/2025 07:49:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25100/120000, Loss: 6.0668
+05/26/2025 07:49:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25200/120000, Loss: 6.0569
+Total: 10310
+05/26/2025 08:31:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 25200: 2.8100
+05/26/2025 08:32:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25300/120000, Loss: 5.7375
+05/26/2025 08:32:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25400/120000, Loss: 5.7589
+05/26/2025 08:33:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25500/120000, Loss: 5.7431
+05/26/2025 08:34:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25600/120000, Loss: 5.7245
+05/26/2025 08:34:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25700/120000, Loss: 5.7397
+05/26/2025 08:35:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25800/120000, Loss: 5.6896
+05/26/2025 08:36:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 25900/120000, Loss: 5.7050
+05/26/2025 08:36:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26000/120000, Loss: 5.7454
+05/26/2025 08:37:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26100/120000, Loss: 5.6990
+05/26/2025 08:38:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26200/120000, Loss: 5.6517
+05/26/2025 08:38:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26300/120000, Loss: 5.7119
+05/26/2025 08:39:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26400/120000, Loss: 5.7059
+05/26/2025 08:40:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26500/120000, Loss: 5.7339
+05/26/2025 08:40:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26600/120000, Loss: 5.6869
+05/26/2025 08:41:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26700/120000, Loss: 5.7263
+05/26/2025 08:42:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26800/120000, Loss: 5.7080
+05/26/2025 08:43:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 26900/120000, Loss: 5.7425
+05/26/2025 08:43:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27000/120000, Loss: 5.7030
+05/26/2025 08:44:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27100/120000, Loss: 5.7351
+05/26/2025 08:45:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27200/120000, Loss: 5.6983
+05/26/2025 08:45:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27300/120000, Loss: 5.7215
+05/26/2025 08:46:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27400/120000, Loss: 5.6761
+05/26/2025 08:47:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27500/120000, Loss: 5.7064
+05/26/2025 08:47:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27600/120000, Loss: 5.7096
+05/26/2025 08:48:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27700/120000, Loss: 5.7323
+05/26/2025 08:49:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27800/120000, Loss: 5.6459
+05/26/2025 08:49:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 27900/120000, Loss: 5.7004
+05/26/2025 08:50:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28000/120000, Loss: 5.7391
+05/26/2025 08:51:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28100/120000, Loss: 5.6845
+05/26/2025 08:51:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28200/120000, Loss: 5.6799
+05/26/2025 08:52:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28300/120000, Loss: 5.6833
+05/26/2025 08:53:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28400/120000, Loss: 5.7254
+05/26/2025 08:53:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28500/120000, Loss: 5.6959
+05/26/2025 08:54:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28600/120000, Loss: 5.7007
+05/26/2025 08:55:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28700/120000, Loss: 5.7253
+05/26/2025 08:55:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28800/120000, Loss: 5.6731
+Total: 10310
+05/26/2025 09:37:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 28800: 2.8200
+05/26/2025 09:38:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 28900/120000, Loss: 5.7133
+05/26/2025 09:39:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 29000/120000, Loss: 5.6766
+05/26/2025 09:39:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 29100/120000, Loss: 5.6647
+05/26/2025 09:40:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 29200/120000, Loss: 5.6800
+05/26/2025 09:41:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 29300/120000, Loss: 5.6615
+05/26/2025 09:41:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 6, Step: 29400/120000, Loss: 5.6425
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 09:42:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 29500/120000, Loss: 5.9094
+05/26/2025 09:43:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 29600/120000, Loss: 6.0196
+05/26/2025 09:44:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 29700/120000, Loss: 6.0723
+05/26/2025 09:44:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 29800/120000, Loss: 6.0625
+05/26/2025 09:45:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 29900/120000, Loss: 6.1157
+05/26/2025 09:46:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30000/120000, Loss: 6.0713
+05/26/2025 09:46:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30100/120000, Loss: 6.0588
+05/26/2025 09:47:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30200/120000, Loss: 6.0723
+05/26/2025 09:48:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30300/120000, Loss: 6.0993
+05/26/2025 09:48:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30400/120000, Loss: 6.0849
+05/26/2025 09:49:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30500/120000, Loss: 6.0562
+05/26/2025 09:50:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30600/120000, Loss: 6.0805
+05/26/2025 09:50:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30700/120000, Loss: 6.0268
+05/26/2025 09:51:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30800/120000, Loss: 6.0333
+05/26/2025 09:52:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 30900/120000, Loss: 6.0826
+05/26/2025 09:52:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31000/120000, Loss: 6.0438
+05/26/2025 09:53:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31100/120000, Loss: 5.9907
+05/26/2025 09:54:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31200/120000, Loss: 6.0441
+05/26/2025 09:54:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31300/120000, Loss: 6.0445
+05/26/2025 09:55:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31400/120000, Loss: 6.0724
+05/26/2025 09:56:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31500/120000, Loss: 6.0171
+05/26/2025 09:56:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31600/120000, Loss: 6.0591
+05/26/2025 09:57:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31700/120000, Loss: 6.0622
+05/26/2025 09:58:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31800/120000, Loss: 6.0720
+05/26/2025 09:58:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 31900/120000, Loss: 6.0443
+05/26/2025 09:59:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32000/120000, Loss: 6.0749
+05/26/2025 10:00:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32100/120000, Loss: 6.0450
+05/26/2025 10:00:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32200/120000, Loss: 6.0521
+05/26/2025 10:01:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32300/120000, Loss: 6.0204
+05/26/2025 10:02:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32400/120000, Loss: 6.0357
+Total: 10310
+05/26/2025 10:44:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 32400: 2.8400
+05/26/2025 10:44:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32500/120000, Loss: 5.7110
+05/26/2025 10:45:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32600/120000, Loss: 5.7296
+05/26/2025 10:46:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32700/120000, Loss: 5.6521
+05/26/2025 10:46:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32800/120000, Loss: 5.6959
+05/26/2025 10:47:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 32900/120000, Loss: 5.7423
+05/26/2025 10:48:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33000/120000, Loss: 5.6770
+05/26/2025 10:48:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33100/120000, Loss: 5.6815
+05/26/2025 10:49:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33200/120000, Loss: 5.6786
+05/26/2025 10:50:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33300/120000, Loss: 5.7387
+05/26/2025 10:50:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33400/120000, Loss: 5.6805
+05/26/2025 10:51:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33500/120000, Loss: 5.7059
+05/26/2025 10:52:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33600/120000, Loss: 5.7182
+05/26/2025 10:52:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33700/120000, Loss: 5.6740
+05/26/2025 10:53:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33800/120000, Loss: 5.7193
+05/26/2025 10:54:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 33900/120000, Loss: 5.6682
+05/26/2025 10:54:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 34000/120000, Loss: 5.6601
+05/26/2025 10:55:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 34100/120000, Loss: 5.6760
+05/26/2025 10:56:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 34200/120000, Loss: 5.6656
+05/26/2025 10:57:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 7, Step: 34300/120000, Loss: 5.6396
+05/26/2025 10:57:20 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:21 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 10:57:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 34400/120000, Loss: 5.8985
+05/26/2025 10:58:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 34500/120000, Loss: 6.0209
+05/26/2025 10:59:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 34600/120000, Loss: 6.0591
+05/26/2025 10:59:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 34700/120000, Loss: 6.0636
+05/26/2025 11:00:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 34800/120000, Loss: 6.0983
+05/26/2025 11:01:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 34900/120000, Loss: 6.0696
+05/26/2025 11:01:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35000/120000, Loss: 6.0680
+05/26/2025 11:02:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35100/120000, Loss: 6.0845
+05/26/2025 11:03:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35200/120000, Loss: 6.0814
+05/26/2025 11:03:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35300/120000, Loss: 6.0812
+05/26/2025 11:04:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35400/120000, Loss: 6.0417
+05/26/2025 11:05:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35500/120000, Loss: 6.0829
+05/26/2025 11:05:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35600/120000, Loss: 6.0333
+05/26/2025 11:06:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35700/120000, Loss: 6.0325
+05/26/2025 11:07:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35800/120000, Loss: 6.0665
+05/26/2025 11:07:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 35900/120000, Loss: 6.0387
+05/26/2025 11:08:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36000/120000, Loss: 5.9961
+Total: 10310
+05/26/2025 11:49:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 36000: 2.8300
+05/26/2025 11:50:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36100/120000, Loss: 5.6930
+05/26/2025 11:51:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36200/120000, Loss: 5.7146
+05/26/2025 11:51:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36300/120000, Loss: 5.7211
+05/26/2025 11:52:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36400/120000, Loss: 5.6894
+05/26/2025 11:53:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36500/120000, Loss: 5.7137
+05/26/2025 11:53:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36600/120000, Loss: 5.7154
+05/26/2025 11:54:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36700/120000, Loss: 5.7260
+05/26/2025 11:55:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36800/120000, Loss: 5.6997
+05/26/2025 11:55:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 36900/120000, Loss: 5.7364
+05/26/2025 11:56:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37000/120000, Loss: 5.7000
+05/26/2025 11:57:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37100/120000, Loss: 5.7125
+05/26/2025 11:57:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37200/120000, Loss: 5.6748
+05/26/2025 11:58:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37300/120000, Loss: 5.6889
+05/26/2025 11:59:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37400/120000, Loss: 5.7095
+05/26/2025 12:00:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37500/120000, Loss: 5.7267
+05/26/2025 12:00:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37600/120000, Loss: 5.6558
+05/26/2025 12:01:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37700/120000, Loss: 5.6914
+05/26/2025 12:02:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37800/120000, Loss: 5.7370
+05/26/2025 12:02:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 37900/120000, Loss: 5.6663
+05/26/2025 12:03:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38000/120000, Loss: 5.6863
+05/26/2025 12:04:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38100/120000, Loss: 5.6733
+05/26/2025 12:04:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38200/120000, Loss: 5.7345
+05/26/2025 12:05:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38300/120000, Loss: 5.6786
+05/26/2025 12:06:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38400/120000, Loss: 5.7041
+05/26/2025 12:06:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38500/120000, Loss: 5.7157
+05/26/2025 12:07:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38600/120000, Loss: 5.6700
+05/26/2025 12:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38700/120000, Loss: 5.7163
+05/26/2025 12:08:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38800/120000, Loss: 5.6576
+05/26/2025 12:09:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 38900/120000, Loss: 5.6640
+05/26/2025 12:10:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 39000/120000, Loss: 5.6741
+05/26/2025 12:10:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 39100/120000, Loss: 5.6608
+05/26/2025 12:11:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 8, Step: 39200/120000, Loss: 5.6335
+05/26/2025 12:11:46 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:46 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:46 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:46 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:11:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 12:12:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39300/120000, Loss: 5.8974
+05/26/2025 12:12:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39400/120000, Loss: 6.0064
+05/26/2025 12:13:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39500/120000, Loss: 6.0624
+05/26/2025 12:14:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39600/120000, Loss: 6.0619
+Total: 10310
+05/26/2025 12:55:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 39600: 2.8400
+05/26/2025 12:56:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39700/120000, Loss: 5.7554
+05/26/2025 12:56:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39800/120000, Loss: 5.7312
+05/26/2025 12:57:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 39900/120000, Loss: 5.7205
+05/26/2025 12:58:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40000/120000, Loss: 5.7305
+05/26/2025 12:59:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40100/120000, Loss: 5.7391
+05/26/2025 12:59:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40200/120000, Loss: 5.7442
+05/26/2025 13:00:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40300/120000, Loss: 5.7059
+05/26/2025 13:01:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40400/120000, Loss: 5.7352
+05/26/2025 13:01:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40500/120000, Loss: 5.6921
+05/26/2025 13:02:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40600/120000, Loss: 5.7023
+05/26/2025 13:03:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40700/120000, Loss: 5.7208
+05/26/2025 13:03:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40800/120000, Loss: 5.6966
+05/26/2025 13:04:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 40900/120000, Loss: 5.6510
+05/26/2025 13:05:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41000/120000, Loss: 5.6792
+05/26/2025 13:05:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41100/120000, Loss: 5.7160
+05/26/2025 13:06:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41200/120000, Loss: 5.7235
+05/26/2025 13:07:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41300/120000, Loss: 5.6838
+05/26/2025 13:07:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41400/120000, Loss: 5.7159
+05/26/2025 13:08:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41500/120000, Loss: 5.7035
+05/26/2025 13:09:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41600/120000, Loss: 5.7219
+05/26/2025 13:09:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41700/120000, Loss: 5.7056
+05/26/2025 13:10:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41800/120000, Loss: 5.7228
+05/26/2025 13:11:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 41900/120000, Loss: 5.6956
+05/26/2025 13:11:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42000/120000, Loss: 5.7106
+05/26/2025 13:12:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42100/120000, Loss: 5.6739
+05/26/2025 13:13:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42200/120000, Loss: 5.6786
+05/26/2025 13:13:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42300/120000, Loss: 5.7142
+05/26/2025 13:14:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42400/120000, Loss: 5.7185
+05/26/2025 13:15:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42500/120000, Loss: 5.6531
+05/26/2025 13:15:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42600/120000, Loss: 5.6918
+05/26/2025 13:16:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42700/120000, Loss: 5.7218
+05/26/2025 13:17:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42800/120000, Loss: 5.6736
+05/26/2025 13:17:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 42900/120000, Loss: 5.6758
+05/26/2025 13:18:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43000/120000, Loss: 5.6831
+05/26/2025 13:19:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43100/120000, Loss: 5.7171
+05/26/2025 13:19:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43200/120000, Loss: 5.6825
+Total: 10310
+05/26/2025 14:02:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 43200: 2.8600
+05/26/2025 14:03:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43300/120000, Loss: 5.7106
+05/26/2025 14:03:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43400/120000, Loss: 5.7087
+05/26/2025 14:04:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43500/120000, Loss: 5.6598
+05/26/2025 14:05:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43600/120000, Loss: 5.7191
+05/26/2025 14:05:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43700/120000, Loss: 5.6550
+05/26/2025 14:06:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43800/120000, Loss: 5.6615
+05/26/2025 14:07:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 43900/120000, Loss: 5.6670
+05/26/2025 14:07:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 44000/120000, Loss: 5.6596
+05/26/2025 14:08:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 9, Step: 44100/120000, Loss: 5.6351
+05/26/2025 14:08:52 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:52 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:08:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 14:09:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44200/120000, Loss: 5.8749
+05/26/2025 14:10:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44300/120000, Loss: 6.0104
+05/26/2025 14:10:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44400/120000, Loss: 6.0736
+05/26/2025 14:11:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44500/120000, Loss: 6.0516
+05/26/2025 14:12:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44600/120000, Loss: 6.0971
+05/26/2025 14:12:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44700/120000, Loss: 6.0639
+05/26/2025 14:13:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44800/120000, Loss: 6.0653
+05/26/2025 14:14:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 44900/120000, Loss: 6.0733
+05/26/2025 14:14:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45000/120000, Loss: 6.0697
+05/26/2025 14:15:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45100/120000, Loss: 6.0839
+05/26/2025 14:16:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45200/120000, Loss: 6.0490
+05/26/2025 14:16:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45300/120000, Loss: 6.0722
+05/26/2025 14:17:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45400/120000, Loss: 6.0374
+05/26/2025 14:18:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45500/120000, Loss: 6.0246
+05/26/2025 14:18:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45600/120000, Loss: 6.0664
+05/26/2025 14:19:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45700/120000, Loss: 6.0374
+05/26/2025 14:20:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45800/120000, Loss: 5.9958
+05/26/2025 14:20:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 45900/120000, Loss: 6.0161
+05/26/2025 14:21:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46000/120000, Loss: 6.0576
+05/26/2025 14:22:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46100/120000, Loss: 6.0612
+05/26/2025 14:22:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46200/120000, Loss: 6.0159
+05/26/2025 14:23:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46300/120000, Loss: 6.0509
+05/26/2025 14:24:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46400/120000, Loss: 6.0453
+05/26/2025 14:24:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46500/120000, Loss: 6.0584
+05/26/2025 14:25:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46600/120000, Loss: 6.0431
+05/26/2025 14:26:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46700/120000, Loss: 6.0612
+05/26/2025 14:26:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46800/120000, Loss: 6.0379
+Total: 10310
+05/26/2025 15:10:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 46800: 2.8600
+05/26/2025 15:11:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 46900/120000, Loss: 5.7166
+05/26/2025 15:11:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47000/120000, Loss: 5.6817
+05/26/2025 15:12:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47100/120000, Loss: 5.6698
+05/26/2025 15:13:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47200/120000, Loss: 5.7118
+05/26/2025 15:13:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47300/120000, Loss: 5.7203
+05/26/2025 15:14:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47400/120000, Loss: 5.6503
+05/26/2025 15:15:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47500/120000, Loss: 5.6871
+05/26/2025 15:15:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47600/120000, Loss: 5.7257
+05/26/2025 15:16:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47700/120000, Loss: 5.6723
+05/26/2025 15:17:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47800/120000, Loss: 5.6766
+05/26/2025 15:17:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 47900/120000, Loss: 5.6779
+05/26/2025 15:18:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48000/120000, Loss: 5.7224
+05/26/2025 15:19:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48100/120000, Loss: 5.6776
+05/26/2025 15:19:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48200/120000, Loss: 5.7132
+05/26/2025 15:20:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48300/120000, Loss: 5.7087
+05/26/2025 15:21:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48400/120000, Loss: 5.6545
+05/26/2025 15:22:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48500/120000, Loss: 5.7232
+05/26/2025 15:22:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48600/120000, Loss: 5.6502
+05/26/2025 15:23:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48700/120000, Loss: 5.6633
+05/26/2025 15:24:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48800/120000, Loss: 5.6616
+05/26/2025 15:24:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 48900/120000, Loss: 5.6602
+05/26/2025 15:25:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 10, Step: 49000/120000, Loss: 5.6408
+05/26/2025 15:25:43 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:43 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:25:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 15:26:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49100/120000, Loss: 5.8656
+05/26/2025 15:26:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49200/120000, Loss: 6.0168
+05/26/2025 15:27:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49300/120000, Loss: 6.0623
+05/26/2025 15:28:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49400/120000, Loss: 6.0548
+05/26/2025 15:28:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49500/120000, Loss: 6.0839
+05/26/2025 15:29:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49600/120000, Loss: 6.0621
+05/26/2025 15:30:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49700/120000, Loss: 6.0783
+05/26/2025 15:30:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49800/120000, Loss: 6.0563
+05/26/2025 15:31:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 49900/120000, Loss: 6.0779
+05/26/2025 15:32:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50000/120000, Loss: 6.0842
+05/26/2025 15:32:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50100/120000, Loss: 6.0421
+05/26/2025 15:33:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50200/120000, Loss: 6.0610
+05/26/2025 15:34:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50300/120000, Loss: 6.0500
+05/26/2025 15:34:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50400/120000, Loss: 6.0281
+Total: 10310
+05/26/2025 16:16:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 50400: 2.8600
+05/26/2025 16:17:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50500/120000, Loss: 5.7253
+05/26/2025 16:17:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50600/120000, Loss: 5.6906
+05/26/2025 16:18:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50700/120000, Loss: 5.6602
+05/26/2025 16:19:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50800/120000, Loss: 5.6722
+05/26/2025 16:19:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 50900/120000, Loss: 5.7148
+05/26/2025 16:20:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51000/120000, Loss: 5.7168
+05/26/2025 16:21:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51100/120000, Loss: 5.6824
+05/26/2025 16:21:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51200/120000, Loss: 5.7025
+05/26/2025 16:22:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51300/120000, Loss: 5.7033
+05/26/2025 16:23:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51400/120000, Loss: 5.7230
+05/26/2025 16:23:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51500/120000, Loss: 5.6999
+05/26/2025 16:24:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51600/120000, Loss: 5.7174
+05/26/2025 16:25:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51700/120000, Loss: 5.6887
+05/26/2025 16:25:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51800/120000, Loss: 5.7085
+05/26/2025 16:26:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 51900/120000, Loss: 5.6842
+05/26/2025 16:27:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52000/120000, Loss: 5.6754
+05/26/2025 16:27:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52100/120000, Loss: 5.6978
+05/26/2025 16:28:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52200/120000, Loss: 5.7218
+05/26/2025 16:29:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52300/120000, Loss: 5.6509
+05/26/2025 16:29:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52400/120000, Loss: 5.6753
+05/26/2025 16:30:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52500/120000, Loss: 5.7271
+05/26/2025 16:31:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52600/120000, Loss: 5.6694
+05/26/2025 16:32:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52700/120000, Loss: 5.6765
+05/26/2025 16:32:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52800/120000, Loss: 5.6815
+05/26/2025 16:33:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 52900/120000, Loss: 5.7063
+05/26/2025 16:34:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53000/120000, Loss: 5.6828
+05/26/2025 16:34:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53100/120000, Loss: 5.7106
+05/26/2025 16:35:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53200/120000, Loss: 5.7024
+05/26/2025 16:36:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53300/120000, Loss: 5.6572
+05/26/2025 16:36:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53400/120000, Loss: 5.7122
+05/26/2025 16:37:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53500/120000, Loss: 5.6536
+05/26/2025 16:38:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53600/120000, Loss: 5.6606
+05/26/2025 16:38:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53700/120000, Loss: 5.6633
+05/26/2025 16:39:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53800/120000, Loss: 5.6586
+05/26/2025 16:40:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 11, Step: 53900/120000, Loss: 5.6383
+05/26/2025 16:40:30 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:31 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 16:40:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54000/120000, Loss: 5.8448
+Total: 10310
+05/26/2025 17:25:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 54000: 2.8900
+05/26/2025 17:26:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54100/120000, Loss: 5.6619
+05/26/2025 17:27:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54200/120000, Loss: 5.7111
+05/26/2025 17:27:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54300/120000, Loss: 5.7093
+05/26/2025 17:28:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54400/120000, Loss: 5.7430
+05/26/2025 17:29:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54500/120000, Loss: 5.7295
+05/26/2025 17:29:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54600/120000, Loss: 5.7237
+05/26/2025 17:30:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54700/120000, Loss: 5.7127
+05/26/2025 17:31:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54800/120000, Loss: 5.7357
+05/26/2025 17:31:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 54900/120000, Loss: 5.7402
+05/26/2025 17:32:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55000/120000, Loss: 5.6987
+05/26/2025 17:33:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55100/120000, Loss: 5.7205
+05/26/2025 17:33:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55200/120000, Loss: 5.7094
+05/26/2025 17:34:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55300/120000, Loss: 5.6748
+05/26/2025 17:35:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55400/120000, Loss: 5.7250
+05/26/2025 17:35:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55500/120000, Loss: 5.6771
+05/26/2025 17:36:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55600/120000, Loss: 5.6761
+05/26/2025 17:37:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55700/120000, Loss: 5.6577
+05/26/2025 17:37:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55800/120000, Loss: 5.7108
+05/26/2025 17:38:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 55900/120000, Loss: 5.7013
+05/26/2025 17:39:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56000/120000, Loss: 5.6897
+05/26/2025 17:39:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56100/120000, Loss: 5.6996
+05/26/2025 17:40:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56200/120000, Loss: 5.6937
+05/26/2025 17:41:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56300/120000, Loss: 5.7216
+05/26/2025 17:41:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56400/120000, Loss: 5.6984
+05/26/2025 17:42:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56500/120000, Loss: 5.7130
+05/26/2025 17:43:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56600/120000, Loss: 5.6869
+05/26/2025 17:43:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56700/120000, Loss: 5.7035
+05/26/2025 17:44:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56800/120000, Loss: 5.6868
+05/26/2025 17:45:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 56900/120000, Loss: 5.6684
+05/26/2025 17:45:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57000/120000, Loss: 5.6941
+05/26/2025 17:46:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57100/120000, Loss: 5.7166
+05/26/2025 17:47:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57200/120000, Loss: 5.6454
+05/26/2025 17:47:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57300/120000, Loss: 5.6815
+05/26/2025 17:48:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57400/120000, Loss: 5.7164
+05/26/2025 17:49:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57500/120000, Loss: 5.6749
+05/26/2025 17:49:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57600/120000, Loss: 5.6706
+Total: 10310
+05/26/2025 18:32:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 57600: 2.9000
+05/26/2025 18:32:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57700/120000, Loss: 5.6781
+05/26/2025 18:33:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57800/120000, Loss: 5.7057
+05/26/2025 18:34:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 57900/120000, Loss: 5.6737
+05/26/2025 18:34:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58000/120000, Loss: 5.7171
+05/26/2025 18:35:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58100/120000, Loss: 5.6951
+05/26/2025 18:36:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58200/120000, Loss: 5.6568
+05/26/2025 18:37:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58300/120000, Loss: 5.7027
+05/26/2025 18:37:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58400/120000, Loss: 5.6568
+05/26/2025 18:38:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58500/120000, Loss: 5.6619
+05/26/2025 18:39:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58600/120000, Loss: 5.6613
+05/26/2025 18:39:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58700/120000, Loss: 5.6559
+05/26/2025 18:40:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 12, Step: 58800/120000, Loss: 5.6332
+05/26/2025 18:40:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:49 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:40:49 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 18:41:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 58900/120000, Loss: 5.8329
+05/26/2025 18:41:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59000/120000, Loss: 6.0136
+05/26/2025 18:42:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59100/120000, Loss: 6.0434
+05/26/2025 18:43:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59200/120000, Loss: 6.0395
+05/26/2025 18:43:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59300/120000, Loss: 6.0970
+05/26/2025 18:44:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59400/120000, Loss: 6.0668
+05/26/2025 18:45:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59500/120000, Loss: 6.0590
+05/26/2025 18:45:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59600/120000, Loss: 6.0572
+05/26/2025 18:46:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59700/120000, Loss: 6.0735
+05/26/2025 18:47:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59800/120000, Loss: 6.0894
+05/26/2025 18:47:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 59900/120000, Loss: 6.0342
+05/26/2025 18:48:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60000/120000, Loss: 6.0665
+05/26/2025 18:49:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60100/120000, Loss: 6.0498
+05/26/2025 18:49:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60200/120000, Loss: 6.0163
+05/26/2025 18:50:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60300/120000, Loss: 6.0490
+05/26/2025 18:51:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60400/120000, Loss: 6.0260
+05/26/2025 18:52:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60500/120000, Loss: 6.0112
+05/26/2025 18:52:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60600/120000, Loss: 5.9992
+05/26/2025 18:53:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60700/120000, Loss: 6.0520
+05/26/2025 18:54:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60800/120000, Loss: 6.0285
+05/26/2025 18:54:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 60900/120000, Loss: 6.0334
+05/26/2025 18:55:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61000/120000, Loss: 6.0451
+05/26/2025 18:56:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61100/120000, Loss: 6.0393
+05/26/2025 18:56:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61200/120000, Loss: 6.0577
+Total: 10310
+05/26/2025 19:39:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 61200: 2.9000
+05/26/2025 19:40:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61300/120000, Loss: 5.7013
+05/26/2025 19:41:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61400/120000, Loss: 5.7072
+05/26/2025 19:41:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61500/120000, Loss: 5.6835
+05/26/2025 19:42:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61600/120000, Loss: 5.7003
+05/26/2025 19:43:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61700/120000, Loss: 5.6929
+05/26/2025 19:43:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61800/120000, Loss: 5.6696
+05/26/2025 19:44:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 61900/120000, Loss: 5.6998
+05/26/2025 19:45:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62000/120000, Loss: 5.7078
+05/26/2025 19:45:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62100/120000, Loss: 5.6524
+05/26/2025 19:46:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62200/120000, Loss: 5.6730
+05/26/2025 19:47:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62300/120000, Loss: 5.7132
+05/26/2025 19:47:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62400/120000, Loss: 5.6803
+05/26/2025 19:48:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62500/120000, Loss: 5.6676
+05/26/2025 19:49:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62600/120000, Loss: 5.6758
+05/26/2025 19:49:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62700/120000, Loss: 5.7099
+05/26/2025 19:50:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62800/120000, Loss: 5.6675
+05/26/2025 19:51:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 62900/120000, Loss: 5.7187
+05/26/2025 19:51:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63000/120000, Loss: 5.6926
+05/26/2025 19:52:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63100/120000, Loss: 5.6554
+05/26/2025 19:53:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63200/120000, Loss: 5.7072
+05/26/2025 19:53:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63300/120000, Loss: 5.6609
+05/26/2025 19:54:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63400/120000, Loss: 5.6561
+05/26/2025 19:55:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63500/120000, Loss: 5.6561
+05/26/2025 19:55:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63600/120000, Loss: 5.6542
+05/26/2025 19:56:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 13, Step: 63700/120000, Loss: 5.6391
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:03 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 19:57:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 63800/120000, Loss: 5.8224
+05/26/2025 19:58:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 63900/120000, Loss: 6.0145
+05/26/2025 19:58:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64000/120000, Loss: 6.0434
+05/26/2025 19:59:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64100/120000, Loss: 6.0515
+05/26/2025 20:00:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64200/120000, Loss: 6.0892
+05/26/2025 20:00:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64300/120000, Loss: 6.0722
+05/26/2025 20:01:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64400/120000, Loss: 6.0672
+05/26/2025 20:02:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64500/120000, Loss: 6.0439
+05/26/2025 20:02:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64600/120000, Loss: 6.0645
+05/26/2025 20:03:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64700/120000, Loss: 6.0915
+05/26/2025 20:04:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64800/120000, Loss: 6.0339
+Total: 10310
+05/26/2025 20:45:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 64800: 2.9100
+05/26/2025 20:46:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 64900/120000, Loss: 5.7199
+05/26/2025 20:47:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65000/120000, Loss: 5.7007
+05/26/2025 20:47:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65100/120000, Loss: 5.6825
+05/26/2025 20:48:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65200/120000, Loss: 5.7124
+05/26/2025 20:49:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65300/120000, Loss: 5.6901
+05/26/2025 20:49:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65400/120000, Loss: 5.6696
+05/26/2025 20:50:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65500/120000, Loss: 5.6482
+05/26/2025 20:51:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65600/120000, Loss: 5.7178
+05/26/2025 20:51:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65700/120000, Loss: 5.6927
+05/26/2025 20:52:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65800/120000, Loss: 5.6886
+05/26/2025 20:53:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 65900/120000, Loss: 5.6884
+05/26/2025 20:53:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66000/120000, Loss: 5.7037
+05/26/2025 20:54:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66100/120000, Loss: 5.7121
+05/26/2025 20:55:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66200/120000, Loss: 5.6992
+05/26/2025 20:55:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66300/120000, Loss: 5.7073
+05/26/2025 20:56:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66400/120000, Loss: 5.6885
+05/26/2025 20:57:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66500/120000, Loss: 5.6829
+05/26/2025 20:57:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66600/120000, Loss: 5.6999
+05/26/2025 20:58:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66700/120000, Loss: 5.6631
+05/26/2025 20:59:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66800/120000, Loss: 5.6924
+05/26/2025 20:59:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 66900/120000, Loss: 5.7154
+05/26/2025 21:00:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67000/120000, Loss: 5.6453
+05/26/2025 21:01:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67100/120000, Loss: 5.6743
+05/26/2025 21:01:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67200/120000, Loss: 5.7046
+05/26/2025 21:02:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67300/120000, Loss: 5.6826
+05/26/2025 21:03:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67400/120000, Loss: 5.6587
+05/26/2025 21:03:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67500/120000, Loss: 5.6827
+05/26/2025 21:04:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67600/120000, Loss: 5.7022
+05/26/2025 21:05:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67700/120000, Loss: 5.6676
+05/26/2025 21:05:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67800/120000, Loss: 5.7168
+05/26/2025 21:06:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 67900/120000, Loss: 5.6896
+05/26/2025 21:07:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68000/120000, Loss: 5.6550
+05/26/2025 21:07:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68100/120000, Loss: 5.6990
+05/26/2025 21:08:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68200/120000, Loss: 5.6644
+05/26/2025 21:09:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68300/120000, Loss: 5.6579
+05/26/2025 21:09:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68400/120000, Loss: 5.6462
+Total: 10310
+05/26/2025 21:51:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 68400: 2.9200
+05/26/2025 21:52:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68500/120000, Loss: 5.6563
+05/26/2025 21:53:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 14, Step: 68600/120000, Loss: 5.6304
+05/26/2025 21:53:35 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:35 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:35 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:35 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:35 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:35 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:36 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:36 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 21:53:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 68700/120000, Loss: 5.8105
+05/26/2025 21:54:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 68800/120000, Loss: 6.0205
+05/26/2025 21:55:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 68900/120000, Loss: 6.0379
+05/26/2025 21:56:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69000/120000, Loss: 6.0434
+05/26/2025 21:56:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69100/120000, Loss: 6.0832
+05/26/2025 21:57:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69200/120000, Loss: 6.0698
+05/26/2025 21:58:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69300/120000, Loss: 6.0691
+05/26/2025 21:58:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69400/120000, Loss: 6.0491
+05/26/2025 21:59:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69500/120000, Loss: 6.0708
+05/26/2025 22:00:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69600/120000, Loss: 6.0828
+05/26/2025 22:00:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69700/120000, Loss: 6.0387
+05/26/2025 22:01:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69800/120000, Loss: 6.0623
+05/26/2025 22:02:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 69900/120000, Loss: 6.0381
+05/26/2025 22:02:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70000/120000, Loss: 6.0098
+05/26/2025 22:03:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70100/120000, Loss: 6.0476
+05/26/2025 22:04:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70200/120000, Loss: 6.0415
+05/26/2025 22:04:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70300/120000, Loss: 6.0071
+05/26/2025 22:05:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70400/120000, Loss: 5.9905
+05/26/2025 22:06:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70500/120000, Loss: 6.0502
+05/26/2025 22:06:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70600/120000, Loss: 6.0245
+05/26/2025 22:07:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70700/120000, Loss: 6.0372
+05/26/2025 22:08:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70800/120000, Loss: 6.0195
+05/26/2025 22:08:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 70900/120000, Loss: 6.0472
+05/26/2025 22:09:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71000/120000, Loss: 6.0443
+05/26/2025 22:10:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71100/120000, Loss: 6.0537
+05/26/2025 22:10:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71200/120000, Loss: 6.0450
+05/26/2025 22:11:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71300/120000, Loss: 6.0385
+05/26/2025 22:12:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71400/120000, Loss: 6.0323
+05/26/2025 22:12:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71500/120000, Loss: 6.0293
+05/26/2025 22:13:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71600/120000, Loss: 5.9975
+05/26/2025 22:14:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71700/120000, Loss: 6.0526
+05/26/2025 22:15:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71800/120000, Loss: 6.0556
+05/26/2025 22:15:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 71900/120000, Loss: 5.9944
+05/26/2025 22:16:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72000/120000, Loss: 6.0145
+Total: 10310
+05/26/2025 22:57:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 72000: 2.9400
+05/26/2025 22:58:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72100/120000, Loss: 5.7143
+05/26/2025 22:58:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72200/120000, Loss: 5.6865
+05/26/2025 22:59:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72300/120000, Loss: 5.6579
+05/26/2025 23:00:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72400/120000, Loss: 5.6840
+05/26/2025 23:00:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72500/120000, Loss: 5.7078
+05/26/2025 23:01:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72600/120000, Loss: 5.6640
+05/26/2025 23:02:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72700/120000, Loss: 5.7123
+05/26/2025 23:02:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72800/120000, Loss: 5.6893
+05/26/2025 23:03:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 72900/120000, Loss: 5.6544
+05/26/2025 23:04:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 73000/120000, Loss: 5.7065
+05/26/2025 23:04:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 73100/120000, Loss: 5.6578
+05/26/2025 23:05:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 73200/120000, Loss: 5.6616
+05/26/2025 23:06:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 73300/120000, Loss: 5.6416
+05/26/2025 23:06:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 73400/120000, Loss: 5.6619
+05/26/2025 23:07:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 15, Step: 73500/120000, Loss: 5.6321
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:04 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/26/2025 23:08:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 73600/120000, Loss: 5.7906
+05/26/2025 23:09:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 73700/120000, Loss: 6.0182
+05/26/2025 23:09:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 73800/120000, Loss: 6.0451
+05/26/2025 23:10:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 73900/120000, Loss: 6.0455
+05/26/2025 23:11:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74000/120000, Loss: 6.0837
+05/26/2025 23:11:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74100/120000, Loss: 6.0644
+05/26/2025 23:12:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74200/120000, Loss: 6.0628
+05/26/2025 23:13:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74300/120000, Loss: 6.0369
+05/26/2025 23:13:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74400/120000, Loss: 6.0685
+05/26/2025 23:14:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74500/120000, Loss: 6.0756
+05/26/2025 23:15:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74600/120000, Loss: 6.0414
+05/26/2025 23:15:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74700/120000, Loss: 6.0628
+05/26/2025 23:16:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74800/120000, Loss: 6.0407
+05/26/2025 23:17:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 74900/120000, Loss: 6.0066
+05/26/2025 23:17:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75000/120000, Loss: 6.0593
+05/26/2025 23:18:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75100/120000, Loss: 6.0311
+05/26/2025 23:19:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75200/120000, Loss: 6.0096
+05/26/2025 23:19:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75300/120000, Loss: 5.9894
+05/26/2025 23:20:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75400/120000, Loss: 6.0519
+05/26/2025 23:21:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75500/120000, Loss: 6.0158
+05/26/2025 23:21:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75600/120000, Loss: 6.0413
+Total: 10310
+05/27/2025 00:04:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 75600: 2.9400
+05/27/2025 00:05:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75700/120000, Loss: 5.6755
+05/27/2025 00:05:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75800/120000, Loss: 5.7218
+05/27/2025 00:06:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 75900/120000, Loss: 5.7023
+05/27/2025 00:07:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76000/120000, Loss: 5.6979
+05/27/2025 00:07:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76100/120000, Loss: 5.6987
+05/27/2025 00:08:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76200/120000, Loss: 5.6936
+05/27/2025 00:09:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76300/120000, Loss: 5.6891
+05/27/2025 00:09:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76400/120000, Loss: 5.6938
+05/27/2025 00:10:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76500/120000, Loss: 5.6505
+05/27/2025 00:11:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76600/120000, Loss: 5.7045
+05/27/2025 00:11:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76700/120000, Loss: 5.7057
+05/27/2025 00:12:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76800/120000, Loss: 5.6496
+05/27/2025 00:13:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 76900/120000, Loss: 5.6579
+05/27/2025 00:13:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77000/120000, Loss: 5.7069
+05/27/2025 00:14:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77100/120000, Loss: 5.6810
+05/27/2025 00:15:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77200/120000, Loss: 5.6644
+05/27/2025 00:15:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77300/120000, Loss: 5.6791
+05/27/2025 00:16:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77400/120000, Loss: 5.6952
+05/27/2025 00:17:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77500/120000, Loss: 5.6717
+05/27/2025 00:17:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77600/120000, Loss: 5.7105
+05/27/2025 00:18:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77700/120000, Loss: 5.6839
+05/27/2025 00:19:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77800/120000, Loss: 5.6551
+05/27/2025 00:19:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 77900/120000, Loss: 5.6989
+05/27/2025 00:20:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 78000/120000, Loss: 5.6584
+05/27/2025 00:21:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 78100/120000, Loss: 5.6658
+05/27/2025 00:21:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 78200/120000, Loss: 5.6356
+05/27/2025 00:22:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 78300/120000, Loss: 5.6529
+05/27/2025 00:23:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 16, Step: 78400/120000, Loss: 5.6417
+05/27/2025 00:23:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:44 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:45 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:45 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:45 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:45 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:23:45 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:24:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 78500/120000, Loss: 5.7730
+05/27/2025 00:24:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 78600/120000, Loss: 6.0183
+05/27/2025 00:25:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 78700/120000, Loss: 6.0391
+05/27/2025 00:26:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 78800/120000, Loss: 6.0444
+05/27/2025 00:26:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 78900/120000, Loss: 6.0893
+05/27/2025 00:27:27 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79000/120000, Loss: 6.0618
+05/27/2025 00:28:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79100/120000, Loss: 6.0730
+05/27/2025 00:28:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79200/120000, Loss: 6.0393
+Total: 10310
+05/27/2025 01:10:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 79200: 2.9600
+05/27/2025 01:11:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79300/120000, Loss: 5.7276
+05/27/2025 01:11:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79400/120000, Loss: 5.7353
+05/27/2025 01:12:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79500/120000, Loss: 5.7095
+05/27/2025 01:13:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79600/120000, Loss: 5.7110
+05/27/2025 01:13:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79700/120000, Loss: 5.6848
+05/27/2025 01:14:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79800/120000, Loss: 5.6700
+05/27/2025 01:15:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 79900/120000, Loss: 5.7245
+05/27/2025 01:15:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80000/120000, Loss: 5.6843
+05/27/2025 01:16:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80100/120000, Loss: 5.6599
+05/27/2025 01:17:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80200/120000, Loss: 5.6445
+05/27/2025 01:17:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80300/120000, Loss: 5.7101
+05/27/2025 01:18:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80400/120000, Loss: 5.6787
+05/27/2025 01:19:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80500/120000, Loss: 5.7015
+05/27/2025 01:20:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80600/120000, Loss: 5.6761
+05/27/2025 01:20:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80700/120000, Loss: 5.7115
+05/27/2025 01:21:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80800/120000, Loss: 5.7041
+05/27/2025 01:22:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 80900/120000, Loss: 5.6960
+05/27/2025 01:22:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81000/120000, Loss: 5.6925
+05/27/2025 01:23:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81100/120000, Loss: 5.6847
+05/27/2025 01:24:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81200/120000, Loss: 5.6865
+05/27/2025 01:24:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81300/120000, Loss: 5.6982
+05/27/2025 01:25:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81400/120000, Loss: 5.6448
+05/27/2025 01:26:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81500/120000, Loss: 5.7069
+05/27/2025 01:26:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81600/120000, Loss: 5.6997
+05/27/2025 01:27:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81700/120000, Loss: 5.6479
+05/27/2025 01:28:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81800/120000, Loss: 5.6561
+05/27/2025 01:28:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 81900/120000, Loss: 5.7060
+05/27/2025 01:29:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82000/120000, Loss: 5.6741
+05/27/2025 01:30:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82100/120000, Loss: 5.6682
+05/27/2025 01:30:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82200/120000, Loss: 5.6730
+05/27/2025 01:31:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82300/120000, Loss: 5.6935
+05/27/2025 01:32:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82400/120000, Loss: 5.6661
+05/27/2025 01:32:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82500/120000, Loss: 5.7087
+05/27/2025 01:33:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82600/120000, Loss: 5.6909
+05/27/2025 01:34:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82700/120000, Loss: 5.6449
+05/27/2025 01:34:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82800/120000, Loss: 5.6969
+Total: 10310
+05/27/2025 02:15:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 82800: 2.9700
+05/27/2025 02:16:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 82900/120000, Loss: 5.6660
+05/27/2025 02:17:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 83000/120000, Loss: 5.6501
+05/27/2025 02:17:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 83100/120000, Loss: 5.6392
+05/27/2025 02:18:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 83200/120000, Loss: 5.6509
+05/27/2025 02:19:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 17, Step: 83300/120000, Loss: 5.6333
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:47 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:19:48 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 02:20:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 83400/120000, Loss: 5.7687
+05/27/2025 02:20:48 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 83500/120000, Loss: 6.0192
+05/27/2025 02:21:28 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 83600/120000, Loss: 6.0217
+05/27/2025 02:22:08 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 83700/120000, Loss: 6.0537
+05/27/2025 02:22:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 83800/120000, Loss: 6.0777
+05/27/2025 02:23:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 83900/120000, Loss: 6.0692
+05/27/2025 02:24:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84000/120000, Loss: 6.0617
+05/27/2025 02:24:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84100/120000, Loss: 6.0377
+05/27/2025 02:25:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84200/120000, Loss: 6.0515
+05/27/2025 02:26:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84300/120000, Loss: 6.0800
+05/27/2025 02:26:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84400/120000, Loss: 6.0438
+05/27/2025 02:27:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84500/120000, Loss: 6.0585
+05/27/2025 02:28:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84600/120000, Loss: 6.0217
+05/27/2025 02:28:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84700/120000, Loss: 6.0098
+05/27/2025 02:29:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84800/120000, Loss: 6.0626
+05/27/2025 02:30:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 84900/120000, Loss: 6.0361
+05/27/2025 02:30:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85000/120000, Loss: 5.9995
+05/27/2025 02:31:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85100/120000, Loss: 5.9834
+05/27/2025 02:32:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85200/120000, Loss: 6.0574
+05/27/2025 02:32:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85300/120000, Loss: 6.0245
+05/27/2025 02:33:33 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85400/120000, Loss: 6.0466
+05/27/2025 02:34:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85500/120000, Loss: 6.0176
+05/27/2025 02:34:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85600/120000, Loss: 6.0503
+05/27/2025 02:35:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85700/120000, Loss: 6.0430
+05/27/2025 02:36:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85800/120000, Loss: 6.0327
+05/27/2025 02:36:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 85900/120000, Loss: 6.0421
+05/27/2025 02:37:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86000/120000, Loss: 6.0372
+05/27/2025 02:38:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86100/120000, Loss: 6.0203
+05/27/2025 02:38:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86200/120000, Loss: 6.0391
+05/27/2025 02:39:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86300/120000, Loss: 5.9980
+05/27/2025 02:40:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86400/120000, Loss: 6.0586
+Total: 10310
+05/27/2025 03:23:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 86400: 2.9700
+05/27/2025 03:24:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86500/120000, Loss: 5.7011
+05/27/2025 03:24:54 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86600/120000, Loss: 5.6529
+05/27/2025 03:25:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86700/120000, Loss: 5.6529
+05/27/2025 03:26:14 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86800/120000, Loss: 5.7053
+05/27/2025 03:26:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 86900/120000, Loss: 5.6715
+05/27/2025 03:27:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87000/120000, Loss: 5.6732
+05/27/2025 03:28:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87100/120000, Loss: 5.6743
+05/27/2025 03:28:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87200/120000, Loss: 5.6845
+05/27/2025 03:29:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87300/120000, Loss: 5.6673
+05/27/2025 03:30:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87400/120000, Loss: 5.7107
+05/27/2025 03:30:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87500/120000, Loss: 5.6895
+05/27/2025 03:31:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87600/120000, Loss: 5.6440
+05/27/2025 03:32:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87700/120000, Loss: 5.6964
+05/27/2025 03:32:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87800/120000, Loss: 5.6718
+05/27/2025 03:33:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 87900/120000, Loss: 5.6486
+05/27/2025 03:34:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 88000/120000, Loss: 5.6272
+05/27/2025 03:34:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 88100/120000, Loss: 5.6665
+05/27/2025 03:35:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 18, Step: 88200/120000, Loss: 5.6272
+05/27/2025 03:36:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 03:36:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88300/120000, Loss: 5.7593
+05/27/2025 03:37:15 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88400/120000, Loss: 6.0206
+05/27/2025 03:37:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88500/120000, Loss: 6.0162
+05/27/2025 03:38:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88600/120000, Loss: 6.0497
+05/27/2025 03:39:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88700/120000, Loss: 6.0659
+05/27/2025 03:39:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88800/120000, Loss: 6.0552
+05/27/2025 03:40:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 88900/120000, Loss: 6.0703
+05/27/2025 03:41:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89000/120000, Loss: 6.0450
+05/27/2025 03:42:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89100/120000, Loss: 6.0572
+05/27/2025 03:42:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89200/120000, Loss: 6.0779
+05/27/2025 03:43:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89300/120000, Loss: 6.0422
+05/27/2025 03:44:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89400/120000, Loss: 6.0580
+05/27/2025 03:44:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89500/120000, Loss: 6.0094
+05/27/2025 03:45:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89600/120000, Loss: 6.0143
+05/27/2025 03:46:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89700/120000, Loss: 6.0588
+05/27/2025 03:46:46 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89800/120000, Loss: 6.0411
+05/27/2025 03:47:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 89900/120000, Loss: 5.9860
+05/27/2025 03:48:07 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90000/120000, Loss: 5.9837
+Total: 10310
+05/27/2025 04:31:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 90000: 2.9700
+05/27/2025 04:31:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90100/120000, Loss: 5.7083
+05/27/2025 04:32:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90200/120000, Loss: 5.6824
+05/27/2025 04:33:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90300/120000, Loss: 5.6948
+05/27/2025 04:33:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90400/120000, Loss: 5.6678
+05/27/2025 04:34:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90500/120000, Loss: 5.7254
+05/27/2025 04:35:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90600/120000, Loss: 5.6978
+05/27/2025 04:36:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90700/120000, Loss: 5.6897
+05/27/2025 04:36:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90800/120000, Loss: 5.6829
+05/27/2025 04:37:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 90900/120000, Loss: 5.6998
+05/27/2025 04:38:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91000/120000, Loss: 5.6771
+05/27/2025 04:38:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91100/120000, Loss: 5.6940
+05/27/2025 04:39:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91200/120000, Loss: 5.6430
+05/27/2025 04:40:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91300/120000, Loss: 5.7084
+05/27/2025 04:40:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91400/120000, Loss: 5.6941
+05/27/2025 04:41:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91500/120000, Loss: 5.6621
+05/27/2025 04:42:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91600/120000, Loss: 5.6404
+05/27/2025 04:42:42 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91700/120000, Loss: 5.7035
+05/27/2025 04:43:22 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91800/120000, Loss: 5.6749
+05/27/2025 04:44:02 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 91900/120000, Loss: 5.6780
+05/27/2025 04:44:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92000/120000, Loss: 5.6571
+05/27/2025 04:45:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92100/120000, Loss: 5.6873
+05/27/2025 04:46:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92200/120000, Loss: 5.6683
+05/27/2025 04:46:43 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92300/120000, Loss: 5.7023
+05/27/2025 04:47:23 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92400/120000, Loss: 5.6914
+05/27/2025 04:48:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92500/120000, Loss: 5.6467
+05/27/2025 04:48:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92600/120000, Loss: 5.6924
+05/27/2025 04:49:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92700/120000, Loss: 5.6720
+05/27/2025 04:50:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92800/120000, Loss: 5.6417
+05/27/2025 04:50:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 92900/120000, Loss: 5.6343
+05/27/2025 04:51:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 93000/120000, Loss: 5.6560
+05/27/2025 04:52:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 19, Step: 93100/120000, Loss: 5.6253
+05/27/2025 04:52:37 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:37 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:37 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:38 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 04:52:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93200/120000, Loss: 5.7488
+05/27/2025 04:53:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93300/120000, Loss: 6.0171
+05/27/2025 04:54:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93400/120000, Loss: 6.0060
+05/27/2025 04:54:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93500/120000, Loss: 6.0522
+05/27/2025 04:55:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93600/120000, Loss: 6.0633
+Total: 10310
+05/27/2025 05:37:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 93600: 2.9800
+05/27/2025 05:37:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93700/120000, Loss: 5.7136
+05/27/2025 05:38:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93800/120000, Loss: 5.7333
+05/27/2025 05:39:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 93900/120000, Loss: 5.6949
+05/27/2025 05:39:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94000/120000, Loss: 5.7151
+05/27/2025 05:40:29 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94100/120000, Loss: 5.7259
+05/27/2025 05:41:09 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94200/120000, Loss: 5.7037
+05/27/2025 05:41:49 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94300/120000, Loss: 5.7180
+05/27/2025 05:42:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94400/120000, Loss: 5.6599
+05/27/2025 05:43:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94500/120000, Loss: 5.6714
+05/27/2025 05:43:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94600/120000, Loss: 5.7187
+05/27/2025 05:44:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94700/120000, Loss: 5.6966
+05/27/2025 05:45:10 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94800/120000, Loss: 5.6561
+05/27/2025 05:45:50 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 94900/120000, Loss: 5.6334
+05/27/2025 05:46:30 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95000/120000, Loss: 5.6962
+05/27/2025 05:47:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95100/120000, Loss: 5.6843
+05/27/2025 05:47:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95200/120000, Loss: 5.6958
+05/27/2025 05:48:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95300/120000, Loss: 5.6572
+05/27/2025 05:49:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95400/120000, Loss: 5.7228
+05/27/2025 05:49:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95500/120000, Loss: 5.6949
+05/27/2025 05:50:31 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95600/120000, Loss: 5.6864
+05/27/2025 05:51:11 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95700/120000, Loss: 5.6867
+05/27/2025 05:51:51 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95800/120000, Loss: 5.6907
+05/27/2025 05:52:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 95900/120000, Loss: 5.6838
+05/27/2025 05:53:12 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96000/120000, Loss: 5.6932
+05/27/2025 05:53:52 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96100/120000, Loss: 5.6376
+05/27/2025 05:54:32 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96200/120000, Loss: 5.7060
+05/27/2025 05:55:13 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96300/120000, Loss: 5.6848
+05/27/2025 05:55:53 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96400/120000, Loss: 5.6706
+05/27/2025 05:56:35 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96500/120000, Loss: 5.6238
+05/27/2025 05:57:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96600/120000, Loss: 5.7017
+05/27/2025 05:57:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96700/120000, Loss: 5.6782
+05/27/2025 05:58:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96800/120000, Loss: 5.6734
+05/27/2025 05:59:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 96900/120000, Loss: 5.6509
+05/27/2025 05:59:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97000/120000, Loss: 5.6871
+05/27/2025 06:00:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97100/120000, Loss: 5.6688
+05/27/2025 06:01:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97200/120000, Loss: 5.7004
+Total: 10310
+05/27/2025 06:43:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 97200: 2.9900
+05/27/2025 06:43:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97300/120000, Loss: 5.6877
+05/27/2025 06:44:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97400/120000, Loss: 5.6482
+05/27/2025 06:45:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97500/120000, Loss: 5.6820
+05/27/2025 06:46:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97600/120000, Loss: 5.6679
+05/27/2025 06:46:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97700/120000, Loss: 5.6436
+05/27/2025 06:47:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97800/120000, Loss: 5.6363
+05/27/2025 06:48:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 97900/120000, Loss: 5.6549
+05/27/2025 06:48:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 20, Step: 98000/120000, Loss: 5.6186
+05/27/2025 06:49:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:15 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:16 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 06:49:34 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98100/120000, Loss: 5.7291
+05/27/2025 06:50:16 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98200/120000, Loss: 6.0186
+05/27/2025 06:50:56 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98300/120000, Loss: 6.0057
+05/27/2025 06:51:36 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98400/120000, Loss: 6.0648
+05/27/2025 06:52:17 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98500/120000, Loss: 6.0558
+05/27/2025 06:52:57 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98600/120000, Loss: 6.0543
+05/27/2025 06:53:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98700/120000, Loss: 6.0757
+05/27/2025 06:54:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98800/120000, Loss: 6.0302
+05/27/2025 06:55:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 98900/120000, Loss: 6.0574
+05/27/2025 06:55:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99000/120000, Loss: 6.0577
+05/27/2025 06:56:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99100/120000, Loss: 6.0509
+05/27/2025 06:57:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99200/120000, Loss: 6.0541
+05/27/2025 06:57:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99300/120000, Loss: 6.0082
+05/27/2025 06:58:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99400/120000, Loss: 6.0142
+05/27/2025 06:59:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99500/120000, Loss: 6.0723
+05/27/2025 06:59:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99600/120000, Loss: 6.0322
+05/27/2025 07:00:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99700/120000, Loss: 6.0069
+05/27/2025 07:01:03 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99800/120000, Loss: 5.9794
+05/27/2025 07:01:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 99900/120000, Loss: 6.0246
+05/27/2025 07:02:24 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100000/120000, Loss: 6.0302
+05/27/2025 07:03:04 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100100/120000, Loss: 6.0377
+05/27/2025 07:03:44 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100200/120000, Loss: 6.0166
+05/27/2025 07:04:25 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100300/120000, Loss: 6.0581
+05/27/2025 07:05:05 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100400/120000, Loss: 6.0370
+05/27/2025 07:05:45 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100500/120000, Loss: 6.0301
+05/27/2025 07:06:26 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100600/120000, Loss: 6.0274
+05/27/2025 07:07:06 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100700/120000, Loss: 6.0405
+05/27/2025 07:07:47 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100800/120000, Loss: 6.0360
+Total: 10310
+05/27/2025 07:49:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Validation Accuracy at step 100800: 2.9900
+05/27/2025 07:49:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 100900/120000, Loss: 5.6969
+05/27/2025 07:50:37 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101000/120000, Loss: 5.6376
+05/27/2025 07:51:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101100/120000, Loss: 5.7129
+05/27/2025 07:51:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101200/120000, Loss: 5.6784
+05/27/2025 07:52:38 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101300/120000, Loss: 5.6694
+05/27/2025 07:53:18 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101400/120000, Loss: 5.6267
+05/27/2025 07:53:58 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101500/120000, Loss: 5.7026
+05/27/2025 07:54:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101600/120000, Loss: 5.6776
+05/27/2025 07:55:19 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101700/120000, Loss: 5.6681
+05/27/2025 07:55:59 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101800/120000, Loss: 5.6608
+05/27/2025 07:56:39 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 101900/120000, Loss: 5.6791
+05/27/2025 07:57:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102000/120000, Loss: 5.6736
+05/27/2025 07:58:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102100/120000, Loss: 5.6984
+05/27/2025 07:58:40 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102200/120000, Loss: 5.6844
+05/27/2025 07:59:20 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102300/120000, Loss: 5.6505
+05/27/2025 08:00:00 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102400/120000, Loss: 5.6833
+05/27/2025 08:00:41 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102500/120000, Loss: 5.6674
+05/27/2025 08:01:21 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102600/120000, Loss: 5.6414
+05/27/2025 08:02:01 - INFO - Model._1_BaseTrainer.generation_trainer -   Epoch: 21, Step: 102700/120000, Loss: 5.6350

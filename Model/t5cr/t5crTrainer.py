@@ -46,7 +46,62 @@ class t5crCLS(ClassificationTrainer):
     return super().run()
 
 class t5crMSG(GenerationTrainer):
-  pass
+  def __init__(self, args, data_file: str, model=None,  eval_=False):
+    super().__init__(args=args, data_file=data_file, model=model, eval_=eval_)
+
+  # 这里可以独立的设计 _setup_training, 来初始化它自己的optimizer和scheduler的设计
+  def _setup_training(self,
+                      scheduler_type="polynomial", 
+                      num_warmup_steps=10000, 
+                      num_training_steps=500):
+    # 参数分组    
+    no_decay = ["bias", "LayerNorm.weight"]
+    optimizer_grouped_parameters = [
+        {
+            "params": [p for n, p in self.model.named_parameters() if not any(nd in n for nd in no_decay)],
+            "weight_decay": 0.01,
+        },
+        {
+            "params": [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)],
+            "weight_decay": 0.0,
+        }]
+    self.optimizer = AdamW(optimizer_grouped_parameters, lr=5e-5)
+    # 学习率调度器
+    self.scheduler = get_scheduler(
+      scheduler_type, 
+      optimizer=self.optimizer, 
+      num_warmup_steps=num_warmup_steps, 
+      num_training_steps=num_training_steps)
+  def run(self):
+    return super().run()
+
 
 class t5crREF(RefinementTrainer):
-  pass
+  def __init__(self, args, data_file: str, model=None,  eval_=False):
+    super().__init__(args=args, data_file=data_file, model=model, eval_=eval_)
+
+  # 这里可以独立的设计 _setup_training, 来初始化它自己的optimizer和scheduler的设计
+  def _setup_training(self,
+                      scheduler_type="polynomial", 
+                      num_warmup_steps=10000, 
+                      num_training_steps=500):
+    # 参数分组    
+    no_decay = ["bias", "LayerNorm.weight"]
+    optimizer_grouped_parameters = [
+        {
+            "params": [p for n, p in self.model.named_parameters() if not any(nd in n for nd in no_decay)],
+            "weight_decay": 0.01,
+        },
+        {
+            "params": [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)],
+            "weight_decay": 0.0,
+        }]
+    self.optimizer = AdamW(optimizer_grouped_parameters, lr=5e-5)
+    # 学习率调度器
+    self.scheduler = get_scheduler(
+      scheduler_type, 
+      optimizer=self.optimizer, 
+      num_warmup_steps=num_warmup_steps, 
+      num_training_steps=num_training_steps)
+  def run(self):
+    return super().run()
