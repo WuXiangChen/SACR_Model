@@ -1,0 +1,97 @@
+nohup: ignoring input
+2025-05-27 00:56:15.940452: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+==================================================
+Program Starting with Parameters:
+Model Name: codet5
+Dataset Name: CR
+==================================================
+
+05/27/2025 00:56:18 - INFO - __main__ -   Start Training
+05/27/2025 00:56:18 - INFO - __main__ -   Training/eval parameters: model_name_or_path=../ACR_Model_Saved/codet5/originalModel/, output_dir=../ACR_Model_Saved/codet5/msg/, dev_filename=../ACR_Dataset/CR/msg/msg-valid.jsonl, train_filename=../ACR_Dataset/CR/msg/
+05/27/2025 00:56:18 - INFO - torch.distributed.distributed_c10d -   Added key: store_based_barrier_key:1 to store for rank: 0
+05/27/2025 00:56:18 - INFO - torch.distributed.distributed_c10d -   Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 1 nodes.
+05/27/2025 00:56:18 - WARNING - Model._1_BaseTrainer.base_trainer -   Process rank: 0, global rank: 0, world size: 1
+05/27/2025 00:56:18 - INFO - Model._1_BaseTrainer.utils -   ==========
+05/27/2025 00:56:18 - INFO - Model._1_BaseTrainer.utils -   loaded model path:../ACR_Model_Saved/codet5/originalModel/
+Some weights of codet5Model were not initialized from the model checkpoint at ../ACR_Model_Saved/codet5/originalModel/ and are newly initialized: ['cls_head.bias', 'cls_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+05/27/2025 00:56:24 - INFO - Model._1_BaseTrainer.utils -   Resizing token embeddings from 32128 to 32216
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+05/27/2025 00:56:34 - WARNING - Model._1_BaseTrainer.configs -   Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, cpu count: 192
+/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+../ACR_Dataset/CR/msg/
+05/27/2025 00:57:04 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-trainrb.exps
+05/27/2025 00:57:35 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+../ACR_Dataset/CR/msg/
+05/27/2025 00:58:18 - INFO - Model._1_BaseTrainer.utils -   Loading examples from ../ACR_Dataset/CR/msg/msg-validrb.exps
+05/27/2025 00:58:19 - INFO - Model._1_BaseTrainer.utils -   Convert examples to features...
+05/27/2025 00:59:53 - INFO - Model._1_BaseTrainer.generation_trainer -   batch size: 8
+05/27/2025 00:59:55 - INFO - Model._1_BaseTrainer.generation_trainer -   Training finished. Cleaning up resources.
+Traceback (most recent call last):
+  File "./main.py", line 52, in <module>
+    trainer.run()
+  File "/root/workspace/SACR_Model/Model/codet5/codet5Trainer.py", line 54, in run
+    return super().run()
+  File "/root/workspace/SACR_Model/Model/_1_BaseTrainer/generation_trainer.py", line 133, in run
+    loss = self.train_step(examples)
+  File "/root/workspace/SACR_Model/Model/_1_BaseTrainer/generation_trainer.py", line 64, in train_step
+    loss = self.model(
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 886, in forward
+    output = self.module(*inputs[0], **kwargs[0])
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/workspace/SACR_Model/Model/codet5/codet5Model.py", line 59, in forward
+    return self.review_forward(input_ids, input_labels, decoder_input_ids, attention_mask, decoder_attention_mask, encoder_loss)
+  File "/root/workspace/SACR_Model/Model/codet5/codet5Model.py", line 85, in review_forward
+    encoder_outputs = self.encoder( \
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 1124, in forward
+    layer_outputs = layer_module(
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 675, in forward
+    self_attention_outputs = self.layer[0](
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 593, in forward
+    attention_output = self.SelfAttention(
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/transformers/models/t5/modeling_t5.py", line 561, in forward
+    attn_output = attn_output.transpose(1, 2).contiguous()
+RuntimeError: CUDA out of memory. Tried to allocate 16.00 MiB (GPU 0; 23.64 GiB total capacity; 21.14 GiB already allocated; 6.69 MiB free; 21.22 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 499187) of binary: /root/miniconda3/envs/mmpose/bin/python
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/mmpose/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 345, in wrapper
+    return f(*args, **kwargs)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/distributed/run.py", line 719, in main
+    run(args)
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/distributed/run.py", line 710, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 131, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/root/miniconda3/envs/mmpose/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 259, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./main.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-05-27_01:00:09
+  host      : c19be109358c
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 499187)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

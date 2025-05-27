@@ -47,7 +47,11 @@ class codet5CLS(ClassificationTrainer):
     return super().run()
 
 class codet5MSG(GenerationTrainer):
-  pass
+  def __init__(self, args, data_file: str, model=None,  eval_=False):
+    super().__init__(args=args, data_file=data_file, model=model, eval_=eval_)
+
+  def run(self):
+    return super().run()
 
 class codet5REF(RefinementTrainer):
   pass

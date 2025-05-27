@@ -50,7 +50,7 @@ class GenerationTrainer(BaseTrainer):
         # 创建采样器
         sampler = DistributedSampler(dataset) if not eval else SequentialSampler(dataset)
         # 创建DataLoader
-        return DataLoader(dataset,sampler=sampler,batch_size=self.args.eval_batch_size if eval else self.args.train_batch_size,
+        return DataLoader(combined_dataset,sampler=sampler,batch_size=self.args.eval_batch_size if eval else self.args.train_batch_size,
             num_workers=self.args.cpu_count, collate_fn=fn) # 这部分应该是共用的
 
     def train_step(self, examples):
